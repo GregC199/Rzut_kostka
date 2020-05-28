@@ -12,9 +12,12 @@
 //polaczenie z plytka
 #include <QBluetoothDeviceDiscoveryAgent>
 #include <QBluetoothSocket>
+#include <QBluetoothLocalDevice>
 #include <QDebug>
 #include <QDateTime>
 #include <QList>
+
+//obsluga operacji na plikach
 #include <string>
 #include <iostream>
 #include <stdio.h>
@@ -36,10 +39,34 @@ public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
+    //tworzenie diody
+    void tworz_diode();
+
+    //tworzenie wykresow
     void stworz_wykresy();
+    //inicjalizacja obslugi bluetooth
     void obsluga_bt();
+
+    //informacje o nawiazanym polaczeniu
+    void inicjalizuj_info();
+    void informacje_bluetooth();
+
+    //aktualizacja danych na wykresie
     void aktualizuj_wykres(float a_x,float a_y,float a_z,float g_x,float g_y,float g_z,float rkom,float pkom, unsigned long long czas);
+
+    //wczytanie danych z pliku bedacego logiem polaczenia bluetooth
     void wczytanie_danych_z_logu(unsigned long long czas_zmierzony);
+
+    //kolejne operacje tworzenia wykresow
+    void utworz_osie();
+
+    void utworz_serie();
+
+    void utworz_wykresy();
+
+    void wizualizuj_wykresy();
+
+    void przypnij_serie_do_osi();
 
 private slots:
 
@@ -61,9 +88,9 @@ private slots:
 
 
 private:
+
     //obsluga dzialania wykresow
     //wyswietlanie wykresow:
-
     QChartView* view_acc_wykres_x;
     QChartView* view_acc_wykres_y;
     QChartView* view_acc_wykres_z;
@@ -84,15 +111,25 @@ private:
 
     QLineSeries* series_gyr_wykres_z;
 
-    //os czasu
+    //pomiar czasu
     QTime pomiar;
 
+    //osie czasu
     QValueAxis* timeline_acc_x;
     QValueAxis* timeline_acc_y;
     QValueAxis* timeline_acc_z;
     QValueAxis* timeline_gyr_x;
     QValueAxis* timeline_gyr_y;
     QValueAxis* timeline_gyr_z;
+
+    //osie wartosci
+    QValueAxis* acc_x_wartosci_y;
+    QValueAxis* acc_y_wartosci_y;
+    QValueAxis* acc_z_wartosci_y;
+    QValueAxis* gyr_x_wartosci_y;
+    QValueAxis* gyr_y_wartosci_y;
+    QValueAxis* gyr_z_wartosci_y;
+
 
     //wykresy
     QChart* line_acc_wykres_x;
@@ -107,9 +144,23 @@ private:
     std::ifstream czytanie;
 
     Ui::MainWindow* ui;
+
+    //aktualizacja logu polaczenia
     void addToLogs(QString message);
+
+    //obsluga bt
     QBluetoothDeviceDiscoveryAgent* discoveryAgent;
     QBluetoothSocket* socket;
+
+    //informacje o bluetooth
+    QBluetoothLocalDevice* host;
+    QString nazwa_local_host;
+    QString adres_local_host;
+    QString nazwa_polaczanego;
+    QString adres_polaczanego;
+    QString uuid_polaczonego;
+    QString typ_polaczenia;
+    QString data_polaczenia;
 protected:
     void resizeEvent(QResizeEvent* event);
 };

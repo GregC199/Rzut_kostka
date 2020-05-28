@@ -8,11 +8,19 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
 
+    //tworzenie diody
+    tworz_diode();
+
     //tworzenie wykresow
     stworz_wykresy();
 
     //wywolanie inicjalizacji obslugi komunikacji bluetooth
     obsluga_bt();
+
+    //inicjalizacja danych o local hoscie
+    this->host = new QBluetoothLocalDevice;
+
+    inicjalizuj_info();
 
     //nadpisanie/utworzenie pliku log_polaczenia.txt
     zapis.open("log_polaczenia.txt",std::ios_base::out);
@@ -27,7 +35,76 @@ MainWindow::MainWindow(QWidget *parent)
     //rozpoczecie zliczania czasu dla osi czasu na wykresach
     this->pomiar.start();
 
+    //ustawienie menu glownego jako startowego widgetu
+    ui->tabWidget->setCurrentWidget(ui->tab);
+
 }
+void MainWindow::tworz_diode(){
+
+    //dioda 1 - tab "menu glowne"
+    ui->diodaL->setFixedHeight(100);
+    ui->diodaP->setFixedWidth(100);
+
+    //dioda 2 - tab "status polaczenia"
+    ui->dioda2L->setFixedHeight(100);
+    ui->dioda2P->setFixedWidth(100);
+
+    //utworzenie ksztaltu kola
+    QRect ksztalt(0,0,95,95);
+    QRegion kolo(ksztalt, QRegion::Ellipse);
+
+    //nadanie ksztaltu kola diodom
+    ui->diodaL->setMask(kolo);
+    ui->diodaP->setMask(kolo);
+
+    ui->dioda2L->setMask(kolo);
+    ui->dioda2P->setMask(kolo);
+
+    //dioda prawa ustawienie koloru
+    ui->diodaP->setStyleSheet("QPushButton:flat { color: rgb(255, 0, 0); background-color: rgb(255, 0, 0); border: none;}");
+    ui->dioda2P->setStyleSheet("QPushButton:flat { color: rgb(255, 0, 0); background-color: rgb(255, 0, 0); border: none;}");
+
+    //dioda lewa ustawienie koloru
+    ui->diodaL->setStyleSheet("QPushButton:flat { color: rgb(126, 255, 141); background-color: rgb(126, 255, 141); border: none;}");
+    ui->dioda2L->setStyleSheet("QPushButton:flat { color: rgb(126, 255, 141); background-color: rgb(126, 255, 141); border: none;}");
+}
+
+void MainWindow::inicjalizuj_info(){
+
+    ui->parametry_polaczenia->clear();
+    this->adres_local_host = this->host->address().toString();
+    this->nazwa_local_host = this->host->name();
+    this->adres_polaczanego = "Brak połączenia!";
+    this->nazwa_polaczanego = "Brak połączenia!";
+    this->uuid_polaczonego = "Brak połączenia!";
+    this->typ_polaczenia = "Brak połączenia!";
+    this->data_polaczenia = "Brak połączenia!";
+    ui->parametry_polaczenia->append("Nazwa lokalnego hosta:");
+    ui->parametry_polaczenia->append("Adres lokalnego hosta:");
+    ui->parametry_polaczenia->append("Nazwa urządzenia połączonego:");
+    ui->parametry_polaczenia->append("Adres urządzenia połączonego:");
+    ui->parametry_polaczenia->append("Uuid urządzenia połączonego:");
+    ui->parametry_polaczenia->append("Typ połączenia:");
+    ui->parametry_polaczenia->append("Czas nawiązania połączenia:");
+
+
+    informacje_bluetooth();
+}
+
+void MainWindow::informacje_bluetooth(){
+
+    ui->informacje_o_polaczeniu->clear();
+
+    ui->informacje_o_polaczeniu->append(this->nazwa_local_host);
+    ui->informacje_o_polaczeniu->append(this->adres_local_host);
+    ui->informacje_o_polaczeniu->append(this->nazwa_polaczanego);
+    ui->informacje_o_polaczeniu->append(this->adres_polaczanego);
+    ui->informacje_o_polaczeniu->append(this->uuid_polaczonego );
+    ui->informacje_o_polaczeniu->append(this->typ_polaczenia);
+    ui->informacje_o_polaczeniu->append(this->data_polaczenia);
+
+}
+
 void MainWindow::obsluga_bt(){
 
     this->discoveryAgent = new QBluetoothDeviceDiscoveryAgent(this);
@@ -73,10 +150,18 @@ void MainWindow::on_button_polacz_clicked()
     QString comboBoxQString = ui->list_urzadzen->currentText();
     QStringList portList = comboBoxQString.split(" ");
     QString deviceAddres = portList.last();
+    QString deviceName = portList.first();
 
     static const QString serviceUuid(QStringLiteral("00001101-0000-1000-8000-00805F9B34FB"));
+
+    //zapis danych do informacji o polaczeniu
+    this->uuid_polaczonego = serviceUuid;
+    this->adres_polaczanego = deviceAddres;
+    this->typ_polaczenia = "Read/Write";
+    this->nazwa_polaczanego = deviceName;
+
     this->socket->connectToService(QBluetoothAddress(deviceAddres),QBluetoothUuid(serviceUuid),QIODevice::ReadWrite);
-    this->addToLogs("Laczenie z urządzeniem o nazwie: " + portList.first() + " i adresie: " + deviceAddres);
+    this->addToLogs("Laczenie z urządzeniem o nazwie: " + deviceName + " i adresie: " + deviceAddres);
 
 }
 
@@ -87,11 +172,37 @@ void MainWindow::on_button_rozlacz_clicked()
 }
 
 void MainWindow::connectionEstablished() {
-  this->addToLogs("Polaczenie ustanowione");
+
+    //zapis daty nawiazania polaczenia
+    this->data_polaczenia = QDateTime::currentDateTime().toString("yyyy.MM.dd hh:mm:ss");
+
+    this->addToLogs("Polaczenie ustanowione");
+
+    //aktualizacja informacji bluetooth
+    informacje_bluetooth();
+
+    //dioda prawa ustawienie koloru
+    ui->diodaP->setStyleSheet("QPushButton:flat { color: rgb(255, 129, 129); background-color: rgb(255, 129, 129); border: none; }");
+    ui->dioda2P->setStyleSheet("QPushButton:flat { color: rgb(255, 129, 129); background-color: rgb(255, 129, 129); border: none; }");
+
+    //dioda lewa ustawienie koloru
+    ui->diodaL->setStyleSheet("QPushButton:flat { color: rgb(38, 255, 0); background-color: rgb(38, 255, 0);  border: none; }");
+    ui->dioda2L->setStyleSheet("QPushButton:flat { color: rgb(38, 255, 0); background-color: rgb(38, 255, 0);  border: none; }");
 }
 
 void MainWindow::connectionInterrupted() {
-  this->addToLogs("Polaczenie przerwane");
+    this->addToLogs("Polaczenie przerwane");
+
+    //reset informacji o polaczeniu do poczatkowych wartosci
+    inicjalizuj_info();
+
+    //dioda prawa ustawienie koloru
+    ui->diodaP->setStyleSheet("QPushButton:flat { color: rgb(255, 0, 0); background-color: rgb(255, 0, 0); border: none; }");
+    ui->dioda2P->setStyleSheet("QPushButton:flat { color: rgb(255, 0, 0); background-color: rgb(255, 0, 0); border: none; }");
+
+    //dioda lewa ustawienie koloru
+    ui->diodaL->setStyleSheet("QPushButton:flat { color: rgb(126, 255, 141); background-color: rgb(126, 255, 141); border: none; }");
+    ui->dioda2L->setStyleSheet("QPushButton:flat { color: rgb(126, 255, 141); background-color: rgb(126, 255, 141); border: none; }");
 }
 
 void MainWindow::socketReadyToRead() {
@@ -101,7 +212,6 @@ void MainWindow::socketReadyToRead() {
 
         //zapis ilosci milisekund uplynietych od startu programu
         zmierzony = (unsigned long long) this->pomiar.elapsed();
-        //std::cout<<zmierzony<<std::endl;
 
         //zczytanie danych z socketu bluetooth
         QString line = this->socket->readLine();
@@ -157,9 +267,6 @@ void MainWindow::wczytanie_danych_z_logu(unsigned long long czas_zmierzony){
     czytanie >> h;
     czytanie >> pitch;
 
-    //sscanf(zczytanie.c_str(),"%3s %lf %3s %lf %3s %lf %3s %lf %3s %lf %3s %lf %5s %lf %5s %lf", a,&acc_x,b,&acc_y,c,&acc_z,d,&gyr_x,e,&gyr_y,f,&gyr_z,g,&roll,h,&pitch);
-
-    //sscanf(zczytanie,"Xg: %f Yg: %f Zg: %f Xa: %f Ya: %f Za: %f Rkom: %f Pkom: %f", &acc_x,&acc_y,&acc_z,&gyr_x,&gyr_y,&gyr_z,&roll,&pitch);
 
     aktualizuj_wykres(acc_x,acc_y,acc_z,gyr_x,gyr_y,gyr_z,roll,pitch,czas_zmierzony);
 
@@ -179,12 +286,10 @@ void MainWindow::aktualizuj_wykres(float a_x,float a_y,float a_z,float g_x,float
         koniec=koniec+50;
     }
     if(koniec>50.0)poczatek = ceil(memory);
-    //std::cout<<"test: "<<test<<" ax: "<<a_x<<" "<<std::endl;
 
     //sprawdzenie czy nastąpiła zmiana osi czasy
     if(timeline_acc_x->max() != ceil(koniec)){
 
-        //std::cout<<"zmieniam wielkosc!\n";
         //jesli tak to zmieniamy zakres kazdej z nich
         this->timeline_acc_x->setRange(poczatek,ceil(koniec));
         this->timeline_acc_y->setRange(poczatek,ceil(koniec));
@@ -218,38 +323,7 @@ void MainWindow::aktualizuj_wykres(float a_x,float a_y,float a_z,float g_x,float
     this->series_gyr_wykres_z->append(test,g_z);
 
 }
-
-void MainWindow::stworz_wykresy(){
-
-    //tworzenie serii
-    //acc x,y,z
-    this->series_acc_wykres_x = new QLineSeries();
-    this->series_acc_wykres_x->append(0,0);
-
-    this->series_acc_wykres_y = new QLineSeries();
-    this->series_acc_wykres_y->append(0,0);
-
-    this->series_acc_wykres_z = new QLineSeries();
-    this->series_acc_wykres_z->append(0,0);
-
-    //gyr x, roll, y, pitch, z
-    this->series_gyr_wykres_x = new QLineSeries();
-    this->series_gyr_wykres_x->append(0,0);
-
-    this->series_kom_wykres_x = new QLineSeries();
-    this->series_kom_wykres_x->append(0,0);
-
-    this->series_gyr_wykres_y = new QLineSeries();
-    this->series_gyr_wykres_y->append(0,0);
-
-
-    this->series_kom_wykres_y = new QLineSeries();
-    this->series_kom_wykres_y->append(0,0);
-
-    this->series_gyr_wykres_z = new QLineSeries();
-    this->series_gyr_wykres_z->append(0,0);
-
-
+void MainWindow::utworz_osie(){
     //tworzenie osi czasu acc x,y,z
     this->timeline_acc_x = new QValueAxis;
     this->timeline_acc_x->setLabelFormat("%.2f");
@@ -288,43 +362,72 @@ void MainWindow::stworz_wykresy(){
 
 
     //tworzenie osi wartosci acc x,y,z
-    QValueAxis* acc_x_wartosci_y = new QValueAxis;
-    acc_x_wartosci_y->setLabelFormat("%.3f");
-    acc_x_wartosci_y->setRange(-4,4);
-    acc_x_wartosci_y->setTickCount(9);
+    this->acc_x_wartosci_y = new QValueAxis;
+    this->acc_x_wartosci_y->setLabelFormat("%.3f");
+    this->acc_x_wartosci_y->setRange(-4,4);
+    this->acc_x_wartosci_y->setTickCount(9);
 
 
-    QValueAxis* acc_y_wartosci_y = new QValueAxis;
-    acc_y_wartosci_y->setLabelFormat("%.3f");
-    acc_y_wartosci_y->setRange(-4,4);
-    acc_y_wartosci_y->setTickCount(9);
+    this->acc_y_wartosci_y = new QValueAxis;
+    this->acc_y_wartosci_y->setLabelFormat("%.3f");
+    this->acc_y_wartosci_y->setRange(-4,4);
+    this->acc_y_wartosci_y->setTickCount(9);
 
 
-    QValueAxis* acc_z_wartosci_y = new QValueAxis;
-    acc_z_wartosci_y->setLabelFormat("%.3f");
-    acc_z_wartosci_y->setRange(-4,4);
-    acc_z_wartosci_y->setTickCount(9);
+    this->acc_z_wartosci_y = new QValueAxis;
+    this->acc_z_wartosci_y->setLabelFormat("%.3f");
+    this->acc_z_wartosci_y->setRange(-4,4);
+    this->acc_z_wartosci_y->setTickCount(9);
 
 
     //tworzenie osi wartosci gyr x,y,z
-    QValueAxis* gyr_x_wartosci_y = new QValueAxis;
-    gyr_x_wartosci_y->setLabelFormat("%.2f");
-    gyr_x_wartosci_y->setRange(-360,360);
-    gyr_x_wartosci_y->setTickCount(9);
+    this->gyr_x_wartosci_y = new QValueAxis;
+    this->gyr_x_wartosci_y->setLabelFormat("%.2f");
+    this->gyr_x_wartosci_y->setRange(-360,360);
+    this->gyr_x_wartosci_y->setTickCount(9);
 
-    QValueAxis* gyr_y_wartosci_y = new QValueAxis;
-    gyr_y_wartosci_y->setLabelFormat("%.2f");
-    gyr_y_wartosci_y->setRange(-360,360);
-    gyr_y_wartosci_y->setTickCount(9);
+    this->gyr_y_wartosci_y = new QValueAxis;
+    this->gyr_y_wartosci_y->setLabelFormat("%.2f");
+    this->gyr_y_wartosci_y->setRange(-360,360);
+    this->gyr_y_wartosci_y->setTickCount(9);
+
+    this->gyr_z_wartosci_y = new QValueAxis;
+    this->gyr_z_wartosci_y->setLabelFormat("%.2f");
+    this->gyr_z_wartosci_y->setRange(-360,360);
+    this->gyr_z_wartosci_y->setTickCount(9);
+}
+
+void MainWindow::utworz_serie(){
+    //tworzenie serii
+    //acc x,y,z
+    this->series_acc_wykres_x = new QLineSeries();
+    this->series_acc_wykres_x->append(0,0);
+
+    this->series_acc_wykres_y = new QLineSeries();
+    this->series_acc_wykres_y->append(0,0);
+
+    this->series_acc_wykres_z = new QLineSeries();
+    this->series_acc_wykres_z->append(0,0);
+
+    //gyr x, roll, y, pitch, z
+    this->series_gyr_wykres_x = new QLineSeries();
+    this->series_gyr_wykres_x->append(0,0);
+
+    this->series_kom_wykres_x = new QLineSeries();
+    this->series_kom_wykres_x->append(0,0);
+
+    this->series_gyr_wykres_y = new QLineSeries();
+    this->series_gyr_wykres_y->append(0,0);
 
 
+    this->series_kom_wykres_y = new QLineSeries();
+    this->series_kom_wykres_y->append(0,0);
 
-    QValueAxis* gyr_z_wartosci_y = new QValueAxis;
-    gyr_z_wartosci_y->setLabelFormat("%.2f");
-    gyr_z_wartosci_y->setRange(-360,360);
-    gyr_z_wartosci_y->setTickCount(9);
+    this->series_gyr_wykres_z = new QLineSeries();
+    this->series_gyr_wykres_z->append(0,0);
+}
 
-
+void MainWindow::utworz_wykresy(){
     //stworzenie wykresu liniowego z serii - acc_x
     this->line_acc_wykres_x = new QChart();
 
@@ -340,7 +443,6 @@ void MainWindow::stworz_wykresy(){
 
     //wylaczenie legendy
     this->line_acc_wykres_x->legend()->hide();
-    //this->line_acc_wykres_x-> createDefaultAxes();
 
 
 
@@ -356,7 +458,6 @@ void MainWindow::stworz_wykresy(){
 
     this->line_acc_wykres_y->legend()->hide();
 
-    //this->line_acc_wykres_y->createDefaultAxes();
 
 
     //acc_z
@@ -371,7 +472,6 @@ void MainWindow::stworz_wykresy(){
 
     this->line_acc_wykres_z->legend()->hide();
 
-    //this->line_acc_wykres_z->createDefaultAxes();
 
 
     //gyr_x
@@ -386,8 +486,6 @@ void MainWindow::stworz_wykresy(){
     this->line_gyr_wykres_x->setTitle("Zczytania wzdłuż osi X");
 
     this->line_gyr_wykres_x->legend()->hide();
-
-    //this->line_gyr_wykres_x->createDefaultAxes();
 
 
 
@@ -405,8 +503,6 @@ void MainWindow::stworz_wykresy(){
 
     this->line_gyr_wykres_y->legend()->hide();
 
-    //this->line_gyr_wykres_y->createDefaultAxes();
-
 
 
 
@@ -421,31 +517,9 @@ void MainWindow::stworz_wykresy(){
     this->line_gyr_wykres_z->setTitle("Zczytania wzdłuż osi Z");
 
     this->line_gyr_wykres_z->legend()->hide();
+}
 
-    //this->line_gyr_wykres_z->createDefaultAxes();
-
-
-
-
-    //laczenie osi czasu z seriami danych
-    this->series_acc_wykres_x->attachAxis(this->timeline_acc_x);
-    this->series_acc_wykres_y->attachAxis(this->timeline_acc_y);
-    this->series_acc_wykres_z->attachAxis(this->timeline_acc_z);
-    this->series_gyr_wykres_x->attachAxis(this->timeline_gyr_x);
-    this->series_kom_wykres_x->attachAxis(this->timeline_gyr_x);
-    this->series_gyr_wykres_y->attachAxis(this->timeline_gyr_y);
-    this->series_kom_wykres_y->attachAxis(this->timeline_gyr_y);
-    this->series_gyr_wykres_z->attachAxis(this->timeline_gyr_z);
-
-    //laczenie osi wartosci z seriami danych
-    this->series_acc_wykres_x->attachAxis(acc_x_wartosci_y);
-    this->series_acc_wykres_y->attachAxis(acc_y_wartosci_y);
-    this->series_acc_wykres_z->attachAxis(acc_z_wartosci_y);
-    this->series_gyr_wykres_x->attachAxis(gyr_x_wartosci_y);
-    this->series_kom_wykres_x->attachAxis(gyr_x_wartosci_y);
-    this->series_gyr_wykres_y->attachAxis(gyr_y_wartosci_y);
-    this->series_kom_wykres_y->attachAxis(gyr_y_wartosci_y);
-    this->series_gyr_wykres_z->attachAxis(gyr_z_wartosci_y);
+void MainWindow::wizualizuj_wykresy(){
 
     //wyswietlanie utworzonych wykresow - acc_x
     this->view_acc_wykres_x = new QChartView(this->line_acc_wykres_x);
@@ -476,35 +550,53 @@ void MainWindow::stworz_wykresy(){
     this->view_gyr_wykres_z = new QChartView(this->line_gyr_wykres_z);
     this->view_gyr_wykres_z->setRenderHint(QPainter::Antialiasing);
     this->view_gyr_wykres_z->setParent(ui->gyr_wykres_z);
+}
 
-    /*
-    //dostosowanie startowego rozmiaru wykresow
-    //QResizeEvent* start1;
-    //start1 = new QResizeEvent(view_acc_wykres_x->parentWidget()->size(),view_acc_wykres_x->size());
-    this->view_acc_wykres_x->setGeometry(this->view_acc_wykres_x->parentWidget()->geometry());
+void MainWindow::przypnij_serie_do_osi(){
+    //laczenie osi czasu z seriami danych
+    this->series_acc_wykres_x->attachAxis(this->timeline_acc_x);
+    this->series_acc_wykres_y->attachAxis(this->timeline_acc_y);
+    this->series_acc_wykres_z->attachAxis(this->timeline_acc_z);
+    this->series_gyr_wykres_x->attachAxis(this->timeline_gyr_x);
+    this->series_kom_wykres_x->attachAxis(this->timeline_gyr_x);
+    this->series_gyr_wykres_y->attachAxis(this->timeline_gyr_y);
+    this->series_kom_wykres_y->attachAxis(this->timeline_gyr_y);
+    this->series_gyr_wykres_z->attachAxis(this->timeline_gyr_z);
 
-    //QResizeEvent* start2;
-    //start2 = new QResizeEvent(view_acc_wykres_y->parentWidget()->size(),view_acc_wykres_y->size());
-    this->view_acc_wykres_y->setGeometry(this->view_acc_wykres_y->parentWidget()->geometry());
+    //laczenie osi wartosci z seriami danych
+    this->series_acc_wykres_x->attachAxis(acc_x_wartosci_y);
+    this->series_acc_wykres_y->attachAxis(acc_y_wartosci_y);
+    this->series_acc_wykres_z->attachAxis(acc_z_wartosci_y);
+    this->series_gyr_wykres_x->attachAxis(gyr_x_wartosci_y);
+    this->series_kom_wykres_x->attachAxis(gyr_x_wartosci_y);
+    this->series_gyr_wykres_y->attachAxis(gyr_y_wartosci_y);
+    this->series_kom_wykres_y->attachAxis(gyr_y_wartosci_y);
+    this->series_gyr_wykres_z->attachAxis(gyr_z_wartosci_y);
+}
 
-    //QResizeEvent* start3;
-    //start3 = new QResizeEvent(view_acc_wykres_z->parentWidget()->size(),view_acc_wykres_z->size());
-    this->view_acc_wykres_z->setGeometry(this->view_acc_wykres_z->parentWidget()->geometry());
+void MainWindow::stworz_wykresy(){
 
-    //QResizeEvent* start4;
-    //start4 = new QResizeEvent(view_gyr_wykres_x->parentWidget()->size(),view_gyr_wykres_x->size());
-    this->view_gyr_wykres_x->setGeometry(this->view_gyr_wykres_x->parentWidget()->geometry());
+    this->utworz_serie();
 
-    //QResizeEvent* start5;
-    //start5 = new QResizeEvent(view_gyr_wykres_y->parentWidget()->size(),view_gyr_wykres_y->size());
-    this->view_gyr_wykres_y->setGeometry(this->view_gyr_wykres_y->parentWidget()->geometry());
+    this->utworz_osie();
 
-    //QResizeEvent* start6;
-    //tart6 = new QResizeEvent(view_gyr_wykres_z->parentWidget()->size(),view_gyr_wykres_z->size());
-    this->view_gyr_wykres_z->setGeometry(this->view_gyr_wykres_z->parentWidget()->geometry());
-    QResizeEvent* start;
-    start = new QResizeEvent(this->size(),this->size());
-    QMainWindow::resizeEvent(start);*/
+    this->utworz_wykresy();
+
+    this->przypnij_serie_do_osi();
+
+    this->wizualizuj_wykresy();
+
+    //dostosowanie startowego rozmiaru wykresow - acc
+    ui->acc_wykres_x->setGeometry(12,30,274,211);
+    ui->acc_wykres_y->setGeometry(292,30,274,211);
+    ui->acc_wykres_z->setGeometry(572,30,274,211);
+
+    //gyr
+    ui->gyr_wykres_x->setGeometry(12,30,274,210);
+    ui->gyr_wykres_y->setGeometry(292,30,274,210);
+    ui->gyr_wykres_z->setGeometry(572,30,274,210);
+
+
 }
 void MainWindow::resizeEvent(QResizeEvent* event){
 
