@@ -31,7 +31,10 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
         main.cpp \
-        mainwindow.cpp
+        mainwindow.cpp \
+    diody.cpp \
+    bluetooth.cpp \
+    wykresy.cpp
 
 HEADERS += \
         mainwindow.h

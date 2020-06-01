@@ -1,6 +1,8 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 
+#include "ui_mainwindow.h"
+
 #include <QMainWindow>
 
 //Tworzenie wykresow:
@@ -41,6 +43,9 @@ public:
 
     //tworzenie diody
     void tworz_diode();
+    //zmiana kolorow diod
+    void zapal_zielone();
+    void zapal_czerwone();
 
     //tworzenie wykresow
     void stworz_wykresy();
