@@ -38,6 +38,9 @@ MainWindow::MainWindow(QWidget *parent)
     //ustawienie menu glownego jako startowego widgetu
     ui->tabWidget->setCurrentWidget(ui->tab);
 
+    //zmiana rozmiaru okna aplikacji
+    this->resize(1060,690);
+
 }
 
 
@@ -164,23 +167,6 @@ void MainWindow::aktualizuj_wykres(float a_x,float a_y,float a_z,float g_x,float
     //gyrz
     this->series_gyr_wykres_z->append(test,g_z);
 
-}
-
-void MainWindow::resizeEvent(QResizeEvent* event){
-
-    QMainWindow::resizeEvent(event);
-
-    //dostosowanie wielkosci wykresow do wielkosci parent widgetu
-    //podczas zmiany rozmiaru okienka
-    //acc x,y,z
-    this->view_acc_wykres_x->resize(this->view_acc_wykres_x->parentWidget()->size());
-    this->view_acc_wykres_y->resize(this->view_acc_wykres_y->parentWidget()->size());
-    this->view_acc_wykres_z->resize(this->view_acc_wykres_z->parentWidget()->size());
-
-    //gyr x,y,z
-    this->view_gyr_wykres_x->resize(this->view_gyr_wykres_x->parentWidget()->size());
-    this->view_gyr_wykres_y->resize(this->view_gyr_wykres_y->parentWidget()->size());
-    this->view_gyr_wykres_z->resize(this->view_gyr_wykres_z->parentWidget()->size());
 }
 
 MainWindow::~MainWindow()

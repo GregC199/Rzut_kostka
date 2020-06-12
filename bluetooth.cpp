@@ -13,11 +13,13 @@ void MainWindow::obsluga_bt(){
     connect(this->socket, SIGNAL(connected()),this, SLOT(connectionEstablished()));
     connect(this->socket, SIGNAL(disconnected()),this, SLOT(connectionInterrupted()));
     connect(this->socket, SIGNAL(readyRead()),this, SLOT(socketReadyToRead()));
+    ui->button_rozlacz->setEnabled(false);
 }
 
 void MainWindow::on_button_wyszukaj_clicked()
 {
     ui->list_urzadzen->clear();
+    ui->button_wyszukaj->setEnabled(false);
 
     this->addToLogs("Szukam urzadzen...");
     ui->button_wyszukaj->setEnabled(false);
@@ -38,6 +40,8 @@ void MainWindow::captureDeviceProperties(const QBluetoothDeviceInfo &device) {
 void MainWindow::searchingFinished() {
   ui->button_wyszukaj->setEnabled(true);
   this->addToLogs("Wyszukiwanie zakonczone");
+  ui->button_wyszukaj->setEnabled(true);
+
 }
 
 void MainWindow::on_button_polacz_clicked()
@@ -73,6 +77,10 @@ void MainWindow::connectionEstablished() {
 
     this->addToLogs("Polaczenie ustanowione");
 
+    //deaktywacja przycisku połącz
+    ui->button_polacz->setEnabled(false);
+    ui->button_rozlacz->setEnabled(true);
+
     //aktualizacja informacji bluetooth
     informacje_bluetooth();
 
@@ -84,6 +92,8 @@ void MainWindow::connectionEstablished() {
 
 void MainWindow::connectionInterrupted() {
     this->addToLogs("Polaczenie przerwane");
+    ui->button_polacz->setEnabled(true);
+    ui->button_rozlacz->setEnabled(false);
 
     //reset informacji o polaczeniu do poczatkowych wartosci
     inicjalizuj_info();

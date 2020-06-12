@@ -10,6 +10,7 @@
 #include <QChartView>
 #include <QLineSeries>
 #include <QResizeEvent>
+#include <QFont>
 
 //polaczenie z plytka
 #include <QBluetoothDeviceDiscoveryAgent>
@@ -167,6 +168,6 @@ private:
     QString typ_polaczenia;
     QString data_polaczenia;
 protected:
-    void resizeEvent(QResizeEvent* event);
+
 };
 #endif // MAINWINDOW_H

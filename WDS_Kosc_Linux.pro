@@ -34,10 +34,12 @@ SOURCES += \
         mainwindow.cpp \
     diody.cpp \
     bluetooth.cpp \
-    wykresy.cpp
+    wykresy.cpp \
+    wykres.cpp
 
 HEADERS += \
-        mainwindow.h
+        mainwindow.h \
+    wykres.h
 
 FORMS += \
         mainwindow.ui

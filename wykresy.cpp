@@ -1,41 +1,52 @@
 #include "mainwindow.h"
 
 void MainWindow::utworz_osie(){
+
+    //zmiana rozmiarow czcionki w celu poprawienia widoczności wartości na osiach
+    QFont czcionka_osi;
+    czcionka_osi.setPixelSize(9);
+
     //tworzenie osi czasu acc x,y,z
     this->timeline_acc_x = new QValueAxis;
     this->timeline_acc_x->setLabelFormat("%.2f");
     this->timeline_acc_x->setRange(0,10);
     this->timeline_acc_x->setTickCount(6);
+    this->timeline_acc_x->setLabelsFont(czcionka_osi);
 
 
     this->timeline_acc_y = new QValueAxis;
     this->timeline_acc_y->setLabelFormat("%.2f");
     this->timeline_acc_y->setRange(0,10);
     this->timeline_acc_y->setTickCount(6);
+    this->timeline_acc_y->setLabelsFont(czcionka_osi);
 
 
     this->timeline_acc_z = new QValueAxis;
     this->timeline_acc_z->setLabelFormat("%.2f");
     this->timeline_acc_z->setRange(0,10);
     this->timeline_acc_z->setTickCount(6);
+    this->timeline_acc_z->setLabelsFont(czcionka_osi);
 
     //tworzenie osi czasu gyr x,y,z
     this->timeline_gyr_x = new QValueAxis;
     this->timeline_gyr_x->setLabelFormat("%.2f");
     this->timeline_gyr_x->setRange(0,10);
     this->timeline_gyr_x->setTickCount(6);
+    this->timeline_gyr_x->setLabelsFont(czcionka_osi);
 
 
     this->timeline_gyr_y = new QValueAxis;
     this->timeline_gyr_y->setLabelFormat("%.2f");
     this->timeline_gyr_y->setRange(0,10);
     this->timeline_gyr_y->setTickCount(6);
+    this->timeline_gyr_y->setLabelsFont(czcionka_osi);
 
 
     this->timeline_gyr_z = new QValueAxis;
     this->timeline_gyr_z->setLabelFormat("%.2f");
     this->timeline_gyr_z->setRange(0,10);
     this->timeline_gyr_z->setTickCount(6);
+    this->timeline_gyr_z->setLabelsFont(czcionka_osi);
 
 
     //tworzenie osi wartosci acc x,y,z
@@ -43,18 +54,21 @@ void MainWindow::utworz_osie(){
     this->acc_x_wartosci_y->setLabelFormat("%.3f");
     this->acc_x_wartosci_y->setRange(-4,4);
     this->acc_x_wartosci_y->setTickCount(9);
+    this->acc_x_wartosci_y->setLabelsFont(czcionka_osi);
 
 
     this->acc_y_wartosci_y = new QValueAxis;
     this->acc_y_wartosci_y->setLabelFormat("%.3f");
     this->acc_y_wartosci_y->setRange(-4,4);
     this->acc_y_wartosci_y->setTickCount(9);
+    this->acc_y_wartosci_y->setLabelsFont(czcionka_osi);
 
 
     this->acc_z_wartosci_y = new QValueAxis;
     this->acc_z_wartosci_y->setLabelFormat("%.3f");
     this->acc_z_wartosci_y->setRange(-4,4);
     this->acc_z_wartosci_y->setTickCount(9);
+    this->acc_z_wartosci_y->setLabelsFont(czcionka_osi);
 
 
     //tworzenie osi wartosci gyr x,y,z
@@ -62,16 +76,19 @@ void MainWindow::utworz_osie(){
     this->gyr_x_wartosci_y->setLabelFormat("%.2f");
     this->gyr_x_wartosci_y->setRange(-360,360);
     this->gyr_x_wartosci_y->setTickCount(9);
+    this->gyr_x_wartosci_y->setLabelsFont(czcionka_osi);
 
     this->gyr_y_wartosci_y = new QValueAxis;
     this->gyr_y_wartosci_y->setLabelFormat("%.2f");
     this->gyr_y_wartosci_y->setRange(-360,360);
     this->gyr_y_wartosci_y->setTickCount(9);
+    this->gyr_y_wartosci_y->setLabelsFont(czcionka_osi);
 
     this->gyr_z_wartosci_y = new QValueAxis;
     this->gyr_z_wartosci_y->setLabelFormat("%.2f");
     this->gyr_z_wartosci_y->setRange(-360,360);
     this->gyr_z_wartosci_y->setTickCount(9);
+    this->gyr_z_wartosci_y->setLabelsFont(czcionka_osi);
 }
 
 void MainWindow::utworz_serie(){
@@ -208,6 +225,7 @@ void MainWindow::wizualizuj_wykresy(){
     this->view_acc_wykres_y->setRenderHint(QPainter::Antialiasing);
     this->view_acc_wykres_y->setParent(ui->acc_wykres_y);
 
+
     //acc_z
     this->view_acc_wykres_z = new QChartView(this->line_acc_wykres_z);
     this->view_acc_wykres_z->setRenderHint(QPainter::Antialiasing);
@@ -264,14 +282,14 @@ void MainWindow::stworz_wykresy(){
     this->wizualizuj_wykresy();
 
     //dostosowanie startowego rozmiaru wykresow - acc
-    ui->acc_wykres_x->setGeometry(12,30,274,211);
-    ui->acc_wykres_y->setGeometry(292,30,274,211);
-    ui->acc_wykres_z->setGeometry(572,30,274,211);
+    ui->acc_wykres_x->setGeometry(9,9,256,192);
+    ui->acc_wykres_y->setGeometry(9,9,256,192);
+    ui->acc_wykres_z->setGeometry(9,9,256,192);
 
     //gyr
-    ui->gyr_wykres_x->setGeometry(12,30,274,210);
-    ui->gyr_wykres_y->setGeometry(292,30,274,210);
-    ui->gyr_wykres_z->setGeometry(572,30,274,210);
+    ui->gyr_wykres_x->setGeometry(9,9,256,192);
+    ui->gyr_wykres_y->setGeometry(9,9,256,192);
+    ui->gyr_wykres_z->setGeometry(9,9,256,192);
 
 
 }
