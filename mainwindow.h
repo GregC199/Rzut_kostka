@@ -25,13 +25,24 @@
 #include <iostream>
 #include <stdio.h>
 #include <fstream>
+#include <math.h>
 
+//kosc
+#include <QOpenGLWidget>
+#include <QOpenGLFunctions>
+#include <QtOpenGL>
+#include <QOpenGLBuffer>
+#include <QSurfaceFormat>
+#include <QOpenGLShaderProgram>
+#include <QOpenGLTexture>
+#include <QMouseEvent>
 
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
 QT_END_NAMESPACE
 
+class WizualizacjaKosc;
 
 
 class MainWindow : public QMainWindow
@@ -58,7 +69,7 @@ public:
     void informacje_bluetooth();
 
     //aktualizacja danych na wykresie
-    void aktualizuj_wykres(float a_x,float a_y,float a_z,float g_x,float g_y,float g_z,float rkom,float pkom, unsigned long long czas);
+    void aktualizuj_wykres(float a_x,float a_y,float a_z,float g_x,float g_y,double g_z,double rkom,double pkom, unsigned long long czas);
 
     //wczytanie danych z pliku bedacego logiem polaczenia bluetooth
     void wczytanie_danych_z_logu(unsigned long long czas_zmierzony);
@@ -74,7 +85,14 @@ public:
 
     void przypnij_serie_do_osi();
 
+    //kostka
+    void rotuj_kostke(double  xa, double  ya, double  za);
+    void przemiesc_kostke();
+
 private slots:
+
+    //aktualizacja obrazku
+    void aktualizuj_obraz(int val);
 
     //obsluga dzialania polaczenia z plytka
     void captureDeviceProperties(const QBluetoothDeviceInfo &device);
@@ -94,6 +112,17 @@ private slots:
 
 
 private:
+
+    //kosc
+    WizualizacjaKosc *currentGlWidget;
+
+    float x_mem = 0.0;
+    float y_mem = 0.0;
+    float z_mem = 0.0;
+    QTime dt;
+    double x_buff = 0.0;
+    double y_buff = 0.0;
+    double z_buff = 0.0;
 
     //obsluga dzialania wykresow
     //wyswietlanie wykresow:

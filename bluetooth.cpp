@@ -13,6 +13,7 @@ void MainWindow::obsluga_bt(){
     connect(this->socket, SIGNAL(connected()),this, SLOT(connectionEstablished()));
     connect(this->socket, SIGNAL(disconnected()),this, SLOT(connectionInterrupted()));
     connect(this->socket, SIGNAL(readyRead()),this, SLOT(socketReadyToRead()));
+
     ui->button_rozlacz->setEnabled(false);
 }
 
@@ -66,6 +67,12 @@ void MainWindow::on_button_polacz_clicked()
 
 void MainWindow::on_button_rozlacz_clicked()
 {
+    QString wyslij_wiad;
+
+    wyslij_wiad = "0\n";
+
+    this->socket->write(wyslij_wiad.toStdString().c_str());
+
     this->addToLogs("Zamykam polaczenie");
     this->socket->disconnectFromService();
 }
@@ -76,6 +83,15 @@ void MainWindow::connectionEstablished() {
     this->data_polaczenia = QDateTime::currentDateTime().toString("yyyy.MM.dd hh:mm:ss");
 
     this->addToLogs("Polaczenie ustanowione");
+
+    QString wyslij_wiad;
+
+    wyslij_wiad = "1\n";
+
+    //rozpoczynamy odliczanie
+     dt.start();
+
+    this->socket->write(wyslij_wiad.toStdString().c_str());
 
     //deaktywacja przycisku połącz
     ui->button_polacz->setEnabled(false);

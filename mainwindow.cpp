@@ -8,6 +8,13 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
 
+    //kosc obsluga
+    currentGlWidget = ui->wizualizacja;
+
+    connect(ui->Rotx, SIGNAL(valueChanged(int)),ui->wizualizacja, SLOT(obrocX(int)));
+    connect(ui->Roty, SIGNAL(valueChanged(int)),ui->wizualizacja, SLOT(obrocY(int)));
+    connect(ui->Rotz, SIGNAL(valueChanged(int)),ui->wizualizacja, SLOT(obrocZ(int)));
+
     //tworzenie diody
     tworz_diode();
 
@@ -41,8 +48,8 @@ MainWindow::MainWindow(QWidget *parent)
     //zmiana rozmiaru okna aplikacji
     this->resize(1060,690);
 
-}
 
+}
 
 void MainWindow::inicjalizuj_info(){
 
@@ -84,15 +91,16 @@ void MainWindow::informacje_bluetooth(){
 void MainWindow::wczytanie_danych_z_logu(unsigned long long czas_zmierzony){
 
     //zmienne pomocnicze do realizacji zczytywania danych
-    char a[10],b[10],c[10],d[10],e[10],f[10],g[10],h[10];
+    char a[10],b[10],c[10],d[10],e[10],f[10],g[10],h[10],i[10];
     float  acc_x = 0.0;
     float  acc_y = 0.0;
     float  acc_z = 0.0;
     float  gyr_x = 0.0;
     float  gyr_y = 0.0;
-    float  gyr_z = 0.0;
-    float  roll = 0.0;
-    float  pitch = 0.0;
+    double  gyr_z = 0.0;
+    double  roll = 0.0;
+    double  pitch = 0.0;
+    int  button = 0;
 
     //zczytywanie kolejnych danych z pliku
     czytanie >> a;
@@ -111,13 +119,23 @@ void MainWindow::wczytanie_danych_z_logu(unsigned long long czas_zmierzony){
     czytanie >> roll;
     czytanie >> h;
     czytanie >> pitch;
+    czytanie >> i;
+    czytanie >> button;
 
 
     aktualizuj_wykres(acc_x,acc_y,acc_z,gyr_x,gyr_y,gyr_z,roll,pitch,czas_zmierzony);
 
+    rotuj_kostke(roll,pitch,gyr_z);
+
+    if(button == 1){
+
+        przemiesc_kostke();
+
+    }
+
 }
 
-void MainWindow::aktualizuj_wykres(float a_x,float a_y,float a_z,float g_x,float g_y,float g_z,float rkom,float pkom, unsigned long long czas){
+void MainWindow::aktualizuj_wykres(float a_x,float a_y,float a_z,float g_x,float g_y,double g_z,double rkom,double pkom, unsigned long long czas){
 
     //os czasu - zmienne pomocnicze sluzace do jej przesuwania
     long double test = ((long double)czas)/1000;

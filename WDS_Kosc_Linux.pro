@@ -10,7 +10,10 @@ QT       += core gui
 QT += bluetooth
 #wykresy
 QT += charts
-
+#kosc
+QT += opengl
+#LIBS     += -lOpengl32
+#LIBS += -lglut -lGLU
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -22,6 +25,8 @@ TEMPLATE = app
 # depend on your compiler). Please consult the documentation of the
 # deprecated API in order to know how to port your code away from it.
 DEFINES += QT_DEPRECATED_WARNINGS
+
+
 
 # You can also make your code fail to compile if you use deprecated APIs.
 # In order to do so, uncomment the following line.
@@ -35,11 +40,14 @@ SOURCES += \
     diody.cpp \
     bluetooth.cpp \
     wykresy.cpp \
-    wykres.cpp
+    wykres.cpp \
+    kosc.cpp \
+    wizualizacjakosc.cpp
 
 HEADERS += \
         mainwindow.h \
-    wykres.h
+    wykres.h \
+    wizualizacjakosc.h
 
 FORMS += \
         mainwindow.ui
