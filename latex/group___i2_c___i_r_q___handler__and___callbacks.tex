@@ -1,0 +1,114 @@
+\hypertarget{group___i2_c___i_r_q___handler__and___callbacks}{}\section{I\+RQ Handler and Callbacks}
+\label{group___i2_c___i_r_q___handler__and___callbacks}\index{I\+R\+Q Handler and Callbacks@{I\+R\+Q Handler and Callbacks}}
+Diagram współpracy dla I\+RQ Handler and Callbacks\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{group___i2_c___i_r_q___handler__and___callbacks}
+\end{center}
+\end{figure}
+\subsection*{Funkcje}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{group___i2_c___i_r_q___handler__and___callbacks_ga0cd3cc56c83b85a65e31c945c854d9d5}{H\+A\+L\+\_\+\+I2\+C\+\_\+\+E\+V\+\_\+\+I\+R\+Q\+Handler} (\hyperlink{group___i2_c__handle___structure__definition_ga68e9f45c2fd2161fb827ccdeabb55ea5}{I2\+C\+\_\+\+Handle\+Type\+Def} $\ast$hi2c)
+\item 
+void \hyperlink{group___i2_c___i_r_q___handler__and___callbacks_ga78739c0d57d55034a9c8bc39c8ee6bc2}{H\+A\+L\+\_\+\+I2\+C\+\_\+\+E\+R\+\_\+\+I\+R\+Q\+Handler} (\hyperlink{group___i2_c__handle___structure__definition_ga68e9f45c2fd2161fb827ccdeabb55ea5}{I2\+C\+\_\+\+Handle\+Type\+Def} $\ast$hi2c)
+\item 
+void \hyperlink{group___i2_c___i_r_q___handler__and___callbacks_gaa258e0eb52bbc34002a46dc2db89a84b}{H\+A\+L\+\_\+\+I2\+C\+\_\+\+Master\+Tx\+Cplt\+Callback} (\hyperlink{group___i2_c__handle___structure__definition_ga68e9f45c2fd2161fb827ccdeabb55ea5}{I2\+C\+\_\+\+Handle\+Type\+Def} $\ast$hi2c)
+\item 
+void \hyperlink{group___i2_c___i_r_q___handler__and___callbacks_ga5782358f977ddf450b203fc075833a1d}{H\+A\+L\+\_\+\+I2\+C\+\_\+\+Master\+Rx\+Cplt\+Callback} (\hyperlink{group___i2_c__handle___structure__definition_ga68e9f45c2fd2161fb827ccdeabb55ea5}{I2\+C\+\_\+\+Handle\+Type\+Def} $\ast$hi2c)
+\item 
+void \hyperlink{group___i2_c___i_r_q___handler__and___callbacks_ga7e086b3ee67187ea072aec6fb4d52aad}{H\+A\+L\+\_\+\+I2\+C\+\_\+\+Slave\+Tx\+Cplt\+Callback} (\hyperlink{group___i2_c__handle___structure__definition_ga68e9f45c2fd2161fb827ccdeabb55ea5}{I2\+C\+\_\+\+Handle\+Type\+Def} $\ast$hi2c)
+\item 
+void \hyperlink{group___i2_c___i_r_q___handler__and___callbacks_gae23a5b1ce68867c35093ff2b5931e9a0}{H\+A\+L\+\_\+\+I2\+C\+\_\+\+Slave\+Rx\+Cplt\+Callback} (\hyperlink{group___i2_c__handle___structure__definition_ga68e9f45c2fd2161fb827ccdeabb55ea5}{I2\+C\+\_\+\+Handle\+Type\+Def} $\ast$hi2c)
+\item 
+void \hyperlink{group___i2_c___i_r_q___handler__and___callbacks_ga3b2a6a0ff585d8e529a73ba7d291c92d}{H\+A\+L\+\_\+\+I2\+C\+\_\+\+Addr\+Callback} (\hyperlink{group___i2_c__handle___structure__definition_ga68e9f45c2fd2161fb827ccdeabb55ea5}{I2\+C\+\_\+\+Handle\+Type\+Def} $\ast$hi2c, uint8\+\_\+t Transfer\+Direction, uint16\+\_\+t Addr\+Match\+Code)
+\item 
+void \hyperlink{group___i2_c___i_r_q___handler__and___callbacks_ga22544d1e6a14392cd5fe41e4e4f4cc96}{H\+A\+L\+\_\+\+I2\+C\+\_\+\+Listen\+Cplt\+Callback} (\hyperlink{group___i2_c__handle___structure__definition_ga68e9f45c2fd2161fb827ccdeabb55ea5}{I2\+C\+\_\+\+Handle\+Type\+Def} $\ast$hi2c)
+\item 
+void \hyperlink{group___i2_c___i_r_q___handler__and___callbacks_ga874f6104d2cdbced9f2ab6e941ec58f0}{H\+A\+L\+\_\+\+I2\+C\+\_\+\+Mem\+Tx\+Cplt\+Callback} (\hyperlink{group___i2_c__handle___structure__definition_ga68e9f45c2fd2161fb827ccdeabb55ea5}{I2\+C\+\_\+\+Handle\+Type\+Def} $\ast$hi2c)
+\item 
+void \hyperlink{group___i2_c___i_r_q___handler__and___callbacks_gac16a95413b35f05c5ce725fefd8531a5}{H\+A\+L\+\_\+\+I2\+C\+\_\+\+Mem\+Rx\+Cplt\+Callback} (\hyperlink{group___i2_c__handle___structure__definition_ga68e9f45c2fd2161fb827ccdeabb55ea5}{I2\+C\+\_\+\+Handle\+Type\+Def} $\ast$hi2c)
+\item 
+void \hyperlink{group___i2_c___i_r_q___handler__and___callbacks_ga4d5338cd64a656dfdc4154773bc4f05d}{H\+A\+L\+\_\+\+I2\+C\+\_\+\+Error\+Callback} (\hyperlink{group___i2_c__handle___structure__definition_ga68e9f45c2fd2161fb827ccdeabb55ea5}{I2\+C\+\_\+\+Handle\+Type\+Def} $\ast$hi2c)
+\item 
+void \hyperlink{group___i2_c___i_r_q___handler__and___callbacks_gaa4c2f59ea15698a1490401e5bbc3f296}{H\+A\+L\+\_\+\+I2\+C\+\_\+\+Abort\+Cplt\+Callback} (\hyperlink{group___i2_c__handle___structure__definition_ga68e9f45c2fd2161fb827ccdeabb55ea5}{I2\+C\+\_\+\+Handle\+Type\+Def} $\ast$hi2c)
+\end{DoxyCompactItemize}
+
+
+\subsection{Opis szczegółowy}
+
+
+\subsection{Dokumentacja funkcji}
+\mbox{\Hypertarget{group___i2_c___i_r_q___handler__and___callbacks_gaa4c2f59ea15698a1490401e5bbc3f296}\label{group___i2_c___i_r_q___handler__and___callbacks_gaa4c2f59ea15698a1490401e5bbc3f296}} 
+\index{I\+R\+Q Handler and Callbacks@{I\+R\+Q Handler and Callbacks}!H\+A\+L\+\_\+\+I2\+C\+\_\+\+Abort\+Cplt\+Callback@{H\+A\+L\+\_\+\+I2\+C\+\_\+\+Abort\+Cplt\+Callback}}
+\index{H\+A\+L\+\_\+\+I2\+C\+\_\+\+Abort\+Cplt\+Callback@{H\+A\+L\+\_\+\+I2\+C\+\_\+\+Abort\+Cplt\+Callback}!I\+R\+Q Handler and Callbacks@{I\+R\+Q Handler and Callbacks}}
+\subsubsection{\texorpdfstring{H\+A\+L\+\_\+\+I2\+C\+\_\+\+Abort\+Cplt\+Callback()}{HAL\_I2C\_AbortCpltCallback()}}
+{\footnotesize\ttfamily void H\+A\+L\+\_\+\+I2\+C\+\_\+\+Abort\+Cplt\+Callback (\begin{DoxyParamCaption}\item[{\hyperlink{group___i2_c__handle___structure__definition_ga68e9f45c2fd2161fb827ccdeabb55ea5}{I2\+C\+\_\+\+Handle\+Type\+Def} $\ast$}]{hi2c }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{group___i2_c___i_r_q___handler__and___callbacks_ga3b2a6a0ff585d8e529a73ba7d291c92d}\label{group___i2_c___i_r_q___handler__and___callbacks_ga3b2a6a0ff585d8e529a73ba7d291c92d}} 
+\index{I\+R\+Q Handler and Callbacks@{I\+R\+Q Handler and Callbacks}!H\+A\+L\+\_\+\+I2\+C\+\_\+\+Addr\+Callback@{H\+A\+L\+\_\+\+I2\+C\+\_\+\+Addr\+Callback}}
+\index{H\+A\+L\+\_\+\+I2\+C\+\_\+\+Addr\+Callback@{H\+A\+L\+\_\+\+I2\+C\+\_\+\+Addr\+Callback}!I\+R\+Q Handler and Callbacks@{I\+R\+Q Handler and Callbacks}}
+\subsubsection{\texorpdfstring{H\+A\+L\+\_\+\+I2\+C\+\_\+\+Addr\+Callback()}{HAL\_I2C\_AddrCallback()}}
+{\footnotesize\ttfamily void H\+A\+L\+\_\+\+I2\+C\+\_\+\+Addr\+Callback (\begin{DoxyParamCaption}\item[{\hyperlink{group___i2_c__handle___structure__definition_ga68e9f45c2fd2161fb827ccdeabb55ea5}{I2\+C\+\_\+\+Handle\+Type\+Def} $\ast$}]{hi2c,  }\item[{uint8\+\_\+t}]{Transfer\+Direction,  }\item[{uint16\+\_\+t}]{Addr\+Match\+Code }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{group___i2_c___i_r_q___handler__and___callbacks_ga78739c0d57d55034a9c8bc39c8ee6bc2}\label{group___i2_c___i_r_q___handler__and___callbacks_ga78739c0d57d55034a9c8bc39c8ee6bc2}} 
+\index{I\+R\+Q Handler and Callbacks@{I\+R\+Q Handler and Callbacks}!H\+A\+L\+\_\+\+I2\+C\+\_\+\+E\+R\+\_\+\+I\+R\+Q\+Handler@{H\+A\+L\+\_\+\+I2\+C\+\_\+\+E\+R\+\_\+\+I\+R\+Q\+Handler}}
+\index{H\+A\+L\+\_\+\+I2\+C\+\_\+\+E\+R\+\_\+\+I\+R\+Q\+Handler@{H\+A\+L\+\_\+\+I2\+C\+\_\+\+E\+R\+\_\+\+I\+R\+Q\+Handler}!I\+R\+Q Handler and Callbacks@{I\+R\+Q Handler and Callbacks}}
+\subsubsection{\texorpdfstring{H\+A\+L\+\_\+\+I2\+C\+\_\+\+E\+R\+\_\+\+I\+R\+Q\+Handler()}{HAL\_I2C\_ER\_IRQHandler()}}
+{\footnotesize\ttfamily void H\+A\+L\+\_\+\+I2\+C\+\_\+\+E\+R\+\_\+\+I\+R\+Q\+Handler (\begin{DoxyParamCaption}\item[{\hyperlink{group___i2_c__handle___structure__definition_ga68e9f45c2fd2161fb827ccdeabb55ea5}{I2\+C\+\_\+\+Handle\+Type\+Def} $\ast$}]{hi2c }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{group___i2_c___i_r_q___handler__and___callbacks_ga4d5338cd64a656dfdc4154773bc4f05d}\label{group___i2_c___i_r_q___handler__and___callbacks_ga4d5338cd64a656dfdc4154773bc4f05d}} 
+\index{I\+R\+Q Handler and Callbacks@{I\+R\+Q Handler and Callbacks}!H\+A\+L\+\_\+\+I2\+C\+\_\+\+Error\+Callback@{H\+A\+L\+\_\+\+I2\+C\+\_\+\+Error\+Callback}}
+\index{H\+A\+L\+\_\+\+I2\+C\+\_\+\+Error\+Callback@{H\+A\+L\+\_\+\+I2\+C\+\_\+\+Error\+Callback}!I\+R\+Q Handler and Callbacks@{I\+R\+Q Handler and Callbacks}}
+\subsubsection{\texorpdfstring{H\+A\+L\+\_\+\+I2\+C\+\_\+\+Error\+Callback()}{HAL\_I2C\_ErrorCallback()}}
+{\footnotesize\ttfamily void H\+A\+L\+\_\+\+I2\+C\+\_\+\+Error\+Callback (\begin{DoxyParamCaption}\item[{\hyperlink{group___i2_c__handle___structure__definition_ga68e9f45c2fd2161fb827ccdeabb55ea5}{I2\+C\+\_\+\+Handle\+Type\+Def} $\ast$}]{hi2c }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{group___i2_c___i_r_q___handler__and___callbacks_ga0cd3cc56c83b85a65e31c945c854d9d5}\label{group___i2_c___i_r_q___handler__and___callbacks_ga0cd3cc56c83b85a65e31c945c854d9d5}} 
+\index{I\+R\+Q Handler and Callbacks@{I\+R\+Q Handler and Callbacks}!H\+A\+L\+\_\+\+I2\+C\+\_\+\+E\+V\+\_\+\+I\+R\+Q\+Handler@{H\+A\+L\+\_\+\+I2\+C\+\_\+\+E\+V\+\_\+\+I\+R\+Q\+Handler}}
+\index{H\+A\+L\+\_\+\+I2\+C\+\_\+\+E\+V\+\_\+\+I\+R\+Q\+Handler@{H\+A\+L\+\_\+\+I2\+C\+\_\+\+E\+V\+\_\+\+I\+R\+Q\+Handler}!I\+R\+Q Handler and Callbacks@{I\+R\+Q Handler and Callbacks}}
+\subsubsection{\texorpdfstring{H\+A\+L\+\_\+\+I2\+C\+\_\+\+E\+V\+\_\+\+I\+R\+Q\+Handler()}{HAL\_I2C\_EV\_IRQHandler()}}
+{\footnotesize\ttfamily void H\+A\+L\+\_\+\+I2\+C\+\_\+\+E\+V\+\_\+\+I\+R\+Q\+Handler (\begin{DoxyParamCaption}\item[{\hyperlink{group___i2_c__handle___structure__definition_ga68e9f45c2fd2161fb827ccdeabb55ea5}{I2\+C\+\_\+\+Handle\+Type\+Def} $\ast$}]{hi2c }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{group___i2_c___i_r_q___handler__and___callbacks_ga22544d1e6a14392cd5fe41e4e4f4cc96}\label{group___i2_c___i_r_q___handler__and___callbacks_ga22544d1e6a14392cd5fe41e4e4f4cc96}} 
+\index{I\+R\+Q Handler and Callbacks@{I\+R\+Q Handler and Callbacks}!H\+A\+L\+\_\+\+I2\+C\+\_\+\+Listen\+Cplt\+Callback@{H\+A\+L\+\_\+\+I2\+C\+\_\+\+Listen\+Cplt\+Callback}}
+\index{H\+A\+L\+\_\+\+I2\+C\+\_\+\+Listen\+Cplt\+Callback@{H\+A\+L\+\_\+\+I2\+C\+\_\+\+Listen\+Cplt\+Callback}!I\+R\+Q Handler and Callbacks@{I\+R\+Q Handler and Callbacks}}
+\subsubsection{\texorpdfstring{H\+A\+L\+\_\+\+I2\+C\+\_\+\+Listen\+Cplt\+Callback()}{HAL\_I2C\_ListenCpltCallback()}}
+{\footnotesize\ttfamily void H\+A\+L\+\_\+\+I2\+C\+\_\+\+Listen\+Cplt\+Callback (\begin{DoxyParamCaption}\item[{\hyperlink{group___i2_c__handle___structure__definition_ga68e9f45c2fd2161fb827ccdeabb55ea5}{I2\+C\+\_\+\+Handle\+Type\+Def} $\ast$}]{hi2c }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{group___i2_c___i_r_q___handler__and___callbacks_ga5782358f977ddf450b203fc075833a1d}\label{group___i2_c___i_r_q___handler__and___callbacks_ga5782358f977ddf450b203fc075833a1d}} 
+\index{I\+R\+Q Handler and Callbacks@{I\+R\+Q Handler and Callbacks}!H\+A\+L\+\_\+\+I2\+C\+\_\+\+Master\+Rx\+Cplt\+Callback@{H\+A\+L\+\_\+\+I2\+C\+\_\+\+Master\+Rx\+Cplt\+Callback}}
+\index{H\+A\+L\+\_\+\+I2\+C\+\_\+\+Master\+Rx\+Cplt\+Callback@{H\+A\+L\+\_\+\+I2\+C\+\_\+\+Master\+Rx\+Cplt\+Callback}!I\+R\+Q Handler and Callbacks@{I\+R\+Q Handler and Callbacks}}
+\subsubsection{\texorpdfstring{H\+A\+L\+\_\+\+I2\+C\+\_\+\+Master\+Rx\+Cplt\+Callback()}{HAL\_I2C\_MasterRxCpltCallback()}}
+{\footnotesize\ttfamily void H\+A\+L\+\_\+\+I2\+C\+\_\+\+Master\+Rx\+Cplt\+Callback (\begin{DoxyParamCaption}\item[{\hyperlink{group___i2_c__handle___structure__definition_ga68e9f45c2fd2161fb827ccdeabb55ea5}{I2\+C\+\_\+\+Handle\+Type\+Def} $\ast$}]{hi2c }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{group___i2_c___i_r_q___handler__and___callbacks_gaa258e0eb52bbc34002a46dc2db89a84b}\label{group___i2_c___i_r_q___handler__and___callbacks_gaa258e0eb52bbc34002a46dc2db89a84b}} 
+\index{I\+R\+Q Handler and Callbacks@{I\+R\+Q Handler and Callbacks}!H\+A\+L\+\_\+\+I2\+C\+\_\+\+Master\+Tx\+Cplt\+Callback@{H\+A\+L\+\_\+\+I2\+C\+\_\+\+Master\+Tx\+Cplt\+Callback}}
+\index{H\+A\+L\+\_\+\+I2\+C\+\_\+\+Master\+Tx\+Cplt\+Callback@{H\+A\+L\+\_\+\+I2\+C\+\_\+\+Master\+Tx\+Cplt\+Callback}!I\+R\+Q Handler and Callbacks@{I\+R\+Q Handler and Callbacks}}
+\subsubsection{\texorpdfstring{H\+A\+L\+\_\+\+I2\+C\+\_\+\+Master\+Tx\+Cplt\+Callback()}{HAL\_I2C\_MasterTxCpltCallback()}}
+{\footnotesize\ttfamily void H\+A\+L\+\_\+\+I2\+C\+\_\+\+Master\+Tx\+Cplt\+Callback (\begin{DoxyParamCaption}\item[{\hyperlink{group___i2_c__handle___structure__definition_ga68e9f45c2fd2161fb827ccdeabb55ea5}{I2\+C\+\_\+\+Handle\+Type\+Def} $\ast$}]{hi2c }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{group___i2_c___i_r_q___handler__and___callbacks_gac16a95413b35f05c5ce725fefd8531a5}\label{group___i2_c___i_r_q___handler__and___callbacks_gac16a95413b35f05c5ce725fefd8531a5}} 
+\index{I\+R\+Q Handler and Callbacks@{I\+R\+Q Handler and Callbacks}!H\+A\+L\+\_\+\+I2\+C\+\_\+\+Mem\+Rx\+Cplt\+Callback@{H\+A\+L\+\_\+\+I2\+C\+\_\+\+Mem\+Rx\+Cplt\+Callback}}
+\index{H\+A\+L\+\_\+\+I2\+C\+\_\+\+Mem\+Rx\+Cplt\+Callback@{H\+A\+L\+\_\+\+I2\+C\+\_\+\+Mem\+Rx\+Cplt\+Callback}!I\+R\+Q Handler and Callbacks@{I\+R\+Q Handler and Callbacks}}
+\subsubsection{\texorpdfstring{H\+A\+L\+\_\+\+I2\+C\+\_\+\+Mem\+Rx\+Cplt\+Callback()}{HAL\_I2C\_MemRxCpltCallback()}}
+{\footnotesize\ttfamily void H\+A\+L\+\_\+\+I2\+C\+\_\+\+Mem\+Rx\+Cplt\+Callback (\begin{DoxyParamCaption}\item[{\hyperlink{group___i2_c__handle___structure__definition_ga68e9f45c2fd2161fb827ccdeabb55ea5}{I2\+C\+\_\+\+Handle\+Type\+Def} $\ast$}]{hi2c }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{group___i2_c___i_r_q___handler__and___callbacks_ga874f6104d2cdbced9f2ab6e941ec58f0}\label{group___i2_c___i_r_q___handler__and___callbacks_ga874f6104d2cdbced9f2ab6e941ec58f0}} 
+\index{I\+R\+Q Handler and Callbacks@{I\+R\+Q Handler and Callbacks}!H\+A\+L\+\_\+\+I2\+C\+\_\+\+Mem\+Tx\+Cplt\+Callback@{H\+A\+L\+\_\+\+I2\+C\+\_\+\+Mem\+Tx\+Cplt\+Callback}}
+\index{H\+A\+L\+\_\+\+I2\+C\+\_\+\+Mem\+Tx\+Cplt\+Callback@{H\+A\+L\+\_\+\+I2\+C\+\_\+\+Mem\+Tx\+Cplt\+Callback}!I\+R\+Q Handler and Callbacks@{I\+R\+Q Handler and Callbacks}}
+\subsubsection{\texorpdfstring{H\+A\+L\+\_\+\+I2\+C\+\_\+\+Mem\+Tx\+Cplt\+Callback()}{HAL\_I2C\_MemTxCpltCallback()}}
+{\footnotesize\ttfamily void H\+A\+L\+\_\+\+I2\+C\+\_\+\+Mem\+Tx\+Cplt\+Callback (\begin{DoxyParamCaption}\item[{\hyperlink{group___i2_c__handle___structure__definition_ga68e9f45c2fd2161fb827ccdeabb55ea5}{I2\+C\+\_\+\+Handle\+Type\+Def} $\ast$}]{hi2c }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{group___i2_c___i_r_q___handler__and___callbacks_gae23a5b1ce68867c35093ff2b5931e9a0}\label{group___i2_c___i_r_q___handler__and___callbacks_gae23a5b1ce68867c35093ff2b5931e9a0}} 
+\index{I\+R\+Q Handler and Callbacks@{I\+R\+Q Handler and Callbacks}!H\+A\+L\+\_\+\+I2\+C\+\_\+\+Slave\+Rx\+Cplt\+Callback@{H\+A\+L\+\_\+\+I2\+C\+\_\+\+Slave\+Rx\+Cplt\+Callback}}
+\index{H\+A\+L\+\_\+\+I2\+C\+\_\+\+Slave\+Rx\+Cplt\+Callback@{H\+A\+L\+\_\+\+I2\+C\+\_\+\+Slave\+Rx\+Cplt\+Callback}!I\+R\+Q Handler and Callbacks@{I\+R\+Q Handler and Callbacks}}
+\subsubsection{\texorpdfstring{H\+A\+L\+\_\+\+I2\+C\+\_\+\+Slave\+Rx\+Cplt\+Callback()}{HAL\_I2C\_SlaveRxCpltCallback()}}
+{\footnotesize\ttfamily void H\+A\+L\+\_\+\+I2\+C\+\_\+\+Slave\+Rx\+Cplt\+Callback (\begin{DoxyParamCaption}\item[{\hyperlink{group___i2_c__handle___structure__definition_ga68e9f45c2fd2161fb827ccdeabb55ea5}{I2\+C\+\_\+\+Handle\+Type\+Def} $\ast$}]{hi2c }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{group___i2_c___i_r_q___handler__and___callbacks_ga7e086b3ee67187ea072aec6fb4d52aad}\label{group___i2_c___i_r_q___handler__and___callbacks_ga7e086b3ee67187ea072aec6fb4d52aad}} 
+\index{I\+R\+Q Handler and Callbacks@{I\+R\+Q Handler and Callbacks}!H\+A\+L\+\_\+\+I2\+C\+\_\+\+Slave\+Tx\+Cplt\+Callback@{H\+A\+L\+\_\+\+I2\+C\+\_\+\+Slave\+Tx\+Cplt\+Callback}}
+\index{H\+A\+L\+\_\+\+I2\+C\+\_\+\+Slave\+Tx\+Cplt\+Callback@{H\+A\+L\+\_\+\+I2\+C\+\_\+\+Slave\+Tx\+Cplt\+Callback}!I\+R\+Q Handler and Callbacks@{I\+R\+Q Handler and Callbacks}}
+\subsubsection{\texorpdfstring{H\+A\+L\+\_\+\+I2\+C\+\_\+\+Slave\+Tx\+Cplt\+Callback()}{HAL\_I2C\_SlaveTxCpltCallback()}}
+{\footnotesize\ttfamily void H\+A\+L\+\_\+\+I2\+C\+\_\+\+Slave\+Tx\+Cplt\+Callback (\begin{DoxyParamCaption}\item[{\hyperlink{group___i2_c__handle___structure__definition_ga68e9f45c2fd2161fb827ccdeabb55ea5}{I2\+C\+\_\+\+Handle\+Type\+Def} $\ast$}]{hi2c }\end{DoxyParamCaption})}
+

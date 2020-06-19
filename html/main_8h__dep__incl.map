@@ -1,0 +1,15 @@
+<map id="STM/WDS_Kosc_Linux/Core/Inc/main.h" name="STM/WDS_Kosc_Linux/Core/Inc/main.h">
+<area shape="rect" id="node2" href="$gpio_8h.html" title="STM/WDS_Kosc_Linux\l/Core/Inc/gpio.h" alt="" coords="72,102,233,143"/>
+<area shape="rect" id="node4" href="$main_8c.html" title=": Main program body " alt="" coords="376,199,537,240"/>
+<area shape="rect" id="node5" href="$i2c_8h.html" title="STM/WDS_Kosc_Linux\l/Core/Inc/i2c.h" alt="" coords="257,102,419,143"/>
+<area shape="rect" id="node7" href="$spi_8h.html" title="STM/WDS_Kosc_Linux\l/Core/Inc/spi.h" alt="" coords="495,102,656,143"/>
+<area shape="rect" id="node9" href="$tim_8h.html" title="STM/WDS_Kosc_Linux\l/Core/Inc/tim.h" alt="" coords="680,102,841,143"/>
+<area shape="rect" id="node11" href="$usart_8h.html" title="STM/WDS_Kosc_Linux\l/Core/Inc/usart.h" alt="" coords="865,102,1027,143"/>
+<area shape="rect" id="node13" href="$stm32f4xx__hal__msp_8c.html" title="STM/WDS_Kosc_Linux\l/Core/Src/stm32f4xx\l_hal_msp.c" alt="" coords="1051,95,1212,151"/>
+<area shape="rect" id="node14" href="$stm32f4xx__it_8c.html" title="Interrupt Service Routines. " alt="" coords="1237,102,1405,143"/>
+<area shape="rect" id="node3" href="$gpio_8c.html" title="STM/WDS_Kosc_Linux\l/Core/Src/gpio.c" alt="" coords="5,199,167,240"/>
+<area shape="rect" id="node6" href="$i2c_8c.html" title="STM/WDS_Kosc_Linux\l/Core/Src/i2c.c" alt="" coords="191,199,352,240"/>
+<area shape="rect" id="node8" href="$spi_8c.html" title="STM/WDS_Kosc_Linux\l/Core/Src/spi.c" alt="" coords="561,199,723,240"/>
+<area shape="rect" id="node10" href="$tim_8c.html" title="STM/WDS_Kosc_Linux\l/Core/Src/tim.c" alt="" coords="747,199,908,240"/>
+<area shape="rect" id="node12" href="$usart_8c.html" title="STM/WDS_Kosc_Linux\l/Core/Src/usart.c" alt="" coords="932,199,1093,240"/>
+</map>

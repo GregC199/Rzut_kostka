@@ -1,0 +1,16 @@
+<map id="SPI Exported Constants" name="SPI Exported Constants">
+<area shape="rect" id="node2" href="$group___s_p_i___c_r_c___calculation.html" title="SPI CRC Calculation" alt="" coords="337,5,483,32"/>
+<area shape="rect" id="node3" href="$group___s_p_i___clock___polarity.html" title="SPI Clock Polarity" alt="" coords="345,56,475,83"/>
+<area shape="rect" id="node5" href="$group___s_p_i___interrupt__definition.html" title="SPI Interrupt Definition" alt="" coords="333,107,487,133"/>
+<area shape="rect" id="node6" href="$group___s_p_i___m_s_b___l_s_b__transmission.html" title="SPI MSB LSB Transmission" alt="" coords="316,157,504,184"/>
+<area shape="rect" id="node7" href="$group___s_p_i___baud_rate___prescaler.html" title="SPI BaudRate Prescaler" alt="" coords="327,208,493,235"/>
+<area shape="rect" id="node8" href="$group___s_p_i___slave___select__management.html" title="SPI Slave Select Management" alt="" coords="309,259,511,285"/>
+<area shape="rect" id="node9" href="$group___s_p_i___mode.html" title="SPI Mode" alt="" coords="370,309,450,336"/>
+<area shape="rect" id="node10" href="$group___s_p_i___clock___phase.html" title="SPI Clock Phase" alt="" coords="349,360,471,387"/>
+<area shape="rect" id="node11" href="$group___s_p_i___t_i__mode.html" title="SPI TI Mode" alt="" coords="362,411,458,437"/>
+<area shape="rect" id="node12" href="$group___s_p_i___flags__definition.html" title="SPI Flags Definition" alt="" coords="341,461,479,488"/>
+<area shape="rect" id="node13" href="$group___s_p_i___direction.html" title="SPI Direction Mode" alt="" coords="342,512,478,539"/>
+<area shape="rect" id="node14" href="$group___s_p_i___data___size.html" title="SPI Data Size" alt="" coords="357,563,463,589"/>
+<area shape="rect" id="node15" href="$group___s_p_i___error___code.html" title="SPI Error Code" alt="" coords="355,613,465,640"/>
+<area shape="rect" id="node4" href="$group___s_p_i.html" title="SPI HAL module driver. " alt="" coords="5,309,49,336"/>
+</map>

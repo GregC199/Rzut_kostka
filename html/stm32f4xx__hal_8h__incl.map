@@ -1,0 +1,25 @@
+<map id="STM/WDS_Kosc_Linux/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h" name="STM/WDS_Kosc_Linux/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h">
+<area shape="rect" id="node2" href="$stm32f4xx__hal__conf_8h.html" title="stm32f4xx_hal_conf.h" alt="" coords="1126,109,1277,136"/>
+<area shape="rect" id="node3" href="$stm32f4xx__hal__rcc_8h.html" title="Header file of RCC HAL module. " alt="" coords="37,184,180,211"/>
+<area shape="rect" id="node9" href="$stm32f4xx__hal__exti_8h.html" title="Header file of EXTI HAL module. " alt="" coords="215,266,362,293"/>
+<area shape="rect" id="node10" href="$stm32f4xx__hal__gpio_8h.html" title="Header file of GPIO HAL module. " alt="" coords="447,184,596,211"/>
+<area shape="rect" id="node12" href="$stm32f4xx__hal__dma_8h.html" title="Header file of DMA HAL module. " alt="" coords="692,184,842,211"/>
+<area shape="rect" id="node14" href="$stm32f4xx__hal__cortex_8h.html" title="Header file of CORTEX HAL module. " alt="" coords="877,266,1038,293"/>
+<area shape="rect" id="node15" href="$stm32f4xx__hal__flash_8h.html" title="Header file of FLASH HAL module. " alt="" coords="1125,184,1278,211"/>
+<area shape="rect" id="node18" href="$stm32f4xx__hal__i2c_8h.html" title="Header file of I2C HAL module. " alt="" coords="1422,184,1565,211"/>
+<area shape="rect" id="node20" href="$stm32f4xx__hal__pwr_8h.html" title="Header file of PWR HAL module. " alt="" coords="1632,184,1779,211"/>
+<area shape="rect" id="node22" href="$stm32f4xx__hal__spi_8h.html" title="Header file of SPI HAL module. " alt="" coords="1804,184,1946,211"/>
+<area shape="rect" id="node23" href="$stm32f4xx__hal__tim_8h.html" title="Header file of TIM HAL module. " alt="" coords="1970,184,2113,211"/>
+<area shape="rect" id="node25" href="$stm32f4xx__hal__uart_8h.html" title="Header file of UART HAL module. " alt="" coords="2172,184,2319,211"/>
+<area shape="rect" id="node4" href="$stm32f4xx__hal__def_8h.html" title="This file contains HAL common defines, enumeration, macros and structures definitions. " alt="" coords="1005,348,1148,375"/>
+<area shape="rect" id="node8" href="$stm32f4xx__hal__rcc__ex_8h.html" title="Header file of RCC HAL Extension module. " alt="" coords="26,266,190,293"/>
+<area shape="rect" id="node5" href="$stm32f4xx_8h.html" title="CMSIS STM32F4xx Device Peripheral Access Layer Header File. " alt="" coords="865,423,960,449"/>
+<area shape="rect" id="node6" href="$stm32__hal__legacy_8h.html" title="This file contains aliases definition for the STM32Cube HAL constants macros and functions maintained..." alt="" coords="984,423,1168,449"/>
+<area shape="rect" id="node11" href="$stm32f4xx__hal__gpio__ex_8h.html" title="Header file of GPIO HAL Extension module. " alt="" coords="436,266,607,293"/>
+<area shape="rect" id="node13" href="$stm32f4xx__hal__dma__ex_8h.html" title="Header file of DMA HAL extension module. " alt="" coords="682,266,852,293"/>
+<area shape="rect" id="node16" href="$stm32f4xx__hal__flash__ex_8h.html" title="Header file of FLASH HAL Extension module. " alt="" coords="1114,266,1289,293"/>
+<area shape="rect" id="node17" href="$stm32f4xx__hal__flash__ramfunc_8h.html" title="Header file of FLASH RAMFUNC driver. " alt="" coords="1313,259,1456,300"/>
+<area shape="rect" id="node19" href="$stm32f4xx__hal__i2c__ex_8h.html" title="Header file of I2C HAL Extension module. " alt="" coords="1531,266,1694,293"/>
+<area shape="rect" id="node21" href="$stm32f4xx__hal__pwr__ex_8h.html" title="Header file of PWR HAL Extension module. " alt="" coords="1769,266,1936,293"/>
+<area shape="rect" id="node24" href="$stm32f4xx__hal__tim__ex_8h.html" title="Header file of TIM HAL Extended module. " alt="" coords="2062,266,2226,293"/>
+</map>

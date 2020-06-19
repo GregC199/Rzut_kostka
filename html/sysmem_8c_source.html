@@ -1,0 +1,79 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>WDS_Kosc_Linux: Plik źródłowy STM/WDS_Kosc_Linux/Core/Src/sysmem.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">WDS_Kosc_Linux
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Wygenerowano przez Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Szukaj');
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Szukaj');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_327c904981e4abecaa1a81e309b923cb.html">STM</a></li><li class="navelem"><a class="el" href="dir_8ac8b9b6d5566ee1a3f3d0ab2ebf10ba.html">WDS_Kosc_Linux</a></li><li class="navelem"><a class="el" href="dir_cdd29a8b8622ed6f3ea665fe746e00e8.html">Core</a></li><li class="navelem"><a class="el" href="dir_078f1245488109bd8b7843b1ac369f09.html">Src</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">sysmem.c</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="sysmem_8c.html">Idź do dokumentacji tego pliku.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment">/* Includes */</span></div><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#include &lt;errno.h&gt;</span></div><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#include &lt;stdio.h&gt;</span></div><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="comment">/* Variables */</span></div><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="keyword">extern</span> <span class="keywordtype">int</span> <a class="code" href="sysmem_8c.html#ad65a8842cc674e3ddf69355898c0ecbf">errno</a>;</div><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="keyword">register</span> <span class="keywordtype">char</span> * stack_ptr <span class="keyword">asm</span>(<span class="stringliteral">&quot;sp&quot;</span>);</div><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="comment">/* Functions */</span></div><div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div><div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="sysmem_8c.html#aae54d7b9578ba1fc171ce6f30f4c68a3">   38</a></span>&#160;caddr_t <a class="code" href="sysmem_8c.html#aae54d7b9578ba1fc171ce6f30f4c68a3">_sbrk</a>(<span class="keywordtype">int</span> incr)</div><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;{</div><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keyword">extern</span> <span class="keywordtype">char</span> end <span class="keyword">asm</span>(<span class="stringliteral">&quot;end&quot;</span>);</div><div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">char</span> *heap_end;</div><div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keywordtype">char</span> *prev_heap_end;</div><div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div><div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keywordflow">if</span> (heap_end == 0)</div><div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        heap_end = &amp;end;</div><div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div><div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    prev_heap_end = heap_end;</div><div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keywordflow">if</span> (heap_end + incr &gt; stack_ptr)</div><div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    {</div><div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <a class="code" href="sysmem_8c.html#ad65a8842cc674e3ddf69355898c0ecbf">errno</a> = ENOMEM;</div><div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        <span class="keywordflow">return</span> (caddr_t) -1;</div><div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    }</div><div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div><div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    heap_end += incr;</div><div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div><div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keywordflow">return</span> (caddr_t) prev_heap_end;</div><div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;}</div><div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div><div class="ttc" id="sysmem_8c_html_aae54d7b9578ba1fc171ce6f30f4c68a3"><div class="ttname"><a href="sysmem_8c.html#aae54d7b9578ba1fc171ce6f30f4c68a3">_sbrk</a></div><div class="ttdeci">caddr_t _sbrk(int incr)</div><div class="ttdef"><b>Definition:</b> <a href="sysmem_8c_source.html#l00038">sysmem.c:38</a></div></div>
+<div class="ttc" id="sysmem_8c_html_ad65a8842cc674e3ddf69355898c0ecbf"><div class="ttname"><a href="sysmem_8c.html#ad65a8842cc674e3ddf69355898c0ecbf">errno</a></div><div class="ttdeci">int errno</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Wygenerowano przez &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>

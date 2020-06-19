@@ -1,0 +1,649 @@
+\hypertarget{main_8c}{}\section{Dokumentacja pliku S\+T\+M/\+W\+D\+S\+\_\+\+Kosc\+\_\+\+Linux/\+Core/\+Src/main.c}
+\label{main_8c}\index{S\+T\+M/\+W\+D\+S\+\_\+\+Kosc\+\_\+\+Linux/\+Core/\+Src/main.\+c@{S\+T\+M/\+W\+D\+S\+\_\+\+Kosc\+\_\+\+Linux/\+Core/\+Src/main.\+c}}
+
+
+\+: Main program body  
+
+
+{\ttfamily \#include \char`\"{}main.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}i2c.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}spi.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}tim.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}usart.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}gpio.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$limits.\+h$>$}\newline
+{\ttfamily \#include $<$math.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+Wykres zależności załączania dla main.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Definicje}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{main_8c_a337e9e0f1bba29076f506da16c4bf0ee}{A\+C\+C\+\_\+\+U\+S\+T\+A\+W\+I\+E\+N\+IA}~0x57
+\item 
+\#define \hyperlink{main_8c_a63cf4b5f070793b792511c930780fe2d}{A\+C\+C\+\_\+\+A\+D\+R\+ES}~(0x19 $<$$<$ 1)
+\item 
+\#define \hyperlink{main_8c_abc5fef7a2f53bf8ab1e86a05075908a2}{A\+C\+C\+\_\+\+C\+T\+R\+L\+\_\+\+R\+E\+G1\+\_\+A}~0x20
+\item 
+\#define \hyperlink{main_8c_a64e11ea6d3bcee7800a4925c95f97798}{A\+C\+C\+\_\+\+C\+T\+R\+L\+\_\+\+R\+E\+G4\+\_\+A}~0x23
+\item 
+\#define \hyperlink{main_8c_ae917463c5b05dbe574651d0192d048c4}{A\+C\+C\+\_\+\+Z\+C\+Z\+Y\+T\+A\+N\+I\+E\+\_\+\+P\+O\+C\+Z\+A\+T\+EK}~0x28
+\item 
+\#define \hyperlink{main_8c_a0cef80daeb6526d93d892c039232fc9b}{A\+C\+C\+\_\+\+M\+U\+L\+T\+I\+\_\+\+R\+E\+AD}~0x80
+\item 
+\#define \hyperlink{main_8c_a61a025677156c75c72e3d2e933770a92}{A\+C\+C\+\_\+\+W\+S\+Z\+Y\+S\+T\+K\+I\+E\+\_\+\+O\+S\+I\+E\+\_\+\+Z\+C\+Z\+Y\+T\+A\+N\+IE}~(\hyperlink{main_8c_a0cef80daeb6526d93d892c039232fc9b}{A\+C\+C\+\_\+\+M\+U\+L\+T\+I\+\_\+\+R\+E\+AD} $\vert$ \hyperlink{main_8c_ae917463c5b05dbe574651d0192d048c4}{A\+C\+C\+\_\+\+Z\+C\+Z\+Y\+T\+A\+N\+I\+E\+\_\+\+P\+O\+C\+Z\+A\+T\+EK})
+\item 
+\#define \hyperlink{main_8c_aa84a7b0536055e5fdf191f28f5b4d9e5}{A\+C\+C\+\_\+\+S\+E\+T\+\_\+4G}~0x10
+\item 
+\#define \hyperlink{main_8c_a74931ed0c7a3d20bdd6b509e44eadf8a}{Z\+Y\+R\+\_\+\+R\+E\+G1\+\_\+A}~0x20
+\item 
+\#define \hyperlink{main_8c_a0b46fbe491f967ea3f2432cad3d67487}{Z\+Y\+R\+\_\+\+U\+S\+T\+A\+W\+I\+E\+N\+IA}~0x0F
+\item 
+\#define \hyperlink{main_8c_a9905ca845340300ca002704a00cbc3aa}{Z\+Y\+R\+\_\+\+M\+U\+L\+T\+I\+R\+E\+AD}~0x40
+\item 
+\#define \hyperlink{main_8c_a82859117a7258dd03a9e401ffe73095b}{Z\+Y\+R\+\_\+\+R\+E\+AD}~0x80
+\item 
+\#define \hyperlink{main_8c_af2ffd2279ebacc9c0c297a049cd24aed}{Z\+Y\+R\+\_\+\+Z\+C\+Z\+Y\+T\+A\+N\+I\+E\+\_\+\+P\+O\+C\+Z\+A\+T\+EK}~0x28
+\item 
+\#define \hyperlink{main_8c_a8ef7bd3bcc4f87fe5d636e7238df7336}{Z\+Y\+R\+\_\+\+W\+S\+Z\+Y\+S\+T\+K\+I\+E\+\_\+\+O\+S\+I\+E\+\_\+\+Z\+C\+Z\+Y\+T\+A\+N\+IE}~(\hyperlink{main_8c_a82859117a7258dd03a9e401ffe73095b}{Z\+Y\+R\+\_\+\+R\+E\+AD} $\vert$ \hyperlink{main_8c_a9905ca845340300ca002704a00cbc3aa}{Z\+Y\+R\+\_\+\+M\+U\+L\+T\+I\+R\+E\+AD} $\vert$ \hyperlink{main_8c_af2ffd2279ebacc9c0c297a049cd24aed}{Z\+Y\+R\+\_\+\+Z\+C\+Z\+Y\+T\+A\+N\+I\+E\+\_\+\+P\+O\+C\+Z\+A\+T\+EK})
+\end{DoxyCompactItemize}
+\subsection*{Funkcje}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{main_8c_a70af21c671abfcc773614a9a4f63d920}{System\+Clock\+\_\+\+Config} (void)
+\begin{DoxyCompactList}\small\item\em System Clock Configuration. \end{DoxyCompactList}\item 
+void \hyperlink{group___t_i_m___exported___functions___group9_ga8a3b0ad512a6e6c6157440b68d395eac}{H\+A\+L\+\_\+\+T\+I\+M\+\_\+\+Period\+Elapsed\+Callback} (\hyperlink{struct_t_i_m___handle_type_def}{T\+I\+M\+\_\+\+Handle\+Type\+Def} $\ast$htim)
+\item 
+void \hyperlink{main_8c_aa2c07790f204996bbcc1b0aff230fc67}{Setup\+\_\+\+U\+A\+R\+T\+\_\+\+BT} (\hyperlink{group___u_a_r_t___exported___types_ga7adf4f3e4c3ecde572be5925c915a967}{U\+A\+R\+T\+\_\+\+Handle\+Type\+Def} $\ast$U\+A\+RT)
+\item 
+void \hyperlink{main_8c_a471021b1fa96d7870422247bbb401732}{Setup\+\_\+\+L3\+G\+D20} (\hyperlink{group___s_p_i___exported___types_gab3bd115785297692c125528b7293566b}{S\+P\+I\+\_\+\+Handle\+Type\+Def} $\ast$spi)
+\item 
+void \hyperlink{main_8c_a5fc16ab87fe4b7be4e36a832f156e1e1}{L3\+G\+D20\+\_\+\+Multi\+Read} (\hyperlink{group___s_p_i___exported___types_gab3bd115785297692c125528b7293566b}{S\+P\+I\+\_\+\+Handle\+Type\+Def} $\ast$spi)
+\item 
+void \hyperlink{main_8c_ab157705f0f001f785fffc77a27200015}{Filtr\+\_\+komplementarny} (float xg, float yg, float zg, float xa, float ya, float za, float przyrost)
+\item 
+int \hyperlink{main_8c_a840291bc02cba5474a4cb46a9b9566fe}{main} (void)
+\begin{DoxyCompactList}\small\item\em The application entry point. \end{DoxyCompactList}\item 
+void \hyperlink{main_8c_a1730ffe1e560465665eb47d9264826f9}{Error\+\_\+\+Handler} (void)
+\begin{DoxyCompactList}\small\item\em This function is executed in case of error occurrence. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Zmienne}
+\begin{DoxyCompactItemize}
+\item 
+int8\+\_\+t \hyperlink{main_8c_ab59a8a428b266863f97dc0a7f5ea6d38}{Wiadomosc} \mbox{[}200\mbox{]}
+\item 
+uint8\+\_\+t \hyperlink{main_8c_a5a5b07db260a35ffcede3ff26557b55c}{Odbior} \mbox{[}10\mbox{]}
+\item 
+int16\+\_\+t \hyperlink{main_8c_ac4395370ebf7d3707363b8c85609cee7}{Rozmiar}
+\item 
+uint8\+\_\+t \hyperlink{main_8c_af10fe25d18db4e4cb1443d06a4ed809b}{Dane} \mbox{[}6\mbox{]}
+\item 
+int16\+\_\+t \hyperlink{main_8c_aa6aba27bc1a89db9e350b50bbf881f57}{X} = 0
+\item 
+int16\+\_\+t \hyperlink{main_8c_abe4637362df8e341470401813999dd17}{Y} = 0
+\item 
+int16\+\_\+t \hyperlink{main_8c_a9a9188839f9d62a895b0371d08d0f22b}{Z} = 0
+\item 
+float \hyperlink{main_8c_a2f235b678a68ce42b7b525da8cccb5e0}{X\+\_\+g} = 0
+\item 
+float \hyperlink{main_8c_a370fe05e5eb44c207cb5eab8006e5994}{Y\+\_\+g} = 0
+\item 
+float \hyperlink{main_8c_ac63fbeed0ce6dbd374dcfbf9b595349f}{Z\+\_\+g} = 0
+\item 
+float \hyperlink{main_8c_aa8177e4262a7e6c50c13d7c4c871c7e5}{X\+\_\+mem} = 0
+\item 
+float \hyperlink{main_8c_a14838e6c6915f575b07fe2de908e1858}{Y\+\_\+mem} = 0
+\item 
+float \hyperlink{main_8c_a2c7e49bf27ba861ab29b9bf50ef77bb1}{Z\+\_\+mem} = 0
+\item 
+float \hyperlink{main_8c_a61e67562d73860519c92f9a4874e8a47}{X\+\_\+roznica} = 0
+\item 
+float \hyperlink{main_8c_a2d73757c97cc889e060ade6dffbdd8a6}{Y\+\_\+roznica} = 0
+\item 
+float \hyperlink{main_8c_ac59073cd9142ed81cf2d37807b678e52}{Z\+\_\+roznica} = 0
+\item 
+float \hyperlink{main_8c_a8a24ed0830048dce8c69bb8c49fc621d}{X\+\_\+kat} = 0
+\item 
+float \hyperlink{main_8c_a571a943925a04794ca2c21b6c4f028a3}{Y\+\_\+kat} = 0
+\item 
+float \hyperlink{main_8c_a5b33399a3a48c735834819b78d04f860}{Z\+\_\+kat} = 0
+\item 
+float \hyperlink{main_8c_a26fd84d522945b6038221d9e38c7cc39}{roll} = 0
+\item 
+float \hyperlink{main_8c_a282e7d4378d4a18a805b8980295ac86c}{pitch} = 0
+\item 
+int \hyperlink{main_8c_a3a84093535b390d14477ed40e850014b}{Button\+\_\+\+B\+\_\+mem} = 0
+\item 
+int \hyperlink{main_8c_a09f904e618569a217ab032fb39800921}{Button\+\_\+B} = 0
+\item 
+int \hyperlink{main_8c_ae73bfe641dddaa19b9d52282d7897385}{Polaczenie} = 0
+\item 
+volatile int \hyperlink{main_8c_a792cd126b2d51df48530d7abf671114b}{flaga} = 0
+\item 
+volatile int \hyperlink{main_8c_ada49d26ae9b2f0dd00d0c59f3f5766a7}{flaga2} = 0
+\end{DoxyCompactItemize}
+
+
+\subsection{Opis szczegółowy}
+\+: Main program body 
+
+\begin{DoxyAttention}{Uwaga}
+
+\end{DoxyAttention}
+\subsubsection*{\begin{center}\copyright{} Copyright (c) 2020 S\+T\+Microelectronics. All rights reserved.\end{center} }
+
+This software component is licensed by ST under B\+SD 3-\/\+Clause license, the \char`\"{}\+License\char`\"{}; You may not use this file except in compliance with the License. You may obtain a copy of the License at\+: opensource.\+org/licenses/\+B\+S\+D-\/3-\/\+Clause 
+
+\subsection{Dokumentacja definicji}
+\mbox{\Hypertarget{main_8c_a63cf4b5f070793b792511c930780fe2d}\label{main_8c_a63cf4b5f070793b792511c930780fe2d}} 
+\index{main.\+c@{main.\+c}!A\+C\+C\+\_\+\+A\+D\+R\+ES@{A\+C\+C\+\_\+\+A\+D\+R\+ES}}
+\index{A\+C\+C\+\_\+\+A\+D\+R\+ES@{A\+C\+C\+\_\+\+A\+D\+R\+ES}!main.\+c@{main.\+c}}
+\subsubsection{\texorpdfstring{A\+C\+C\+\_\+\+A\+D\+R\+ES}{ACC\_ADRES}}
+{\footnotesize\ttfamily \#define A\+C\+C\+\_\+\+A\+D\+R\+ES~(0x19 $<$$<$ 1)}
+
+
+
+Definicja w linii 47 pliku main.\+c.
+
+\mbox{\Hypertarget{main_8c_abc5fef7a2f53bf8ab1e86a05075908a2}\label{main_8c_abc5fef7a2f53bf8ab1e86a05075908a2}} 
+\index{main.\+c@{main.\+c}!A\+C\+C\+\_\+\+C\+T\+R\+L\+\_\+\+R\+E\+G1\+\_\+A@{A\+C\+C\+\_\+\+C\+T\+R\+L\+\_\+\+R\+E\+G1\+\_\+A}}
+\index{A\+C\+C\+\_\+\+C\+T\+R\+L\+\_\+\+R\+E\+G1\+\_\+A@{A\+C\+C\+\_\+\+C\+T\+R\+L\+\_\+\+R\+E\+G1\+\_\+A}!main.\+c@{main.\+c}}
+\subsubsection{\texorpdfstring{A\+C\+C\+\_\+\+C\+T\+R\+L\+\_\+\+R\+E\+G1\+\_\+A}{ACC\_CTRL\_REG1\_A}}
+{\footnotesize\ttfamily \#define A\+C\+C\+\_\+\+C\+T\+R\+L\+\_\+\+R\+E\+G1\+\_\+A~0x20}
+
+
+
+Definicja w linii 48 pliku main.\+c.
+
+\mbox{\Hypertarget{main_8c_a64e11ea6d3bcee7800a4925c95f97798}\label{main_8c_a64e11ea6d3bcee7800a4925c95f97798}} 
+\index{main.\+c@{main.\+c}!A\+C\+C\+\_\+\+C\+T\+R\+L\+\_\+\+R\+E\+G4\+\_\+A@{A\+C\+C\+\_\+\+C\+T\+R\+L\+\_\+\+R\+E\+G4\+\_\+A}}
+\index{A\+C\+C\+\_\+\+C\+T\+R\+L\+\_\+\+R\+E\+G4\+\_\+A@{A\+C\+C\+\_\+\+C\+T\+R\+L\+\_\+\+R\+E\+G4\+\_\+A}!main.\+c@{main.\+c}}
+\subsubsection{\texorpdfstring{A\+C\+C\+\_\+\+C\+T\+R\+L\+\_\+\+R\+E\+G4\+\_\+A}{ACC\_CTRL\_REG4\_A}}
+{\footnotesize\ttfamily \#define A\+C\+C\+\_\+\+C\+T\+R\+L\+\_\+\+R\+E\+G4\+\_\+A~0x23}
+
+
+
+Definicja w linii 49 pliku main.\+c.
+
+\mbox{\Hypertarget{main_8c_a0cef80daeb6526d93d892c039232fc9b}\label{main_8c_a0cef80daeb6526d93d892c039232fc9b}} 
+\index{main.\+c@{main.\+c}!A\+C\+C\+\_\+\+M\+U\+L\+T\+I\+\_\+\+R\+E\+AD@{A\+C\+C\+\_\+\+M\+U\+L\+T\+I\+\_\+\+R\+E\+AD}}
+\index{A\+C\+C\+\_\+\+M\+U\+L\+T\+I\+\_\+\+R\+E\+AD@{A\+C\+C\+\_\+\+M\+U\+L\+T\+I\+\_\+\+R\+E\+AD}!main.\+c@{main.\+c}}
+\subsubsection{\texorpdfstring{A\+C\+C\+\_\+\+M\+U\+L\+T\+I\+\_\+\+R\+E\+AD}{ACC\_MULTI\_READ}}
+{\footnotesize\ttfamily \#define A\+C\+C\+\_\+\+M\+U\+L\+T\+I\+\_\+\+R\+E\+AD~0x80}
+
+
+
+Definicja w linii 51 pliku main.\+c.
+
+\mbox{\Hypertarget{main_8c_aa84a7b0536055e5fdf191f28f5b4d9e5}\label{main_8c_aa84a7b0536055e5fdf191f28f5b4d9e5}} 
+\index{main.\+c@{main.\+c}!A\+C\+C\+\_\+\+S\+E\+T\+\_\+4G@{A\+C\+C\+\_\+\+S\+E\+T\+\_\+4G}}
+\index{A\+C\+C\+\_\+\+S\+E\+T\+\_\+4G@{A\+C\+C\+\_\+\+S\+E\+T\+\_\+4G}!main.\+c@{main.\+c}}
+\subsubsection{\texorpdfstring{A\+C\+C\+\_\+\+S\+E\+T\+\_\+4G}{ACC\_SET\_4G}}
+{\footnotesize\ttfamily \#define A\+C\+C\+\_\+\+S\+E\+T\+\_\+4G~0x10}
+
+
+
+Definicja w linii 53 pliku main.\+c.
+
+\mbox{\Hypertarget{main_8c_a337e9e0f1bba29076f506da16c4bf0ee}\label{main_8c_a337e9e0f1bba29076f506da16c4bf0ee}} 
+\index{main.\+c@{main.\+c}!A\+C\+C\+\_\+\+U\+S\+T\+A\+W\+I\+E\+N\+IA@{A\+C\+C\+\_\+\+U\+S\+T\+A\+W\+I\+E\+N\+IA}}
+\index{A\+C\+C\+\_\+\+U\+S\+T\+A\+W\+I\+E\+N\+IA@{A\+C\+C\+\_\+\+U\+S\+T\+A\+W\+I\+E\+N\+IA}!main.\+c@{main.\+c}}
+\subsubsection{\texorpdfstring{A\+C\+C\+\_\+\+U\+S\+T\+A\+W\+I\+E\+N\+IA}{ACC\_USTAWIENIA}}
+{\footnotesize\ttfamily \#define A\+C\+C\+\_\+\+U\+S\+T\+A\+W\+I\+E\+N\+IA~0x57}
+
+
+
+Definicja w linii 46 pliku main.\+c.
+
+\mbox{\Hypertarget{main_8c_a61a025677156c75c72e3d2e933770a92}\label{main_8c_a61a025677156c75c72e3d2e933770a92}} 
+\index{main.\+c@{main.\+c}!A\+C\+C\+\_\+\+W\+S\+Z\+Y\+S\+T\+K\+I\+E\+\_\+\+O\+S\+I\+E\+\_\+\+Z\+C\+Z\+Y\+T\+A\+N\+IE@{A\+C\+C\+\_\+\+W\+S\+Z\+Y\+S\+T\+K\+I\+E\+\_\+\+O\+S\+I\+E\+\_\+\+Z\+C\+Z\+Y\+T\+A\+N\+IE}}
+\index{A\+C\+C\+\_\+\+W\+S\+Z\+Y\+S\+T\+K\+I\+E\+\_\+\+O\+S\+I\+E\+\_\+\+Z\+C\+Z\+Y\+T\+A\+N\+IE@{A\+C\+C\+\_\+\+W\+S\+Z\+Y\+S\+T\+K\+I\+E\+\_\+\+O\+S\+I\+E\+\_\+\+Z\+C\+Z\+Y\+T\+A\+N\+IE}!main.\+c@{main.\+c}}
+\subsubsection{\texorpdfstring{A\+C\+C\+\_\+\+W\+S\+Z\+Y\+S\+T\+K\+I\+E\+\_\+\+O\+S\+I\+E\+\_\+\+Z\+C\+Z\+Y\+T\+A\+N\+IE}{ACC\_WSZYSTKIE\_OSIE\_ZCZYTANIE}}
+{\footnotesize\ttfamily \#define A\+C\+C\+\_\+\+W\+S\+Z\+Y\+S\+T\+K\+I\+E\+\_\+\+O\+S\+I\+E\+\_\+\+Z\+C\+Z\+Y\+T\+A\+N\+IE~(\hyperlink{main_8c_a0cef80daeb6526d93d892c039232fc9b}{A\+C\+C\+\_\+\+M\+U\+L\+T\+I\+\_\+\+R\+E\+AD} $\vert$ \hyperlink{main_8c_ae917463c5b05dbe574651d0192d048c4}{A\+C\+C\+\_\+\+Z\+C\+Z\+Y\+T\+A\+N\+I\+E\+\_\+\+P\+O\+C\+Z\+A\+T\+EK})}
+
+
+
+Definicja w linii 52 pliku main.\+c.
+
+\mbox{\Hypertarget{main_8c_ae917463c5b05dbe574651d0192d048c4}\label{main_8c_ae917463c5b05dbe574651d0192d048c4}} 
+\index{main.\+c@{main.\+c}!A\+C\+C\+\_\+\+Z\+C\+Z\+Y\+T\+A\+N\+I\+E\+\_\+\+P\+O\+C\+Z\+A\+T\+EK@{A\+C\+C\+\_\+\+Z\+C\+Z\+Y\+T\+A\+N\+I\+E\+\_\+\+P\+O\+C\+Z\+A\+T\+EK}}
+\index{A\+C\+C\+\_\+\+Z\+C\+Z\+Y\+T\+A\+N\+I\+E\+\_\+\+P\+O\+C\+Z\+A\+T\+EK@{A\+C\+C\+\_\+\+Z\+C\+Z\+Y\+T\+A\+N\+I\+E\+\_\+\+P\+O\+C\+Z\+A\+T\+EK}!main.\+c@{main.\+c}}
+\subsubsection{\texorpdfstring{A\+C\+C\+\_\+\+Z\+C\+Z\+Y\+T\+A\+N\+I\+E\+\_\+\+P\+O\+C\+Z\+A\+T\+EK}{ACC\_ZCZYTANIE\_POCZATEK}}
+{\footnotesize\ttfamily \#define A\+C\+C\+\_\+\+Z\+C\+Z\+Y\+T\+A\+N\+I\+E\+\_\+\+P\+O\+C\+Z\+A\+T\+EK~0x28}
+
+
+
+Definicja w linii 50 pliku main.\+c.
+
+\mbox{\Hypertarget{main_8c_a9905ca845340300ca002704a00cbc3aa}\label{main_8c_a9905ca845340300ca002704a00cbc3aa}} 
+\index{main.\+c@{main.\+c}!Z\+Y\+R\+\_\+\+M\+U\+L\+T\+I\+R\+E\+AD@{Z\+Y\+R\+\_\+\+M\+U\+L\+T\+I\+R\+E\+AD}}
+\index{Z\+Y\+R\+\_\+\+M\+U\+L\+T\+I\+R\+E\+AD@{Z\+Y\+R\+\_\+\+M\+U\+L\+T\+I\+R\+E\+AD}!main.\+c@{main.\+c}}
+\subsubsection{\texorpdfstring{Z\+Y\+R\+\_\+\+M\+U\+L\+T\+I\+R\+E\+AD}{ZYR\_MULTIREAD}}
+{\footnotesize\ttfamily \#define Z\+Y\+R\+\_\+\+M\+U\+L\+T\+I\+R\+E\+AD~0x40}
+
+
+
+Definicja w linii 58 pliku main.\+c.
+
+\mbox{\Hypertarget{main_8c_a82859117a7258dd03a9e401ffe73095b}\label{main_8c_a82859117a7258dd03a9e401ffe73095b}} 
+\index{main.\+c@{main.\+c}!Z\+Y\+R\+\_\+\+R\+E\+AD@{Z\+Y\+R\+\_\+\+R\+E\+AD}}
+\index{Z\+Y\+R\+\_\+\+R\+E\+AD@{Z\+Y\+R\+\_\+\+R\+E\+AD}!main.\+c@{main.\+c}}
+\subsubsection{\texorpdfstring{Z\+Y\+R\+\_\+\+R\+E\+AD}{ZYR\_READ}}
+{\footnotesize\ttfamily \#define Z\+Y\+R\+\_\+\+R\+E\+AD~0x80}
+
+
+
+Definicja w linii 59 pliku main.\+c.
+
+\mbox{\Hypertarget{main_8c_a74931ed0c7a3d20bdd6b509e44eadf8a}\label{main_8c_a74931ed0c7a3d20bdd6b509e44eadf8a}} 
+\index{main.\+c@{main.\+c}!Z\+Y\+R\+\_\+\+R\+E\+G1\+\_\+A@{Z\+Y\+R\+\_\+\+R\+E\+G1\+\_\+A}}
+\index{Z\+Y\+R\+\_\+\+R\+E\+G1\+\_\+A@{Z\+Y\+R\+\_\+\+R\+E\+G1\+\_\+A}!main.\+c@{main.\+c}}
+\subsubsection{\texorpdfstring{Z\+Y\+R\+\_\+\+R\+E\+G1\+\_\+A}{ZYR\_REG1\_A}}
+{\footnotesize\ttfamily \#define Z\+Y\+R\+\_\+\+R\+E\+G1\+\_\+A~0x20}
+
+
+
+Definicja w linii 56 pliku main.\+c.
+
+\mbox{\Hypertarget{main_8c_a0b46fbe491f967ea3f2432cad3d67487}\label{main_8c_a0b46fbe491f967ea3f2432cad3d67487}} 
+\index{main.\+c@{main.\+c}!Z\+Y\+R\+\_\+\+U\+S\+T\+A\+W\+I\+E\+N\+IA@{Z\+Y\+R\+\_\+\+U\+S\+T\+A\+W\+I\+E\+N\+IA}}
+\index{Z\+Y\+R\+\_\+\+U\+S\+T\+A\+W\+I\+E\+N\+IA@{Z\+Y\+R\+\_\+\+U\+S\+T\+A\+W\+I\+E\+N\+IA}!main.\+c@{main.\+c}}
+\subsubsection{\texorpdfstring{Z\+Y\+R\+\_\+\+U\+S\+T\+A\+W\+I\+E\+N\+IA}{ZYR\_USTAWIENIA}}
+{\footnotesize\ttfamily \#define Z\+Y\+R\+\_\+\+U\+S\+T\+A\+W\+I\+E\+N\+IA~0x0F}
+
+
+
+Definicja w linii 57 pliku main.\+c.
+
+\mbox{\Hypertarget{main_8c_a8ef7bd3bcc4f87fe5d636e7238df7336}\label{main_8c_a8ef7bd3bcc4f87fe5d636e7238df7336}} 
+\index{main.\+c@{main.\+c}!Z\+Y\+R\+\_\+\+W\+S\+Z\+Y\+S\+T\+K\+I\+E\+\_\+\+O\+S\+I\+E\+\_\+\+Z\+C\+Z\+Y\+T\+A\+N\+IE@{Z\+Y\+R\+\_\+\+W\+S\+Z\+Y\+S\+T\+K\+I\+E\+\_\+\+O\+S\+I\+E\+\_\+\+Z\+C\+Z\+Y\+T\+A\+N\+IE}}
+\index{Z\+Y\+R\+\_\+\+W\+S\+Z\+Y\+S\+T\+K\+I\+E\+\_\+\+O\+S\+I\+E\+\_\+\+Z\+C\+Z\+Y\+T\+A\+N\+IE@{Z\+Y\+R\+\_\+\+W\+S\+Z\+Y\+S\+T\+K\+I\+E\+\_\+\+O\+S\+I\+E\+\_\+\+Z\+C\+Z\+Y\+T\+A\+N\+IE}!main.\+c@{main.\+c}}
+\subsubsection{\texorpdfstring{Z\+Y\+R\+\_\+\+W\+S\+Z\+Y\+S\+T\+K\+I\+E\+\_\+\+O\+S\+I\+E\+\_\+\+Z\+C\+Z\+Y\+T\+A\+N\+IE}{ZYR\_WSZYSTKIE\_OSIE\_ZCZYTANIE}}
+{\footnotesize\ttfamily \#define Z\+Y\+R\+\_\+\+W\+S\+Z\+Y\+S\+T\+K\+I\+E\+\_\+\+O\+S\+I\+E\+\_\+\+Z\+C\+Z\+Y\+T\+A\+N\+IE~(\hyperlink{main_8c_a82859117a7258dd03a9e401ffe73095b}{Z\+Y\+R\+\_\+\+R\+E\+AD} $\vert$ \hyperlink{main_8c_a9905ca845340300ca002704a00cbc3aa}{Z\+Y\+R\+\_\+\+M\+U\+L\+T\+I\+R\+E\+AD} $\vert$ \hyperlink{main_8c_af2ffd2279ebacc9c0c297a049cd24aed}{Z\+Y\+R\+\_\+\+Z\+C\+Z\+Y\+T\+A\+N\+I\+E\+\_\+\+P\+O\+C\+Z\+A\+T\+EK})}
+
+
+
+Definicja w linii 61 pliku main.\+c.
+
+\mbox{\Hypertarget{main_8c_af2ffd2279ebacc9c0c297a049cd24aed}\label{main_8c_af2ffd2279ebacc9c0c297a049cd24aed}} 
+\index{main.\+c@{main.\+c}!Z\+Y\+R\+\_\+\+Z\+C\+Z\+Y\+T\+A\+N\+I\+E\+\_\+\+P\+O\+C\+Z\+A\+T\+EK@{Z\+Y\+R\+\_\+\+Z\+C\+Z\+Y\+T\+A\+N\+I\+E\+\_\+\+P\+O\+C\+Z\+A\+T\+EK}}
+\index{Z\+Y\+R\+\_\+\+Z\+C\+Z\+Y\+T\+A\+N\+I\+E\+\_\+\+P\+O\+C\+Z\+A\+T\+EK@{Z\+Y\+R\+\_\+\+Z\+C\+Z\+Y\+T\+A\+N\+I\+E\+\_\+\+P\+O\+C\+Z\+A\+T\+EK}!main.\+c@{main.\+c}}
+\subsubsection{\texorpdfstring{Z\+Y\+R\+\_\+\+Z\+C\+Z\+Y\+T\+A\+N\+I\+E\+\_\+\+P\+O\+C\+Z\+A\+T\+EK}{ZYR\_ZCZYTANIE\_POCZATEK}}
+{\footnotesize\ttfamily \#define Z\+Y\+R\+\_\+\+Z\+C\+Z\+Y\+T\+A\+N\+I\+E\+\_\+\+P\+O\+C\+Z\+A\+T\+EK~0x28}
+
+
+
+Definicja w linii 60 pliku main.\+c.
+
+
+
+\subsection{Dokumentacja funkcji}
+\mbox{\Hypertarget{main_8c_a1730ffe1e560465665eb47d9264826f9}\label{main_8c_a1730ffe1e560465665eb47d9264826f9}} 
+\index{main.\+c@{main.\+c}!Error\+\_\+\+Handler@{Error\+\_\+\+Handler}}
+\index{Error\+\_\+\+Handler@{Error\+\_\+\+Handler}!main.\+c@{main.\+c}}
+\subsubsection{\texorpdfstring{Error\+\_\+\+Handler()}{Error\_Handler()}}
+{\footnotesize\ttfamily void Error\+\_\+\+Handler (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+This function is executed in case of error occurrence. 
+
+
+\begin{DoxyRetVals}{Zwracane wartości}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definicja w linii 405 pliku main.\+c.
+
+\mbox{\Hypertarget{main_8c_ab157705f0f001f785fffc77a27200015}\label{main_8c_ab157705f0f001f785fffc77a27200015}} 
+\index{main.\+c@{main.\+c}!Filtr\+\_\+komplementarny@{Filtr\+\_\+komplementarny}}
+\index{Filtr\+\_\+komplementarny@{Filtr\+\_\+komplementarny}!main.\+c@{main.\+c}}
+\subsubsection{\texorpdfstring{Filtr\+\_\+komplementarny()}{Filtr\_komplementarny()}}
+{\footnotesize\ttfamily void Filtr\+\_\+komplementarny (\begin{DoxyParamCaption}\item[{float}]{xg,  }\item[{float}]{yg,  }\item[{float}]{zg,  }\item[{float}]{xa,  }\item[{float}]{ya,  }\item[{float}]{za,  }\item[{float}]{przyrost }\end{DoxyParamCaption})}
+
+
+
+Definicja w linii 181 pliku main.\+c.
+
+\mbox{\Hypertarget{main_8c_a5fc16ab87fe4b7be4e36a832f156e1e1}\label{main_8c_a5fc16ab87fe4b7be4e36a832f156e1e1}} 
+\index{main.\+c@{main.\+c}!L3\+G\+D20\+\_\+\+Multi\+Read@{L3\+G\+D20\+\_\+\+Multi\+Read}}
+\index{L3\+G\+D20\+\_\+\+Multi\+Read@{L3\+G\+D20\+\_\+\+Multi\+Read}!main.\+c@{main.\+c}}
+\subsubsection{\texorpdfstring{L3\+G\+D20\+\_\+\+Multi\+Read()}{L3GD20\_MultiRead()}}
+{\footnotesize\ttfamily void L3\+G\+D20\+\_\+\+Multi\+Read (\begin{DoxyParamCaption}\item[{\hyperlink{group___s_p_i___exported___types_gab3bd115785297692c125528b7293566b}{S\+P\+I\+\_\+\+Handle\+Type\+Def} $\ast$}]{spi }\end{DoxyParamCaption})}
+
+
+
+Definicja w linii 165 pliku main.\+c.
+
+\mbox{\Hypertarget{main_8c_a840291bc02cba5474a4cb46a9b9566fe}\label{main_8c_a840291bc02cba5474a4cb46a9b9566fe}} 
+\index{main.\+c@{main.\+c}!main@{main}}
+\index{main@{main}!main.\+c@{main.\+c}}
+\subsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+The application entry point. 
+
+
+\begin{DoxyRetVals}{Zwracane wartości}
+{\em int} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definicja w linii 210 pliku main.\+c.
+
+\mbox{\Hypertarget{main_8c_a471021b1fa96d7870422247bbb401732}\label{main_8c_a471021b1fa96d7870422247bbb401732}} 
+\index{main.\+c@{main.\+c}!Setup\+\_\+\+L3\+G\+D20@{Setup\+\_\+\+L3\+G\+D20}}
+\index{Setup\+\_\+\+L3\+G\+D20@{Setup\+\_\+\+L3\+G\+D20}!main.\+c@{main.\+c}}
+\subsubsection{\texorpdfstring{Setup\+\_\+\+L3\+G\+D20()}{Setup\_L3GD20()}}
+{\footnotesize\ttfamily void Setup\+\_\+\+L3\+G\+D20 (\begin{DoxyParamCaption}\item[{\hyperlink{group___s_p_i___exported___types_gab3bd115785297692c125528b7293566b}{S\+P\+I\+\_\+\+Handle\+Type\+Def} $\ast$}]{spi }\end{DoxyParamCaption})}
+
+
+
+Definicja w linii 149 pliku main.\+c.
+
+\mbox{\Hypertarget{main_8c_aa2c07790f204996bbcc1b0aff230fc67}\label{main_8c_aa2c07790f204996bbcc1b0aff230fc67}} 
+\index{main.\+c@{main.\+c}!Setup\+\_\+\+U\+A\+R\+T\+\_\+\+BT@{Setup\+\_\+\+U\+A\+R\+T\+\_\+\+BT}}
+\index{Setup\+\_\+\+U\+A\+R\+T\+\_\+\+BT@{Setup\+\_\+\+U\+A\+R\+T\+\_\+\+BT}!main.\+c@{main.\+c}}
+\subsubsection{\texorpdfstring{Setup\+\_\+\+U\+A\+R\+T\+\_\+\+B\+T()}{Setup\_UART\_BT()}}
+{\footnotesize\ttfamily void Setup\+\_\+\+U\+A\+R\+T\+\_\+\+BT (\begin{DoxyParamCaption}\item[{\hyperlink{group___u_a_r_t___exported___types_ga7adf4f3e4c3ecde572be5925c915a967}{U\+A\+R\+T\+\_\+\+Handle\+Type\+Def} $\ast$}]{U\+A\+RT }\end{DoxyParamCaption})}
+
+
+
+Definicja w linii 130 pliku main.\+c.
+
+\mbox{\Hypertarget{main_8c_a70af21c671abfcc773614a9a4f63d920}\label{main_8c_a70af21c671abfcc773614a9a4f63d920}} 
+\index{main.\+c@{main.\+c}!System\+Clock\+\_\+\+Config@{System\+Clock\+\_\+\+Config}}
+\index{System\+Clock\+\_\+\+Config@{System\+Clock\+\_\+\+Config}!main.\+c@{main.\+c}}
+\subsubsection{\texorpdfstring{System\+Clock\+\_\+\+Config()}{SystemClock\_Config()}}
+{\footnotesize\ttfamily void System\+Clock\+\_\+\+Config (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+System Clock Configuration. 
+
+
+\begin{DoxyRetVals}{Zwracane wartości}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+Configure the main internal regulator output voltage
+
+Initializes the C\+PU, A\+HB and A\+PB busses clocks
+
+Initializes the C\+PU, A\+HB and A\+PB busses clocks
+
+Definicja w linii 358 pliku main.\+c.
+
+
+
+\subsection{Dokumentacja zmiennych}
+\mbox{\Hypertarget{main_8c_a09f904e618569a217ab032fb39800921}\label{main_8c_a09f904e618569a217ab032fb39800921}} 
+\index{main.\+c@{main.\+c}!Button\+\_\+B@{Button\+\_\+B}}
+\index{Button\+\_\+B@{Button\+\_\+B}!main.\+c@{main.\+c}}
+\subsubsection{\texorpdfstring{Button\+\_\+B}{Button\_B}}
+{\footnotesize\ttfamily int Button\+\_\+B = 0}
+
+
+
+Definicja w linii 104 pliku main.\+c.
+
+\mbox{\Hypertarget{main_8c_a3a84093535b390d14477ed40e850014b}\label{main_8c_a3a84093535b390d14477ed40e850014b}} 
+\index{main.\+c@{main.\+c}!Button\+\_\+\+B\+\_\+mem@{Button\+\_\+\+B\+\_\+mem}}
+\index{Button\+\_\+\+B\+\_\+mem@{Button\+\_\+\+B\+\_\+mem}!main.\+c@{main.\+c}}
+\subsubsection{\texorpdfstring{Button\+\_\+\+B\+\_\+mem}{Button\_B\_mem}}
+{\footnotesize\ttfamily int Button\+\_\+\+B\+\_\+mem = 0}
+
+
+
+Definicja w linii 103 pliku main.\+c.
+
+\mbox{\Hypertarget{main_8c_af10fe25d18db4e4cb1443d06a4ed809b}\label{main_8c_af10fe25d18db4e4cb1443d06a4ed809b}} 
+\index{main.\+c@{main.\+c}!Dane@{Dane}}
+\index{Dane@{Dane}!main.\+c@{main.\+c}}
+\subsubsection{\texorpdfstring{Dane}{Dane}}
+{\footnotesize\ttfamily uint8\+\_\+t Dane\mbox{[}6\mbox{]}}
+
+
+
+Definicja w linii 79 pliku main.\+c.
+
+\mbox{\Hypertarget{main_8c_a792cd126b2d51df48530d7abf671114b}\label{main_8c_a792cd126b2d51df48530d7abf671114b}} 
+\index{main.\+c@{main.\+c}!flaga@{flaga}}
+\index{flaga@{flaga}!main.\+c@{main.\+c}}
+\subsubsection{\texorpdfstring{flaga}{flaga}}
+{\footnotesize\ttfamily volatile int flaga = 0}
+
+
+
+Definicja w linii 119 pliku main.\+c.
+
+\mbox{\Hypertarget{main_8c_ada49d26ae9b2f0dd00d0c59f3f5766a7}\label{main_8c_ada49d26ae9b2f0dd00d0c59f3f5766a7}} 
+\index{main.\+c@{main.\+c}!flaga2@{flaga2}}
+\index{flaga2@{flaga2}!main.\+c@{main.\+c}}
+\subsubsection{\texorpdfstring{flaga2}{flaga2}}
+{\footnotesize\ttfamily volatile int flaga2 = 0}
+
+
+
+Definicja w linii 120 pliku main.\+c.
+
+\mbox{\Hypertarget{main_8c_a5a5b07db260a35ffcede3ff26557b55c}\label{main_8c_a5a5b07db260a35ffcede3ff26557b55c}} 
+\index{main.\+c@{main.\+c}!Odbior@{Odbior}}
+\index{Odbior@{Odbior}!main.\+c@{main.\+c}}
+\subsubsection{\texorpdfstring{Odbior}{Odbior}}
+{\footnotesize\ttfamily uint8\+\_\+t Odbior\mbox{[}10\mbox{]}}
+
+
+
+Definicja w linii 76 pliku main.\+c.
+
+\mbox{\Hypertarget{main_8c_a282e7d4378d4a18a805b8980295ac86c}\label{main_8c_a282e7d4378d4a18a805b8980295ac86c}} 
+\index{main.\+c@{main.\+c}!pitch@{pitch}}
+\index{pitch@{pitch}!main.\+c@{main.\+c}}
+\subsubsection{\texorpdfstring{pitch}{pitch}}
+{\footnotesize\ttfamily float pitch = 0}
+
+
+
+Definicja w linii 101 pliku main.\+c.
+
+\mbox{\Hypertarget{main_8c_ae73bfe641dddaa19b9d52282d7897385}\label{main_8c_ae73bfe641dddaa19b9d52282d7897385}} 
+\index{main.\+c@{main.\+c}!Polaczenie@{Polaczenie}}
+\index{Polaczenie@{Polaczenie}!main.\+c@{main.\+c}}
+\subsubsection{\texorpdfstring{Polaczenie}{Polaczenie}}
+{\footnotesize\ttfamily int Polaczenie = 0}
+
+
+
+Definicja w linii 106 pliku main.\+c.
+
+\mbox{\Hypertarget{main_8c_a26fd84d522945b6038221d9e38c7cc39}\label{main_8c_a26fd84d522945b6038221d9e38c7cc39}} 
+\index{main.\+c@{main.\+c}!roll@{roll}}
+\index{roll@{roll}!main.\+c@{main.\+c}}
+\subsubsection{\texorpdfstring{roll}{roll}}
+{\footnotesize\ttfamily float roll = 0}
+
+
+
+Definicja w linii 100 pliku main.\+c.
+
+\mbox{\Hypertarget{main_8c_ac4395370ebf7d3707363b8c85609cee7}\label{main_8c_ac4395370ebf7d3707363b8c85609cee7}} 
+\index{main.\+c@{main.\+c}!Rozmiar@{Rozmiar}}
+\index{Rozmiar@{Rozmiar}!main.\+c@{main.\+c}}
+\subsubsection{\texorpdfstring{Rozmiar}{Rozmiar}}
+{\footnotesize\ttfamily int16\+\_\+t Rozmiar}
+
+
+
+Definicja w linii 77 pliku main.\+c.
+
+\mbox{\Hypertarget{main_8c_ab59a8a428b266863f97dc0a7f5ea6d38}\label{main_8c_ab59a8a428b266863f97dc0a7f5ea6d38}} 
+\index{main.\+c@{main.\+c}!Wiadomosc@{Wiadomosc}}
+\index{Wiadomosc@{Wiadomosc}!main.\+c@{main.\+c}}
+\subsubsection{\texorpdfstring{Wiadomosc}{Wiadomosc}}
+{\footnotesize\ttfamily int8\+\_\+t Wiadomosc\mbox{[}200\mbox{]}}
+
+
+
+Definicja w linii 75 pliku main.\+c.
+
+\mbox{\Hypertarget{main_8c_aa6aba27bc1a89db9e350b50bbf881f57}\label{main_8c_aa6aba27bc1a89db9e350b50bbf881f57}} 
+\index{main.\+c@{main.\+c}!X@{X}}
+\index{X@{X}!main.\+c@{main.\+c}}
+\subsubsection{\texorpdfstring{X}{X}}
+{\footnotesize\ttfamily int16\+\_\+t X = 0}
+
+
+
+Definicja w linii 80 pliku main.\+c.
+
+\mbox{\Hypertarget{main_8c_a2f235b678a68ce42b7b525da8cccb5e0}\label{main_8c_a2f235b678a68ce42b7b525da8cccb5e0}} 
+\index{main.\+c@{main.\+c}!X\+\_\+g@{X\+\_\+g}}
+\index{X\+\_\+g@{X\+\_\+g}!main.\+c@{main.\+c}}
+\subsubsection{\texorpdfstring{X\+\_\+g}{X\_g}}
+{\footnotesize\ttfamily float X\+\_\+g = 0}
+
+
+
+Definicja w linii 84 pliku main.\+c.
+
+\mbox{\Hypertarget{main_8c_a8a24ed0830048dce8c69bb8c49fc621d}\label{main_8c_a8a24ed0830048dce8c69bb8c49fc621d}} 
+\index{main.\+c@{main.\+c}!X\+\_\+kat@{X\+\_\+kat}}
+\index{X\+\_\+kat@{X\+\_\+kat}!main.\+c@{main.\+c}}
+\subsubsection{\texorpdfstring{X\+\_\+kat}{X\_kat}}
+{\footnotesize\ttfamily float X\+\_\+kat = 0}
+
+
+
+Definicja w linii 96 pliku main.\+c.
+
+\mbox{\Hypertarget{main_8c_aa8177e4262a7e6c50c13d7c4c871c7e5}\label{main_8c_aa8177e4262a7e6c50c13d7c4c871c7e5}} 
+\index{main.\+c@{main.\+c}!X\+\_\+mem@{X\+\_\+mem}}
+\index{X\+\_\+mem@{X\+\_\+mem}!main.\+c@{main.\+c}}
+\subsubsection{\texorpdfstring{X\+\_\+mem}{X\_mem}}
+{\footnotesize\ttfamily float X\+\_\+mem = 0}
+
+
+
+Definicja w linii 88 pliku main.\+c.
+
+\mbox{\Hypertarget{main_8c_a61e67562d73860519c92f9a4874e8a47}\label{main_8c_a61e67562d73860519c92f9a4874e8a47}} 
+\index{main.\+c@{main.\+c}!X\+\_\+roznica@{X\+\_\+roznica}}
+\index{X\+\_\+roznica@{X\+\_\+roznica}!main.\+c@{main.\+c}}
+\subsubsection{\texorpdfstring{X\+\_\+roznica}{X\_roznica}}
+{\footnotesize\ttfamily float X\+\_\+roznica = 0}
+
+
+
+Definicja w linii 92 pliku main.\+c.
+
+\mbox{\Hypertarget{main_8c_abe4637362df8e341470401813999dd17}\label{main_8c_abe4637362df8e341470401813999dd17}} 
+\index{main.\+c@{main.\+c}!Y@{Y}}
+\index{Y@{Y}!main.\+c@{main.\+c}}
+\subsubsection{\texorpdfstring{Y}{Y}}
+{\footnotesize\ttfamily int16\+\_\+t Y = 0}
+
+
+
+Definicja w linii 81 pliku main.\+c.
+
+\mbox{\Hypertarget{main_8c_a370fe05e5eb44c207cb5eab8006e5994}\label{main_8c_a370fe05e5eb44c207cb5eab8006e5994}} 
+\index{main.\+c@{main.\+c}!Y\+\_\+g@{Y\+\_\+g}}
+\index{Y\+\_\+g@{Y\+\_\+g}!main.\+c@{main.\+c}}
+\subsubsection{\texorpdfstring{Y\+\_\+g}{Y\_g}}
+{\footnotesize\ttfamily float Y\+\_\+g = 0}
+
+
+
+Definicja w linii 85 pliku main.\+c.
+
+\mbox{\Hypertarget{main_8c_a571a943925a04794ca2c21b6c4f028a3}\label{main_8c_a571a943925a04794ca2c21b6c4f028a3}} 
+\index{main.\+c@{main.\+c}!Y\+\_\+kat@{Y\+\_\+kat}}
+\index{Y\+\_\+kat@{Y\+\_\+kat}!main.\+c@{main.\+c}}
+\subsubsection{\texorpdfstring{Y\+\_\+kat}{Y\_kat}}
+{\footnotesize\ttfamily float Y\+\_\+kat = 0}
+
+
+
+Definicja w linii 97 pliku main.\+c.
+
+\mbox{\Hypertarget{main_8c_a14838e6c6915f575b07fe2de908e1858}\label{main_8c_a14838e6c6915f575b07fe2de908e1858}} 
+\index{main.\+c@{main.\+c}!Y\+\_\+mem@{Y\+\_\+mem}}
+\index{Y\+\_\+mem@{Y\+\_\+mem}!main.\+c@{main.\+c}}
+\subsubsection{\texorpdfstring{Y\+\_\+mem}{Y\_mem}}
+{\footnotesize\ttfamily float Y\+\_\+mem = 0}
+
+
+
+Definicja w linii 89 pliku main.\+c.
+
+\mbox{\Hypertarget{main_8c_a2d73757c97cc889e060ade6dffbdd8a6}\label{main_8c_a2d73757c97cc889e060ade6dffbdd8a6}} 
+\index{main.\+c@{main.\+c}!Y\+\_\+roznica@{Y\+\_\+roznica}}
+\index{Y\+\_\+roznica@{Y\+\_\+roznica}!main.\+c@{main.\+c}}
+\subsubsection{\texorpdfstring{Y\+\_\+roznica}{Y\_roznica}}
+{\footnotesize\ttfamily float Y\+\_\+roznica = 0}
+
+
+
+Definicja w linii 93 pliku main.\+c.
+
+\mbox{\Hypertarget{main_8c_a9a9188839f9d62a895b0371d08d0f22b}\label{main_8c_a9a9188839f9d62a895b0371d08d0f22b}} 
+\index{main.\+c@{main.\+c}!Z@{Z}}
+\index{Z@{Z}!main.\+c@{main.\+c}}
+\subsubsection{\texorpdfstring{Z}{Z}}
+{\footnotesize\ttfamily int16\+\_\+t Z = 0}
+
+
+
+Definicja w linii 82 pliku main.\+c.
+
+\mbox{\Hypertarget{main_8c_ac63fbeed0ce6dbd374dcfbf9b595349f}\label{main_8c_ac63fbeed0ce6dbd374dcfbf9b595349f}} 
+\index{main.\+c@{main.\+c}!Z\+\_\+g@{Z\+\_\+g}}
+\index{Z\+\_\+g@{Z\+\_\+g}!main.\+c@{main.\+c}}
+\subsubsection{\texorpdfstring{Z\+\_\+g}{Z\_g}}
+{\footnotesize\ttfamily float Z\+\_\+g = 0}
+
+
+
+Definicja w linii 86 pliku main.\+c.
+
+\mbox{\Hypertarget{main_8c_a5b33399a3a48c735834819b78d04f860}\label{main_8c_a5b33399a3a48c735834819b78d04f860}} 
+\index{main.\+c@{main.\+c}!Z\+\_\+kat@{Z\+\_\+kat}}
+\index{Z\+\_\+kat@{Z\+\_\+kat}!main.\+c@{main.\+c}}
+\subsubsection{\texorpdfstring{Z\+\_\+kat}{Z\_kat}}
+{\footnotesize\ttfamily float Z\+\_\+kat = 0}
+
+
+
+Definicja w linii 98 pliku main.\+c.
+
+\mbox{\Hypertarget{main_8c_a2c7e49bf27ba861ab29b9bf50ef77bb1}\label{main_8c_a2c7e49bf27ba861ab29b9bf50ef77bb1}} 
+\index{main.\+c@{main.\+c}!Z\+\_\+mem@{Z\+\_\+mem}}
+\index{Z\+\_\+mem@{Z\+\_\+mem}!main.\+c@{main.\+c}}
+\subsubsection{\texorpdfstring{Z\+\_\+mem}{Z\_mem}}
+{\footnotesize\ttfamily float Z\+\_\+mem = 0}
+
+
+
+Definicja w linii 90 pliku main.\+c.
+
+\mbox{\Hypertarget{main_8c_ac59073cd9142ed81cf2d37807b678e52}\label{main_8c_ac59073cd9142ed81cf2d37807b678e52}} 
+\index{main.\+c@{main.\+c}!Z\+\_\+roznica@{Z\+\_\+roznica}}
+\index{Z\+\_\+roznica@{Z\+\_\+roznica}!main.\+c@{main.\+c}}
+\subsubsection{\texorpdfstring{Z\+\_\+roznica}{Z\_roznica}}
+{\footnotesize\ttfamily float Z\+\_\+roznica = 0}
+
+
+
+Definicja w linii 94 pliku main.\+c.
+

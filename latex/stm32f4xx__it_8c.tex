@@ -1,0 +1,252 @@
+\hypertarget{stm32f4xx__it_8c}{}\section{Dokumentacja pliku S\+T\+M/\+W\+D\+S\+\_\+\+Kosc\+\_\+\+Linux/\+Core/\+Src/stm32f4xx\+\_\+it.c}
+\label{stm32f4xx__it_8c}\index{S\+T\+M/\+W\+D\+S\+\_\+\+Kosc\+\_\+\+Linux/\+Core/\+Src/stm32f4xx\+\_\+it.\+c@{S\+T\+M/\+W\+D\+S\+\_\+\+Kosc\+\_\+\+Linux/\+Core/\+Src/stm32f4xx\+\_\+it.\+c}}
+
+
+Interrupt Service Routines.  
+
+
+{\ttfamily \#include \char`\"{}main.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}stm32f4xx\+\_\+it.\+h\char`\"{}}\newline
+Wykres zależności załączania dla stm32f4xx\+\_\+it.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{stm32f4xx__it_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Funkcje}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{stm32f4xx__it_8c_a6ad7a5e3ee69cb6db6a6b9111ba898bc}{N\+M\+I\+\_\+\+Handler} (void)
+\begin{DoxyCompactList}\small\item\em This function handles Non maskable interrupt. \end{DoxyCompactList}\item 
+void \hyperlink{stm32f4xx__it_8c_a2bffc10d5bd4106753b7c30e86903bea}{Hard\+Fault\+\_\+\+Handler} (void)
+\begin{DoxyCompactList}\small\item\em This function handles Hard fault interrupt. \end{DoxyCompactList}\item 
+void \hyperlink{stm32f4xx__it_8c_a3150f74512510287a942624aa9b44cc5}{Mem\+Manage\+\_\+\+Handler} (void)
+\begin{DoxyCompactList}\small\item\em This function handles Memory management fault. \end{DoxyCompactList}\item 
+void \hyperlink{stm32f4xx__it_8c_a850cefb17a977292ae5eb4cafa9976c3}{Bus\+Fault\+\_\+\+Handler} (void)
+\begin{DoxyCompactList}\small\item\em This function handles Pre-\/fetch fault, memory access fault. \end{DoxyCompactList}\item 
+void \hyperlink{stm32f4xx__it_8c_a1d98923de2ed6b7309b66f9ba2971647}{Usage\+Fault\+\_\+\+Handler} (void)
+\begin{DoxyCompactList}\small\item\em This function handles Undefined instruction or illegal state. \end{DoxyCompactList}\item 
+void \hyperlink{stm32f4xx__it_8c_a3e5ddb3df0d62f2dc357e64a3f04a6ce}{S\+V\+C\+\_\+\+Handler} (void)
+\begin{DoxyCompactList}\small\item\em This function handles System service call via S\+WI instruction. \end{DoxyCompactList}\item 
+void \hyperlink{stm32f4xx__it_8c_adbdfb05858cc36fc520974df37ec3cb0}{Debug\+Mon\+\_\+\+Handler} (void)
+\begin{DoxyCompactList}\small\item\em This function handles Debug monitor. \end{DoxyCompactList}\item 
+void \hyperlink{stm32f4xx__it_8c_a6303e1f258cbdc1f970ce579cc015623}{Pend\+S\+V\+\_\+\+Handler} (void)
+\begin{DoxyCompactList}\small\item\em This function handles Pendable request for system service. \end{DoxyCompactList}\item 
+void \hyperlink{stm32f4xx__it_8c_ab5e09814056d617c521549e542639b7e}{Sys\+Tick\+\_\+\+Handler} (void)
+\begin{DoxyCompactList}\small\item\em This function handles System tick timer. \end{DoxyCompactList}\item 
+void \hyperlink{stm32f4xx__it_8c_a098245bf4e2f8844b22692b034a266fb}{T\+I\+M1\+\_\+\+T\+R\+G\+\_\+\+C\+O\+M\+\_\+\+T\+I\+M11\+\_\+\+I\+R\+Q\+Handler} (void)
+\begin{DoxyCompactList}\small\item\em This function handles T\+I\+M1 trigger and commutation interrupts and T\+I\+M11 global interrupt. \end{DoxyCompactList}\item 
+void \hyperlink{stm32f4xx__it_8c_a0ca6fd0e6f77921dd1123539857ba0a8}{U\+S\+A\+R\+T2\+\_\+\+I\+R\+Q\+Handler} (void)
+\begin{DoxyCompactList}\small\item\em This function handles U\+S\+A\+R\+T2 global interrupt. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Zmienne}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{struct_t_i_m___handle_type_def}{T\+I\+M\+\_\+\+Handle\+Type\+Def} \hyperlink{stm32f4xx__it_8c_a2f22f985c4f33318fdcd4cc996623bf4}{htim11}
+\item 
+\hyperlink{group___u_a_r_t___exported___types_ga7adf4f3e4c3ecde572be5925c915a967}{U\+A\+R\+T\+\_\+\+Handle\+Type\+Def} \hyperlink{stm32f4xx__it_8c_aa9479c261d65eecedd3d9582f7f0f89c}{huart2}
+\end{DoxyCompactItemize}
+
+
+\subsection{Opis szczegółowy}
+Interrupt Service Routines. 
+
+\begin{DoxyAttention}{Uwaga}
+
+\end{DoxyAttention}
+\subsubsection*{\begin{center}\copyright{} Copyright (c) 2020 S\+T\+Microelectronics. All rights reserved.\end{center} }
+
+This software component is licensed by ST under B\+SD 3-\/\+Clause license, the \char`\"{}\+License\char`\"{}; You may not use this file except in compliance with the License. You may obtain a copy of the License at\+: opensource.\+org/licenses/\+B\+S\+D-\/3-\/\+Clause 
+
+\subsection{Dokumentacja funkcji}
+\mbox{\Hypertarget{stm32f4xx__it_8c_a850cefb17a977292ae5eb4cafa9976c3}\label{stm32f4xx__it_8c_a850cefb17a977292ae5eb4cafa9976c3}} 
+\index{stm32f4xx\+\_\+it.\+c@{stm32f4xx\+\_\+it.\+c}!Bus\+Fault\+\_\+\+Handler@{Bus\+Fault\+\_\+\+Handler}}
+\index{Bus\+Fault\+\_\+\+Handler@{Bus\+Fault\+\_\+\+Handler}!stm32f4xx\+\_\+it.\+c@{stm32f4xx\+\_\+it.\+c}}
+\subsubsection{\texorpdfstring{Bus\+Fault\+\_\+\+Handler()}{BusFault\_Handler()}}
+{\footnotesize\ttfamily void Bus\+Fault\+\_\+\+Handler (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+This function handles Pre-\/fetch fault, memory access fault. 
+
+
+
+Definicja w linii 114 pliku stm32f4xx\+\_\+it.\+c.
+
+\mbox{\Hypertarget{stm32f4xx__it_8c_adbdfb05858cc36fc520974df37ec3cb0}\label{stm32f4xx__it_8c_adbdfb05858cc36fc520974df37ec3cb0}} 
+\index{stm32f4xx\+\_\+it.\+c@{stm32f4xx\+\_\+it.\+c}!Debug\+Mon\+\_\+\+Handler@{Debug\+Mon\+\_\+\+Handler}}
+\index{Debug\+Mon\+\_\+\+Handler@{Debug\+Mon\+\_\+\+Handler}!stm32f4xx\+\_\+it.\+c@{stm32f4xx\+\_\+it.\+c}}
+\subsubsection{\texorpdfstring{Debug\+Mon\+\_\+\+Handler()}{DebugMon\_Handler()}}
+{\footnotesize\ttfamily void Debug\+Mon\+\_\+\+Handler (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+This function handles Debug monitor. 
+
+
+
+Definicja w linii 157 pliku stm32f4xx\+\_\+it.\+c.
+
+\mbox{\Hypertarget{stm32f4xx__it_8c_a2bffc10d5bd4106753b7c30e86903bea}\label{stm32f4xx__it_8c_a2bffc10d5bd4106753b7c30e86903bea}} 
+\index{stm32f4xx\+\_\+it.\+c@{stm32f4xx\+\_\+it.\+c}!Hard\+Fault\+\_\+\+Handler@{Hard\+Fault\+\_\+\+Handler}}
+\index{Hard\+Fault\+\_\+\+Handler@{Hard\+Fault\+\_\+\+Handler}!stm32f4xx\+\_\+it.\+c@{stm32f4xx\+\_\+it.\+c}}
+\subsubsection{\texorpdfstring{Hard\+Fault\+\_\+\+Handler()}{HardFault\_Handler()}}
+{\footnotesize\ttfamily void Hard\+Fault\+\_\+\+Handler (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+This function handles Hard fault interrupt. 
+
+
+
+Definicja w linii 84 pliku stm32f4xx\+\_\+it.\+c.
+
+\mbox{\Hypertarget{stm32f4xx__it_8c_a3150f74512510287a942624aa9b44cc5}\label{stm32f4xx__it_8c_a3150f74512510287a942624aa9b44cc5}} 
+\index{stm32f4xx\+\_\+it.\+c@{stm32f4xx\+\_\+it.\+c}!Mem\+Manage\+\_\+\+Handler@{Mem\+Manage\+\_\+\+Handler}}
+\index{Mem\+Manage\+\_\+\+Handler@{Mem\+Manage\+\_\+\+Handler}!stm32f4xx\+\_\+it.\+c@{stm32f4xx\+\_\+it.\+c}}
+\subsubsection{\texorpdfstring{Mem\+Manage\+\_\+\+Handler()}{MemManage\_Handler()}}
+{\footnotesize\ttfamily void Mem\+Manage\+\_\+\+Handler (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+This function handles Memory management fault. 
+
+
+
+Definicja w linii 99 pliku stm32f4xx\+\_\+it.\+c.
+
+\mbox{\Hypertarget{stm32f4xx__it_8c_a6ad7a5e3ee69cb6db6a6b9111ba898bc}\label{stm32f4xx__it_8c_a6ad7a5e3ee69cb6db6a6b9111ba898bc}} 
+\index{stm32f4xx\+\_\+it.\+c@{stm32f4xx\+\_\+it.\+c}!N\+M\+I\+\_\+\+Handler@{N\+M\+I\+\_\+\+Handler}}
+\index{N\+M\+I\+\_\+\+Handler@{N\+M\+I\+\_\+\+Handler}!stm32f4xx\+\_\+it.\+c@{stm32f4xx\+\_\+it.\+c}}
+\subsubsection{\texorpdfstring{N\+M\+I\+\_\+\+Handler()}{NMI\_Handler()}}
+{\footnotesize\ttfamily void N\+M\+I\+\_\+\+Handler (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+This function handles Non maskable interrupt. 
+
+
+
+Definicja w linii 71 pliku stm32f4xx\+\_\+it.\+c.
+
+\mbox{\Hypertarget{stm32f4xx__it_8c_a6303e1f258cbdc1f970ce579cc015623}\label{stm32f4xx__it_8c_a6303e1f258cbdc1f970ce579cc015623}} 
+\index{stm32f4xx\+\_\+it.\+c@{stm32f4xx\+\_\+it.\+c}!Pend\+S\+V\+\_\+\+Handler@{Pend\+S\+V\+\_\+\+Handler}}
+\index{Pend\+S\+V\+\_\+\+Handler@{Pend\+S\+V\+\_\+\+Handler}!stm32f4xx\+\_\+it.\+c@{stm32f4xx\+\_\+it.\+c}}
+\subsubsection{\texorpdfstring{Pend\+S\+V\+\_\+\+Handler()}{PendSV\_Handler()}}
+{\footnotesize\ttfamily void Pend\+S\+V\+\_\+\+Handler (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+This function handles Pendable request for system service. 
+
+
+
+Definicja w linii 170 pliku stm32f4xx\+\_\+it.\+c.
+
+\mbox{\Hypertarget{stm32f4xx__it_8c_a3e5ddb3df0d62f2dc357e64a3f04a6ce}\label{stm32f4xx__it_8c_a3e5ddb3df0d62f2dc357e64a3f04a6ce}} 
+\index{stm32f4xx\+\_\+it.\+c@{stm32f4xx\+\_\+it.\+c}!S\+V\+C\+\_\+\+Handler@{S\+V\+C\+\_\+\+Handler}}
+\index{S\+V\+C\+\_\+\+Handler@{S\+V\+C\+\_\+\+Handler}!stm32f4xx\+\_\+it.\+c@{stm32f4xx\+\_\+it.\+c}}
+\subsubsection{\texorpdfstring{S\+V\+C\+\_\+\+Handler()}{SVC\_Handler()}}
+{\footnotesize\ttfamily void S\+V\+C\+\_\+\+Handler (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+This function handles System service call via S\+WI instruction. 
+
+
+
+Definicja w linii 144 pliku stm32f4xx\+\_\+it.\+c.
+
+\mbox{\Hypertarget{stm32f4xx__it_8c_ab5e09814056d617c521549e542639b7e}\label{stm32f4xx__it_8c_ab5e09814056d617c521549e542639b7e}} 
+\index{stm32f4xx\+\_\+it.\+c@{stm32f4xx\+\_\+it.\+c}!Sys\+Tick\+\_\+\+Handler@{Sys\+Tick\+\_\+\+Handler}}
+\index{Sys\+Tick\+\_\+\+Handler@{Sys\+Tick\+\_\+\+Handler}!stm32f4xx\+\_\+it.\+c@{stm32f4xx\+\_\+it.\+c}}
+\subsubsection{\texorpdfstring{Sys\+Tick\+\_\+\+Handler()}{SysTick\_Handler()}}
+{\footnotesize\ttfamily void Sys\+Tick\+\_\+\+Handler (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+This function handles System tick timer. 
+
+
+
+Definicja w linii 183 pliku stm32f4xx\+\_\+it.\+c.
+
+\mbox{\Hypertarget{stm32f4xx__it_8c_a098245bf4e2f8844b22692b034a266fb}\label{stm32f4xx__it_8c_a098245bf4e2f8844b22692b034a266fb}} 
+\index{stm32f4xx\+\_\+it.\+c@{stm32f4xx\+\_\+it.\+c}!T\+I\+M1\+\_\+\+T\+R\+G\+\_\+\+C\+O\+M\+\_\+\+T\+I\+M11\+\_\+\+I\+R\+Q\+Handler@{T\+I\+M1\+\_\+\+T\+R\+G\+\_\+\+C\+O\+M\+\_\+\+T\+I\+M11\+\_\+\+I\+R\+Q\+Handler}}
+\index{T\+I\+M1\+\_\+\+T\+R\+G\+\_\+\+C\+O\+M\+\_\+\+T\+I\+M11\+\_\+\+I\+R\+Q\+Handler@{T\+I\+M1\+\_\+\+T\+R\+G\+\_\+\+C\+O\+M\+\_\+\+T\+I\+M11\+\_\+\+I\+R\+Q\+Handler}!stm32f4xx\+\_\+it.\+c@{stm32f4xx\+\_\+it.\+c}}
+\subsubsection{\texorpdfstring{T\+I\+M1\+\_\+\+T\+R\+G\+\_\+\+C\+O\+M\+\_\+\+T\+I\+M11\+\_\+\+I\+R\+Q\+Handler()}{TIM1\_TRG\_COM\_TIM11\_IRQHandler()}}
+{\footnotesize\ttfamily void T\+I\+M1\+\_\+\+T\+R\+G\+\_\+\+C\+O\+M\+\_\+\+T\+I\+M11\+\_\+\+I\+R\+Q\+Handler (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+This function handles T\+I\+M1 trigger and commutation interrupts and T\+I\+M11 global interrupt. 
+
+
+
+Definicja w linii 204 pliku stm32f4xx\+\_\+it.\+c.
+
+\mbox{\Hypertarget{stm32f4xx__it_8c_a1d98923de2ed6b7309b66f9ba2971647}\label{stm32f4xx__it_8c_a1d98923de2ed6b7309b66f9ba2971647}} 
+\index{stm32f4xx\+\_\+it.\+c@{stm32f4xx\+\_\+it.\+c}!Usage\+Fault\+\_\+\+Handler@{Usage\+Fault\+\_\+\+Handler}}
+\index{Usage\+Fault\+\_\+\+Handler@{Usage\+Fault\+\_\+\+Handler}!stm32f4xx\+\_\+it.\+c@{stm32f4xx\+\_\+it.\+c}}
+\subsubsection{\texorpdfstring{Usage\+Fault\+\_\+\+Handler()}{UsageFault\_Handler()}}
+{\footnotesize\ttfamily void Usage\+Fault\+\_\+\+Handler (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+This function handles Undefined instruction or illegal state. 
+
+
+
+Definicja w linii 129 pliku stm32f4xx\+\_\+it.\+c.
+
+\mbox{\Hypertarget{stm32f4xx__it_8c_a0ca6fd0e6f77921dd1123539857ba0a8}\label{stm32f4xx__it_8c_a0ca6fd0e6f77921dd1123539857ba0a8}} 
+\index{stm32f4xx\+\_\+it.\+c@{stm32f4xx\+\_\+it.\+c}!U\+S\+A\+R\+T2\+\_\+\+I\+R\+Q\+Handler@{U\+S\+A\+R\+T2\+\_\+\+I\+R\+Q\+Handler}}
+\index{U\+S\+A\+R\+T2\+\_\+\+I\+R\+Q\+Handler@{U\+S\+A\+R\+T2\+\_\+\+I\+R\+Q\+Handler}!stm32f4xx\+\_\+it.\+c@{stm32f4xx\+\_\+it.\+c}}
+\subsubsection{\texorpdfstring{U\+S\+A\+R\+T2\+\_\+\+I\+R\+Q\+Handler()}{USART2\_IRQHandler()}}
+{\footnotesize\ttfamily void U\+S\+A\+R\+T2\+\_\+\+I\+R\+Q\+Handler (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+This function handles U\+S\+A\+R\+T2 global interrupt. 
+
+
+
+Definicja w linii 218 pliku stm32f4xx\+\_\+it.\+c.
+
+
+
+\subsection{Dokumentacja zmiennych}
+\mbox{\Hypertarget{stm32f4xx__it_8c_a2f22f985c4f33318fdcd4cc996623bf4}\label{stm32f4xx__it_8c_a2f22f985c4f33318fdcd4cc996623bf4}} 
+\index{stm32f4xx\+\_\+it.\+c@{stm32f4xx\+\_\+it.\+c}!htim11@{htim11}}
+\index{htim11@{htim11}!stm32f4xx\+\_\+it.\+c@{stm32f4xx\+\_\+it.\+c}}
+\subsubsection{\texorpdfstring{htim11}{htim11}}
+{\footnotesize\ttfamily \hyperlink{struct_t_i_m___handle_type_def}{T\+I\+M\+\_\+\+Handle\+Type\+Def} htim11}
+
+File Name \+: \hyperlink{tim_8c}{T\+I\+M.\+c} Description \+: This file provides code for the configuration of the T\+IM instances.
+
+\begin{DoxyAttention}{Uwaga}
+
+\end{DoxyAttention}
+\subsubsection*{\begin{center}\copyright{} Copyright (c) 2020 S\+T\+Microelectronics. All rights reserved.\end{center} }
+
+This software component is licensed by ST under B\+SD 3-\/\+Clause license, the \char`\"{}\+License\char`\"{}; You may not use this file except in compliance with the License. You may obtain a copy of the License at\+: opensource.\+org/licenses/\+B\+S\+D-\/3-\/\+Clause 
+
+Definicja w linii 27 pliku tim.\+c.
+
+\mbox{\Hypertarget{stm32f4xx__it_8c_aa9479c261d65eecedd3d9582f7f0f89c}\label{stm32f4xx__it_8c_aa9479c261d65eecedd3d9582f7f0f89c}} 
+\index{stm32f4xx\+\_\+it.\+c@{stm32f4xx\+\_\+it.\+c}!huart2@{huart2}}
+\index{huart2@{huart2}!stm32f4xx\+\_\+it.\+c@{stm32f4xx\+\_\+it.\+c}}
+\subsubsection{\texorpdfstring{huart2}{huart2}}
+{\footnotesize\ttfamily \hyperlink{group___u_a_r_t___exported___types_ga7adf4f3e4c3ecde572be5925c915a967}{U\+A\+R\+T\+\_\+\+Handle\+Type\+Def} huart2}
+
+File Name \+: \hyperlink{usart_8c}{U\+S\+A\+R\+T.\+c} Description \+: This file provides code for the configuration of the U\+S\+A\+RT instances.
+
+\begin{DoxyAttention}{Uwaga}
+
+\end{DoxyAttention}
+\subsubsection*{\begin{center}\copyright{} Copyright (c) 2020 S\+T\+Microelectronics. All rights reserved.\end{center} }
+
+This software component is licensed by ST under B\+SD 3-\/\+Clause license, the \char`\"{}\+License\char`\"{}; You may not use this file except in compliance with the License. You may obtain a copy of the License at\+: opensource.\+org/licenses/\+B\+S\+D-\/3-\/\+Clause 
+
+Definicja w linii 27 pliku usart.\+c.
+

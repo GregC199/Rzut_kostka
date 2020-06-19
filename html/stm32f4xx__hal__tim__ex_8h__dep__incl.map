@@ -1,0 +1,38 @@
+<map id="STM/WDS_Kosc_Linux/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h" name="STM/WDS_Kosc_Linux/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h">
+<area shape="rect" id="node2" href="$stm32f4xx__hal__tim_8h.html" title="Header file of TIM HAL module. " alt="" coords="2485,124,2661,195"/>
+<area shape="rect" id="node3" href="$stm32f4xx__hal__conf_8h.html" title="STM/WDS_Kosc_Linux\l/Core/Inc/stm32f4xx\l_hal_conf.h" alt="" coords="2492,243,2653,299"/>
+<area shape="rect" id="node4" href="$stm32f4xx__hal_8h.html" title="This file contains all the functions prototypes for the HAL module driver. " alt="" coords="2479,347,2666,403"/>
+<area shape="rect" id="node5" href="$main_8h.html" title=": Header for main.c file. This file contains the common defines of the application. " alt="" coords="587,465,748,507"/>
+<area shape="rect" id="node19" href="$stm32f4xx__hal_8c.html" title="HAL module driver. This is the common part of the HAL initialization. " alt="" coords="772,458,960,514"/>
+<area shape="rect" id="node20" href="$stm32f4xx__hal__cortex_8c.html" title="CORTEX HAL module driver. This file provides firmware functions to manage the following functionaliti..." alt="" coords="985,451,1161,521"/>
+<area shape="rect" id="node21" href="$stm32f4xx__hal__dma_8c.html" title="DMA HAL module driver. " alt="" coords="1185,451,1361,521"/>
+<area shape="rect" id="node22" href="$stm32f4xx__hal__dma__ex_8c.html" title="DMA Extension HAL module driver This file provides firmware functions to manage the following functio..." alt="" coords="1385,451,1561,521"/>
+<area shape="rect" id="node23" href="$stm32f4xx__hal__exti_8c.html" title="EXTI HAL module driver. This file provides firmware functions to manage the following functionalities..." alt="" coords="1585,451,1761,521"/>
+<area shape="rect" id="node24" href="$stm32f4xx__hal__flash_8c.html" title="FLASH HAL module driver. This file provides firmware functions to manage the following functionalitie..." alt="" coords="1785,451,1961,521"/>
+<area shape="rect" id="node25" href="$stm32f4xx__hal__flash__ex_8c.html" title="Extended FLASH HAL module driver. This file provides firmware functions to manage the following funct..." alt="" coords="1985,451,2161,521"/>
+<area shape="rect" id="node26" href="$stm32f4xx__hal__flash__ramfunc_8c.html" title="FLASH RAMFUNC module driver. This file provides a FLASH firmware functions which should be executed f..." alt="" coords="2185,451,2361,521"/>
+<area shape="rect" id="node27" href="$stm32f4xx__hal__gpio_8c.html" title="GPIO HAL module driver. This file provides firmware functions to manage the following functionalities..." alt="" coords="2385,451,2561,521"/>
+<area shape="rect" id="node28" href="$stm32f4xx__hal__i2c_8c.html" title="I2C HAL module driver. This file provides firmware functions to manage the following functionalities ..." alt="" coords="2585,451,2761,521"/>
+<area shape="rect" id="node29" href="$stm32f4xx__hal__i2c__ex_8c.html" title="I2C Extension HAL module driver. This file provides firmware functions to manage the following functi..." alt="" coords="2785,451,2961,521"/>
+<area shape="rect" id="node30" href="$stm32f4xx__hal__pwr_8c.html" title="PWR HAL module driver. This file provides firmware functions to manage the following functionalities ..." alt="" coords="2985,451,3161,521"/>
+<area shape="rect" id="node31" href="$stm32f4xx__hal__pwr__ex_8c.html" title="Extended PWR HAL module driver. This file provides firmware functions to manage the following functio..." alt="" coords="3185,451,3361,521"/>
+<area shape="rect" id="node32" href="$stm32f4xx__hal__rcc_8c.html" title="RCC HAL module driver. This file provides firmware functions to manage the following functionalities ..." alt="" coords="3385,451,3561,521"/>
+<area shape="rect" id="node33" href="$stm32f4xx__hal__rcc__ex_8c.html" title="Extension RCC HAL module driver. This file provides firmware functions to manage the following functi..." alt="" coords="3585,451,3761,521"/>
+<area shape="rect" id="node34" href="$stm32f4xx__hal__spi_8c.html" title="SPI HAL module driver. This file provides firmware functions to manage the following functionalities ..." alt="" coords="3785,451,3961,521"/>
+<area shape="rect" id="node35" href="$stm32f4xx__hal__tim_8c.html" title="TIM HAL module driver. This file provides firmware functions to manage the following functionalities ..." alt="" coords="3985,451,4161,521"/>
+<area shape="rect" id="node36" href="$stm32f4xx__hal__tim__ex_8c.html" title="TIM HAL module driver. This file provides firmware functions to manage the following functionalities ..." alt="" coords="4185,451,4361,521"/>
+<area shape="rect" id="node37" href="$stm32f4xx__hal__uart_8c.html" title="UART HAL module driver. This file provides firmware functions to manage the following functionalities..." alt="" coords="4385,451,4561,521"/>
+<area shape="rect" id="node6" href="$gpio_8h.html" title="STM/WDS_Kosc_Linux\l/Core/Inc/gpio.h" alt="" coords="72,577,233,618"/>
+<area shape="rect" id="node8" href="$main_8c.html" title=": Main program body " alt="" coords="376,673,537,715"/>
+<area shape="rect" id="node9" href="$i2c_8h.html" title="STM/WDS_Kosc_Linux\l/Core/Inc/i2c.h" alt="" coords="257,577,419,618"/>
+<area shape="rect" id="node11" href="$spi_8h.html" title="STM/WDS_Kosc_Linux\l/Core/Inc/spi.h" alt="" coords="495,577,656,618"/>
+<area shape="rect" id="node13" href="$tim_8h.html" title="STM/WDS_Kosc_Linux\l/Core/Inc/tim.h" alt="" coords="680,577,841,618"/>
+<area shape="rect" id="node15" href="$usart_8h.html" title="STM/WDS_Kosc_Linux\l/Core/Inc/usart.h" alt="" coords="865,577,1027,618"/>
+<area shape="rect" id="node17" href="$stm32f4xx__hal__msp_8c.html" title="STM/WDS_Kosc_Linux\l/Core/Src/stm32f4xx\l_hal_msp.c" alt="" coords="1051,569,1212,625"/>
+<area shape="rect" id="node18" href="$stm32f4xx__it_8c.html" title="Interrupt Service Routines. " alt="" coords="1237,577,1405,618"/>
+<area shape="rect" id="node7" href="$gpio_8c.html" title="STM/WDS_Kosc_Linux\l/Core/Src/gpio.c" alt="" coords="5,673,167,715"/>
+<area shape="rect" id="node10" href="$i2c_8c.html" title="STM/WDS_Kosc_Linux\l/Core/Src/i2c.c" alt="" coords="191,673,352,715"/>
+<area shape="rect" id="node12" href="$spi_8c.html" title="STM/WDS_Kosc_Linux\l/Core/Src/spi.c" alt="" coords="561,673,723,715"/>
+<area shape="rect" id="node14" href="$tim_8c.html" title="STM/WDS_Kosc_Linux\l/Core/Src/tim.c" alt="" coords="747,673,908,715"/>
+<area shape="rect" id="node16" href="$usart_8c.html" title="STM/WDS_Kosc_Linux\l/Core/Src/usart.c" alt="" coords="932,673,1093,715"/>
+</map>

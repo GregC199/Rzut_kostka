@@ -1,0 +1,7 @@
+<map id="__UART_HandleTypeDef" name="__UART_HandleTypeDef">
+<area shape="rect" id="node2" href="$struct_u_a_r_t___init_type_def.html" title="UART Init Structure definition. " alt="" coords="5,95,140,121"/>
+<area shape="rect" id="node3" href="$struct_____d_m_a___handle_type_def.html" title="DMA handle Structure definition. " alt="" coords="164,95,328,121"/>
+<area shape="rect" id="node4" href="$struct_d_m_a___stream___type_def.html" title="DMA Controller. " alt="" coords="83,5,241,32"/>
+<area shape="rect" id="node5" href="$struct_d_m_a___init_type_def.html" title="DMA Configuration Structure definition. " alt="" coords="265,5,392,32"/>
+<area shape="rect" id="node6" href="$struct_u_s_a_r_t___type_def.html" title="Universal Synchronous Asynchronous Receiver Transmitter. " alt="" coords="353,95,478,121"/>
+</map>

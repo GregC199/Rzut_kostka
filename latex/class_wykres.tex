@@ -1,0 +1,82 @@
+\hypertarget{class_wykres}{}\section{Dokumentacja klasy Wykres}
+\label{class_wykres}\index{Wykres@{Wykres}}
+
+
+Implementacja klasy \hyperlink{}{Wykresy} dziedziczącej klasę Q\+Widget.  
+
+
+
+
+{\ttfamily \#include $<$wykres.\+h$>$}
+
+
+
+Diagram dziedziczenia dla Wykres\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=135pt]{class_wykres__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Diagram współpracy dla Wykres\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=135pt]{class_wykres__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_wykres_a925088821f6b8ff1e9d90eee68557bf6}{Wykres} (Q\+Widget $\ast$parent=nullptr)
+\end{DoxyCompactItemize}
+\subsection*{Metody chronione}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_wykres_a11e95f7acbb5dab2a83fcba55561e204}{resize\+Event} (Q\+Resize\+Event $\ast$event)
+\begin{DoxyCompactList}\small\item\em Reimplementacja resize\+Event Q\+Widgetu. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Opis szczegółowy}
+Implementacja klasy \hyperlink{}{Wykresy} dziedziczącej klasę Q\+Widget. 
+
+Definicja w linii 12 pliku wykres.\+h.
+
+
+
+\subsection{Dokumentacja konstruktora i destruktora}
+\mbox{\Hypertarget{class_wykres_a925088821f6b8ff1e9d90eee68557bf6}\label{class_wykres_a925088821f6b8ff1e9d90eee68557bf6}} 
+\index{Wykres@{Wykres}!Wykres@{Wykres}}
+\index{Wykres@{Wykres}!Wykres@{Wykres}}
+\subsubsection{\texorpdfstring{Wykres()}{Wykres()}}
+{\footnotesize\ttfamily Wykres\+::\+Wykres (\begin{DoxyParamCaption}\item[{Q\+Widget $\ast$}]{parent = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Definicja w linii 3 pliku wykres.\+cpp.
+
+
+
+\subsection{Dokumentacja funkcji składowych}
+\mbox{\Hypertarget{class_wykres_a11e95f7acbb5dab2a83fcba55561e204}\label{class_wykres_a11e95f7acbb5dab2a83fcba55561e204}} 
+\index{Wykres@{Wykres}!resize\+Event@{resize\+Event}}
+\index{resize\+Event@{resize\+Event}!Wykres@{Wykres}}
+\subsubsection{\texorpdfstring{resize\+Event()}{resizeEvent()}}
+{\footnotesize\ttfamily void Wykres\+::resize\+Event (\begin{DoxyParamCaption}\item[{Q\+Resize\+Event $\ast$}]{event }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Reimplementacja resize\+Event Q\+Widgetu. 
+
+W celu utworzenia skalujących się wykresów należało zaimplementować resize dziecka -\/ tudzież Q\+Chart\+View -\/ wewnątrz rodzica. 
+
+Definicja w linii 13 pliku wykres.\+cpp.
+
+
+
+Dokumentacja dla tej klasy została wygenerowana z plików\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{wykres_8h}{wykres.\+h}\item 
+\hyperlink{wykres_8cpp}{wykres.\+cpp}\end{DoxyCompactItemize}

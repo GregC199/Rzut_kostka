@@ -1,0 +1,11 @@
+<map id="inc/wizualizacjakosc.h" name="inc/wizualizacjakosc.h">
+<area shape="rect" id="node2" href="$inc_2ui__mainwindow_8h.html" title="inc/ui_mainwindow.h" alt="" coords="314,80,457,107"/>
+<area shape="rect" id="node10" href="$src_2wizualizacjakosc_8cpp.html" title="src/wizualizacjakosc.cpp" alt="" coords="481,80,649,107"/>
+<area shape="rect" id="node3" href="$inc_2mainwindow_8h.html" title="inc/mainwindow.h" alt="" coords="322,155,449,181"/>
+<area shape="rect" id="node4" href="$src_2bluetooth_8cpp.html" title="src/bluetooth.cpp" alt="" coords="5,229,128,256"/>
+<area shape="rect" id="node5" href="$src_2diody_8cpp.html" title="src/diody.cpp" alt="" coords="153,229,253,256"/>
+<area shape="rect" id="node6" href="$src_2kosc_8cpp.html" title="src/kosc.cpp" alt="" coords="277,229,374,256"/>
+<area shape="rect" id="node7" href="$src_2main_8cpp.html" title="src/main.cpp" alt="" coords="398,229,495,256"/>
+<area shape="rect" id="node8" href="$src_2mainwindow_8cpp.html" title="src/mainwindow.cpp" alt="" coords="520,229,661,256"/>
+<area shape="rect" id="node9" href="$src_2wykresy_8cpp.html" title="src/wykresy.cpp" alt="" coords="686,229,805,256"/>
+</map>

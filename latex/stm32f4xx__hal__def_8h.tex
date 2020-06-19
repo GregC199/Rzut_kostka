@@ -1,0 +1,270 @@
+\hypertarget{stm32f4xx__hal__def_8h}{}\section{Dokumentacja pliku S\+T\+M/\+W\+D\+S\+\_\+\+Kosc\+\_\+\+Linux/\+Drivers/\+S\+T\+M32\+F4xx\+\_\+\+H\+A\+L\+\_\+\+Driver/\+Inc/stm32f4xx\+\_\+hal\+\_\+def.h}
+\label{stm32f4xx__hal__def_8h}\index{S\+T\+M/\+W\+D\+S\+\_\+\+Kosc\+\_\+\+Linux/\+Drivers/\+S\+T\+M32\+F4xx\+\_\+\+H\+A\+L\+\_\+\+Driver/\+Inc/stm32f4xx\+\_\+hal\+\_\+def.\+h@{S\+T\+M/\+W\+D\+S\+\_\+\+Kosc\+\_\+\+Linux/\+Drivers/\+S\+T\+M32\+F4xx\+\_\+\+H\+A\+L\+\_\+\+Driver/\+Inc/stm32f4xx\+\_\+hal\+\_\+def.\+h}}
+
+
+This file contains H\+AL common defines, enumeration, macros and structures definitions.  
+
+
+{\ttfamily \#include \char`\"{}stm32f4xx.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Legacy/stm32\+\_\+hal\+\_\+legacy.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$stddef.\+h$>$}\newline
+Wykres zależności załączania dla stm32f4xx\+\_\+hal\+\_\+def.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{stm32f4xx__hal__def_8h__incl}
+\end{center}
+\end{figure}
+Ten wykres pokazuje, które pliki bezpośrednio lub pośrednio załączają ten plik\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{stm32f4xx__hal__def_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Definicje}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{stm32f4xx__hal__def_8h_a6bc306171da085f4c7df2c66d2ff8e47}{U\+N\+U\+S\+ED}(\hyperlink{main_8c_aa6aba27bc1a89db9e350b50bbf881f57}{X})~(void)\hyperlink{main_8c_aa6aba27bc1a89db9e350b50bbf881f57}{X}      /$\ast$ To avoid gcc/g++ warnings $\ast$/
+\item 
+\#define \hyperlink{stm32f4xx__hal__def_8h_aad28bc64749c50dcedd6bf819fdc6974}{H\+A\+L\+\_\+\+M\+A\+X\+\_\+\+D\+E\+L\+AY}~0x\+F\+F\+F\+F\+F\+F\+F\+FU
+\item 
+\#define \hyperlink{stm32f4xx__hal__def_8h_a5b44dfd2a26f85f7b628b0945daff2c3}{H\+A\+L\+\_\+\+I\+S\+\_\+\+B\+I\+T\+\_\+\+S\+ET}(R\+EG,  B\+IT)~(((R\+EG) \& (B\+IT)) == (B\+IT))
+\item 
+\#define \hyperlink{stm32f4xx__hal__def_8h_a82637a84fbdca0e2a25496089b549924}{H\+A\+L\+\_\+\+I\+S\+\_\+\+B\+I\+T\+\_\+\+C\+LR}(R\+EG,  B\+IT)~(((R\+EG) \& (B\+IT)) == 0\+U)
+\item 
+\#define \hyperlink{stm32f4xx__hal__def_8h_af5b3b3d0eff8c4cb59d4d3909c247311}{\+\_\+\+\_\+\+H\+A\+L\+\_\+\+L\+I\+N\+K\+D\+MA}(\+\_\+\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+\+\_\+,  \+\_\+\+\_\+\+P\+P\+P\+\_\+\+D\+M\+A\+\_\+\+F\+I\+E\+L\+D\+\_\+\+\_\+,  \+\_\+\+\_\+\+D\+M\+A\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+\+\_\+)
+\item 
+\#define \hyperlink{stm32f4xx__hal__def_8h_a5850085e1bb7a96a417756f235b16aea}{\+\_\+\+\_\+\+H\+A\+L\+\_\+\+R\+E\+S\+E\+T\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+\+S\+T\+A\+TE}(\+\_\+\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+\+\_\+)~((\+\_\+\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+\+\_\+)-\/$>$State = 0\+U)
+\begin{DoxyCompactList}\small\item\em Reset the Handle\textquotesingle{}s State field. \end{DoxyCompactList}\item 
+\#define \hyperlink{stm32f4xx__hal__def_8h_ad3d96e1b9022ba76b69eeda91027b36c}{\+\_\+\+\_\+\+H\+A\+L\+\_\+\+L\+O\+CK}(\+\_\+\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+\+\_\+)
+\item 
+\#define \hyperlink{stm32f4xx__hal__def_8h_a7c2c23627aed2bb71d8c1ad071cda004}{\+\_\+\+\_\+\+H\+A\+L\+\_\+\+U\+N\+L\+O\+CK}(\+\_\+\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+\+\_\+)
+\item 
+\#define \hyperlink{stm32f4xx__hal__def_8h_aaa12b03c58e2eb296bd7aa915ee540f3}{\+\_\+\+\_\+\+A\+L\+I\+G\+N\+\_\+\+E\+ND}
+\end{DoxyCompactItemize}
+\subsection*{Wyliczenia}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{H\+A\+L\+\_\+\+Status\+Type\+Def} \{ \hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478fa6eb724a07061d89a4a2052744e5a3632}{H\+A\+L\+\_\+\+OK} = 0x00U, 
+\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478fa5a04e395e501e4e400172c610478c4a4}{H\+A\+L\+\_\+\+E\+R\+R\+OR} = 0x01U, 
+\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478fa8532fa3641ae7c14cb1b0554e2d9cbc7}{H\+A\+L\+\_\+\+B\+U\+SY} = 0x02U, 
+\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478fa00c89549bc881c35e8e4cd9e718337e5}{H\+A\+L\+\_\+\+T\+I\+M\+E\+O\+UT} = 0x03U
+ \}\begin{DoxyCompactList}\small\item\em H\+AL Status structures definition. \end{DoxyCompactList}
+\item 
+enum \hyperlink{stm32f4xx__hal__def_8h_ab367482e943333a1299294eadaad284b}{H\+A\+L\+\_\+\+Lock\+Type\+Def} \{ \hyperlink{stm32f4xx__hal__def_8h_ab367482e943333a1299294eadaad284ba9bd487430440139444e6e7ff226005c0}{H\+A\+L\+\_\+\+U\+N\+L\+O\+C\+K\+ED} = 0x00U, 
+\hyperlink{stm32f4xx__hal__def_8h_ab367482e943333a1299294eadaad284ba656ad5f6dad97210cf3ccf107c033e4d}{H\+A\+L\+\_\+\+L\+O\+C\+K\+ED} = 0x01U
+ \}\begin{DoxyCompactList}\small\item\em H\+AL Lock structures definition. \end{DoxyCompactList}
+\end{DoxyCompactItemize}
+
+
+\subsection{Opis szczegółowy}
+This file contains H\+AL common defines, enumeration, macros and structures definitions. 
+
+\begin{DoxyAuthor}{Autor}
+M\+CD Application Team 
+\end{DoxyAuthor}
+\begin{DoxyAttention}{Uwaga}
+
+\end{DoxyAttention}
+\subsubsection*{\begin{center}\copyright{} Copyright (c) 2017 S\+T\+Microelectronics. All rights reserved.\end{center} }
+
+This software component is licensed by ST under B\+SD 3-\/\+Clause license, the \char`\"{}\+License\char`\"{}; You may not use this file except in compliance with the License. You may obtain a copy of the License at\+: opensource.\+org/licenses/\+B\+S\+D-\/3-\/\+Clause 
+
+\subsection{Dokumentacja definicji}
+\mbox{\Hypertarget{stm32f4xx__hal__def_8h_aaa12b03c58e2eb296bd7aa915ee540f3}\label{stm32f4xx__hal__def_8h_aaa12b03c58e2eb296bd7aa915ee540f3}} 
+\index{stm32f4xx\+\_\+hal\+\_\+def.\+h@{stm32f4xx\+\_\+hal\+\_\+def.\+h}!\+\_\+\+\_\+\+A\+L\+I\+G\+N\+\_\+\+E\+ND@{\+\_\+\+\_\+\+A\+L\+I\+G\+N\+\_\+\+E\+ND}}
+\index{\+\_\+\+\_\+\+A\+L\+I\+G\+N\+\_\+\+E\+ND@{\+\_\+\+\_\+\+A\+L\+I\+G\+N\+\_\+\+E\+ND}!stm32f4xx\+\_\+hal\+\_\+def.\+h@{stm32f4xx\+\_\+hal\+\_\+def.\+h}}
+\subsubsection{\texorpdfstring{\+\_\+\+\_\+\+A\+L\+I\+G\+N\+\_\+\+E\+ND}{\_\_ALIGN\_END}}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+A\+L\+I\+G\+N\+\_\+\+E\+ND}
+
+
+
+Definicja w linii 130 pliku stm32f4xx\+\_\+hal\+\_\+def.\+h.
+
+\mbox{\Hypertarget{stm32f4xx__hal__def_8h_af5b3b3d0eff8c4cb59d4d3909c247311}\label{stm32f4xx__hal__def_8h_af5b3b3d0eff8c4cb59d4d3909c247311}} 
+\index{stm32f4xx\+\_\+hal\+\_\+def.\+h@{stm32f4xx\+\_\+hal\+\_\+def.\+h}!\+\_\+\+\_\+\+H\+A\+L\+\_\+\+L\+I\+N\+K\+D\+MA@{\+\_\+\+\_\+\+H\+A\+L\+\_\+\+L\+I\+N\+K\+D\+MA}}
+\index{\+\_\+\+\_\+\+H\+A\+L\+\_\+\+L\+I\+N\+K\+D\+MA@{\+\_\+\+\_\+\+H\+A\+L\+\_\+\+L\+I\+N\+K\+D\+MA}!stm32f4xx\+\_\+hal\+\_\+def.\+h@{stm32f4xx\+\_\+hal\+\_\+def.\+h}}
+\subsubsection{\texorpdfstring{\+\_\+\+\_\+\+H\+A\+L\+\_\+\+L\+I\+N\+K\+D\+MA}{\_\_HAL\_LINKDMA}}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+H\+A\+L\+\_\+\+L\+I\+N\+K\+D\+MA(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+\+\_\+,  }\item[{}]{\+\_\+\+\_\+\+P\+P\+P\+\_\+\+D\+M\+A\+\_\+\+F\+I\+E\+L\+D\+\_\+\+\_\+,  }\item[{}]{\+\_\+\+\_\+\+D\+M\+A\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+\+\_\+ }\end{DoxyParamCaption})}
+
+{\bfseries Wartość\+:}
+\begin{DoxyCode}
+\textcolor{keywordflow}{do}\{                                                      \(\backslash\)
+                              (\_\_HANDLE\_\_)->\_\_PPP\_DMA\_FIELD\_\_ = &(\_\_DMA\_HANDLE\_\_); \(\backslash\)
+                              (\_\_DMA\_HANDLE\_\_).Parent = (\_\_HANDLE\_\_);             \(\backslash\)
+                          \} \textcolor{keywordflow}{while}(0U)
+\end{DoxyCode}
+
+
+Definicja w linii 65 pliku stm32f4xx\+\_\+hal\+\_\+def.\+h.
+
+\mbox{\Hypertarget{stm32f4xx__hal__def_8h_ad3d96e1b9022ba76b69eeda91027b36c}\label{stm32f4xx__hal__def_8h_ad3d96e1b9022ba76b69eeda91027b36c}} 
+\index{stm32f4xx\+\_\+hal\+\_\+def.\+h@{stm32f4xx\+\_\+hal\+\_\+def.\+h}!\+\_\+\+\_\+\+H\+A\+L\+\_\+\+L\+O\+CK@{\+\_\+\+\_\+\+H\+A\+L\+\_\+\+L\+O\+CK}}
+\index{\+\_\+\+\_\+\+H\+A\+L\+\_\+\+L\+O\+CK@{\+\_\+\+\_\+\+H\+A\+L\+\_\+\+L\+O\+CK}!stm32f4xx\+\_\+hal\+\_\+def.\+h@{stm32f4xx\+\_\+hal\+\_\+def.\+h}}
+\subsubsection{\texorpdfstring{\+\_\+\+\_\+\+H\+A\+L\+\_\+\+L\+O\+CK}{\_\_HAL\_LOCK}}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+H\+A\+L\+\_\+\+L\+O\+CK(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+\+\_\+ }\end{DoxyParamCaption})}
+
+{\bfseries Wartość\+:}
+\begin{DoxyCode}
+\textcolor{keywordflow}{do}\{                                        \(\backslash\)
+                                    if((\_\_HANDLE\_\_)->Lock == \hyperlink{stm32f4xx__hal__def_8h_ab367482e943333a1299294eadaad284ba656ad5f6dad97210cf3ccf107c033e4d}{HAL\_LOCKED})   \(\backslash\)
+                                    \{                                      \(\backslash\)
+                                       return \hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478fa8532fa3641ae7c14cb1b0554e2d9cbc7}{HAL\_BUSY};                    \(\backslash\)
+                                    \}                                      \(\backslash\)
+                                    else                                   \(\backslash\)
+                                    \{                                      \(\backslash\)
+                                       (\_\_HANDLE\_\_)->Lock = \hyperlink{stm32f4xx__hal__def_8h_ab367482e943333a1299294eadaad284ba656ad5f6dad97210cf3ccf107c033e4d}{HAL\_LOCKED};    \(\backslash\)
+                                    \}                                      \(\backslash\)
+                                  \}\textcolor{keywordflow}{while} (0U)
+\end{DoxyCode}
+
+
+Definicja w linii 92 pliku stm32f4xx\+\_\+hal\+\_\+def.\+h.
+
+\mbox{\Hypertarget{stm32f4xx__hal__def_8h_a5850085e1bb7a96a417756f235b16aea}\label{stm32f4xx__hal__def_8h_a5850085e1bb7a96a417756f235b16aea}} 
+\index{stm32f4xx\+\_\+hal\+\_\+def.\+h@{stm32f4xx\+\_\+hal\+\_\+def.\+h}!\+\_\+\+\_\+\+H\+A\+L\+\_\+\+R\+E\+S\+E\+T\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+\+S\+T\+A\+TE@{\+\_\+\+\_\+\+H\+A\+L\+\_\+\+R\+E\+S\+E\+T\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+\+S\+T\+A\+TE}}
+\index{\+\_\+\+\_\+\+H\+A\+L\+\_\+\+R\+E\+S\+E\+T\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+\+S\+T\+A\+TE@{\+\_\+\+\_\+\+H\+A\+L\+\_\+\+R\+E\+S\+E\+T\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+\+S\+T\+A\+TE}!stm32f4xx\+\_\+hal\+\_\+def.\+h@{stm32f4xx\+\_\+hal\+\_\+def.\+h}}
+\subsubsection{\texorpdfstring{\+\_\+\+\_\+\+H\+A\+L\+\_\+\+R\+E\+S\+E\+T\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+\+S\+T\+A\+TE}{\_\_HAL\_RESET\_HANDLE\_STATE}}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+H\+A\+L\+\_\+\+R\+E\+S\+E\+T\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+\+S\+T\+A\+TE(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+\+\_\+ }\end{DoxyParamCaption})~((\+\_\+\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+\+\_\+)-\/$>$State = 0\+U)}
+
+
+
+Reset the Handle\textquotesingle{}s State field. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em $<$strong$>$\+H\+A\+N\+D\+L\+E$<$/strong$>$} & specifies the Peripheral Handle. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Nota}
+This macro can be used for the following purpose\+:
+\begin{DoxyItemize}
+\item When the Handle is declared as local variable; before passing it as parameter to H\+A\+L\+\_\+\+P\+P\+P\+\_\+\+Init() for the first time, it is mandatory to use this macro to set to 0 the Handle\textquotesingle{}s \char`\"{}\+State\char`\"{} field. Otherwise, \char`\"{}\+State\char`\"{} field may have any random value and the first time the function H\+A\+L\+\_\+\+P\+P\+P\+\_\+\+Init() is called, the low level hardware initialization will be missed (i.\+e. H\+A\+L\+\_\+\+P\+P\+P\+\_\+\+Msp\+Init() will not be executed).
+\item When there is a need to reconfigure the low level hardware\+: instead of calling H\+A\+L\+\_\+\+P\+P\+P\+\_\+\+De\+Init() then H\+A\+L\+\_\+\+P\+P\+P\+\_\+\+Init(), user can make a call to this macro then H\+A\+L\+\_\+\+P\+P\+P\+\_\+\+Init(). In this later function, when the Handle\textquotesingle{}s \char`\"{}\+State\char`\"{} field is set to 0, it will execute the function H\+A\+L\+\_\+\+P\+P\+P\+\_\+\+Msp\+Init() which will reconfigure the low level hardware. 
+\end{DoxyItemize}
+\end{DoxyNote}
+
+\begin{DoxyRetVals}{Zwracane wartości}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definicja w linii 86 pliku stm32f4xx\+\_\+hal\+\_\+def.\+h.
+
+\mbox{\Hypertarget{stm32f4xx__hal__def_8h_a7c2c23627aed2bb71d8c1ad071cda004}\label{stm32f4xx__hal__def_8h_a7c2c23627aed2bb71d8c1ad071cda004}} 
+\index{stm32f4xx\+\_\+hal\+\_\+def.\+h@{stm32f4xx\+\_\+hal\+\_\+def.\+h}!\+\_\+\+\_\+\+H\+A\+L\+\_\+\+U\+N\+L\+O\+CK@{\+\_\+\+\_\+\+H\+A\+L\+\_\+\+U\+N\+L\+O\+CK}}
+\index{\+\_\+\+\_\+\+H\+A\+L\+\_\+\+U\+N\+L\+O\+CK@{\+\_\+\+\_\+\+H\+A\+L\+\_\+\+U\+N\+L\+O\+CK}!stm32f4xx\+\_\+hal\+\_\+def.\+h@{stm32f4xx\+\_\+hal\+\_\+def.\+h}}
+\subsubsection{\texorpdfstring{\+\_\+\+\_\+\+H\+A\+L\+\_\+\+U\+N\+L\+O\+CK}{\_\_HAL\_UNLOCK}}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+H\+A\+L\+\_\+\+U\+N\+L\+O\+CK(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+\+\_\+ }\end{DoxyParamCaption})}
+
+{\bfseries Wartość\+:}
+\begin{DoxyCode}
+\textcolor{keywordflow}{do}\{                                       \(\backslash\)
+                                      (\_\_HANDLE\_\_)->Lock = \hyperlink{stm32f4xx__hal__def_8h_ab367482e943333a1299294eadaad284ba9bd487430440139444e6e7ff226005c0}{HAL\_UNLOCKED};    \(\backslash\)
+                                    \}\textcolor{keywordflow}{while} (0U)
+\end{DoxyCode}
+
+
+Definicja w linii 104 pliku stm32f4xx\+\_\+hal\+\_\+def.\+h.
+
+\mbox{\Hypertarget{stm32f4xx__hal__def_8h_a82637a84fbdca0e2a25496089b549924}\label{stm32f4xx__hal__def_8h_a82637a84fbdca0e2a25496089b549924}} 
+\index{stm32f4xx\+\_\+hal\+\_\+def.\+h@{stm32f4xx\+\_\+hal\+\_\+def.\+h}!H\+A\+L\+\_\+\+I\+S\+\_\+\+B\+I\+T\+\_\+\+C\+LR@{H\+A\+L\+\_\+\+I\+S\+\_\+\+B\+I\+T\+\_\+\+C\+LR}}
+\index{H\+A\+L\+\_\+\+I\+S\+\_\+\+B\+I\+T\+\_\+\+C\+LR@{H\+A\+L\+\_\+\+I\+S\+\_\+\+B\+I\+T\+\_\+\+C\+LR}!stm32f4xx\+\_\+hal\+\_\+def.\+h@{stm32f4xx\+\_\+hal\+\_\+def.\+h}}
+\subsubsection{\texorpdfstring{H\+A\+L\+\_\+\+I\+S\+\_\+\+B\+I\+T\+\_\+\+C\+LR}{HAL\_IS\_BIT\_CLR}}
+{\footnotesize\ttfamily \#define H\+A\+L\+\_\+\+I\+S\+\_\+\+B\+I\+T\+\_\+\+C\+LR(\begin{DoxyParamCaption}\item[{}]{R\+EG,  }\item[{}]{B\+IT }\end{DoxyParamCaption})~(((R\+EG) \& (B\+IT)) == 0\+U)}
+
+
+
+Definicja w linii 63 pliku stm32f4xx\+\_\+hal\+\_\+def.\+h.
+
+\mbox{\Hypertarget{stm32f4xx__hal__def_8h_a5b44dfd2a26f85f7b628b0945daff2c3}\label{stm32f4xx__hal__def_8h_a5b44dfd2a26f85f7b628b0945daff2c3}} 
+\index{stm32f4xx\+\_\+hal\+\_\+def.\+h@{stm32f4xx\+\_\+hal\+\_\+def.\+h}!H\+A\+L\+\_\+\+I\+S\+\_\+\+B\+I\+T\+\_\+\+S\+ET@{H\+A\+L\+\_\+\+I\+S\+\_\+\+B\+I\+T\+\_\+\+S\+ET}}
+\index{H\+A\+L\+\_\+\+I\+S\+\_\+\+B\+I\+T\+\_\+\+S\+ET@{H\+A\+L\+\_\+\+I\+S\+\_\+\+B\+I\+T\+\_\+\+S\+ET}!stm32f4xx\+\_\+hal\+\_\+def.\+h@{stm32f4xx\+\_\+hal\+\_\+def.\+h}}
+\subsubsection{\texorpdfstring{H\+A\+L\+\_\+\+I\+S\+\_\+\+B\+I\+T\+\_\+\+S\+ET}{HAL\_IS\_BIT\_SET}}
+{\footnotesize\ttfamily \#define H\+A\+L\+\_\+\+I\+S\+\_\+\+B\+I\+T\+\_\+\+S\+ET(\begin{DoxyParamCaption}\item[{}]{R\+EG,  }\item[{}]{B\+IT }\end{DoxyParamCaption})~(((R\+EG) \& (B\+IT)) == (B\+IT))}
+
+
+
+Definicja w linii 62 pliku stm32f4xx\+\_\+hal\+\_\+def.\+h.
+
+\mbox{\Hypertarget{stm32f4xx__hal__def_8h_aad28bc64749c50dcedd6bf819fdc6974}\label{stm32f4xx__hal__def_8h_aad28bc64749c50dcedd6bf819fdc6974}} 
+\index{stm32f4xx\+\_\+hal\+\_\+def.\+h@{stm32f4xx\+\_\+hal\+\_\+def.\+h}!H\+A\+L\+\_\+\+M\+A\+X\+\_\+\+D\+E\+L\+AY@{H\+A\+L\+\_\+\+M\+A\+X\+\_\+\+D\+E\+L\+AY}}
+\index{H\+A\+L\+\_\+\+M\+A\+X\+\_\+\+D\+E\+L\+AY@{H\+A\+L\+\_\+\+M\+A\+X\+\_\+\+D\+E\+L\+AY}!stm32f4xx\+\_\+hal\+\_\+def.\+h@{stm32f4xx\+\_\+hal\+\_\+def.\+h}}
+\subsubsection{\texorpdfstring{H\+A\+L\+\_\+\+M\+A\+X\+\_\+\+D\+E\+L\+AY}{HAL\_MAX\_DELAY}}
+{\footnotesize\ttfamily \#define H\+A\+L\+\_\+\+M\+A\+X\+\_\+\+D\+E\+L\+AY~0x\+F\+F\+F\+F\+F\+F\+F\+FU}
+
+
+
+Definicja w linii 60 pliku stm32f4xx\+\_\+hal\+\_\+def.\+h.
+
+\mbox{\Hypertarget{stm32f4xx__hal__def_8h_a6bc306171da085f4c7df2c66d2ff8e47}\label{stm32f4xx__hal__def_8h_a6bc306171da085f4c7df2c66d2ff8e47}} 
+\index{stm32f4xx\+\_\+hal\+\_\+def.\+h@{stm32f4xx\+\_\+hal\+\_\+def.\+h}!U\+N\+U\+S\+ED@{U\+N\+U\+S\+ED}}
+\index{U\+N\+U\+S\+ED@{U\+N\+U\+S\+ED}!stm32f4xx\+\_\+hal\+\_\+def.\+h@{stm32f4xx\+\_\+hal\+\_\+def.\+h}}
+\subsubsection{\texorpdfstring{U\+N\+U\+S\+ED}{UNUSED}}
+{\footnotesize\ttfamily \#define U\+N\+U\+S\+ED(\begin{DoxyParamCaption}\item[{}]{\hyperlink{main_8c_aa6aba27bc1a89db9e350b50bbf881f57}{X} }\end{DoxyParamCaption})~(void)\hyperlink{main_8c_aa6aba27bc1a89db9e350b50bbf881f57}{X}      /$\ast$ To avoid gcc/g++ warnings $\ast$/}
+
+
+
+Definicja w linii 58 pliku stm32f4xx\+\_\+hal\+\_\+def.\+h.
+
+
+
+\subsection{Dokumentacja typów wyliczanych}
+\mbox{\Hypertarget{stm32f4xx__hal__def_8h_ab367482e943333a1299294eadaad284b}\label{stm32f4xx__hal__def_8h_ab367482e943333a1299294eadaad284b}} 
+\index{stm32f4xx\+\_\+hal\+\_\+def.\+h@{stm32f4xx\+\_\+hal\+\_\+def.\+h}!H\+A\+L\+\_\+\+Lock\+Type\+Def@{H\+A\+L\+\_\+\+Lock\+Type\+Def}}
+\index{H\+A\+L\+\_\+\+Lock\+Type\+Def@{H\+A\+L\+\_\+\+Lock\+Type\+Def}!stm32f4xx\+\_\+hal\+\_\+def.\+h@{stm32f4xx\+\_\+hal\+\_\+def.\+h}}
+\subsubsection{\texorpdfstring{H\+A\+L\+\_\+\+Lock\+Type\+Def}{HAL\_LockTypeDef}}
+{\footnotesize\ttfamily enum \hyperlink{stm32f4xx__hal__def_8h_ab367482e943333a1299294eadaad284b}{H\+A\+L\+\_\+\+Lock\+Type\+Def}}
+
+
+
+H\+AL Lock structures definition. 
+
+\begin{DoxyEnumFields}{Wartości wyliczeń}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{H\+A\+L\+\_\+\+U\+N\+L\+O\+C\+K\+ED@{H\+A\+L\+\_\+\+U\+N\+L\+O\+C\+K\+ED}!stm32f4xx\+\_\+hal\+\_\+def.\+h@{stm32f4xx\+\_\+hal\+\_\+def.\+h}}\index{stm32f4xx\+\_\+hal\+\_\+def.\+h@{stm32f4xx\+\_\+hal\+\_\+def.\+h}!H\+A\+L\+\_\+\+U\+N\+L\+O\+C\+K\+ED@{H\+A\+L\+\_\+\+U\+N\+L\+O\+C\+K\+ED}}}\mbox{\Hypertarget{stm32f4xx__hal__def_8h_ab367482e943333a1299294eadaad284ba9bd487430440139444e6e7ff226005c0}\label{stm32f4xx__hal__def_8h_ab367482e943333a1299294eadaad284ba9bd487430440139444e6e7ff226005c0}} 
+H\+A\+L\+\_\+\+U\+N\+L\+O\+C\+K\+ED&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{H\+A\+L\+\_\+\+L\+O\+C\+K\+ED@{H\+A\+L\+\_\+\+L\+O\+C\+K\+ED}!stm32f4xx\+\_\+hal\+\_\+def.\+h@{stm32f4xx\+\_\+hal\+\_\+def.\+h}}\index{stm32f4xx\+\_\+hal\+\_\+def.\+h@{stm32f4xx\+\_\+hal\+\_\+def.\+h}!H\+A\+L\+\_\+\+L\+O\+C\+K\+ED@{H\+A\+L\+\_\+\+L\+O\+C\+K\+ED}}}\mbox{\Hypertarget{stm32f4xx__hal__def_8h_ab367482e943333a1299294eadaad284ba656ad5f6dad97210cf3ccf107c033e4d}\label{stm32f4xx__hal__def_8h_ab367482e943333a1299294eadaad284ba656ad5f6dad97210cf3ccf107c033e4d}} 
+H\+A\+L\+\_\+\+L\+O\+C\+K\+ED&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definicja w linii 50 pliku stm32f4xx\+\_\+hal\+\_\+def.\+h.
+
+\mbox{\Hypertarget{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}\label{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}} 
+\index{stm32f4xx\+\_\+hal\+\_\+def.\+h@{stm32f4xx\+\_\+hal\+\_\+def.\+h}!H\+A\+L\+\_\+\+Status\+Type\+Def@{H\+A\+L\+\_\+\+Status\+Type\+Def}}
+\index{H\+A\+L\+\_\+\+Status\+Type\+Def@{H\+A\+L\+\_\+\+Status\+Type\+Def}!stm32f4xx\+\_\+hal\+\_\+def.\+h@{stm32f4xx\+\_\+hal\+\_\+def.\+h}}
+\subsubsection{\texorpdfstring{H\+A\+L\+\_\+\+Status\+Type\+Def}{HAL\_StatusTypeDef}}
+{\footnotesize\ttfamily enum \hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{H\+A\+L\+\_\+\+Status\+Type\+Def}}
+
+
+
+H\+AL Status structures definition. 
+
+\begin{DoxyEnumFields}{Wartości wyliczeń}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{H\+A\+L\+\_\+\+OK@{H\+A\+L\+\_\+\+OK}!stm32f4xx\+\_\+hal\+\_\+def.\+h@{stm32f4xx\+\_\+hal\+\_\+def.\+h}}\index{stm32f4xx\+\_\+hal\+\_\+def.\+h@{stm32f4xx\+\_\+hal\+\_\+def.\+h}!H\+A\+L\+\_\+\+OK@{H\+A\+L\+\_\+\+OK}}}\mbox{\Hypertarget{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478fa6eb724a07061d89a4a2052744e5a3632}\label{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478fa6eb724a07061d89a4a2052744e5a3632}} 
+H\+A\+L\+\_\+\+OK&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{H\+A\+L\+\_\+\+E\+R\+R\+OR@{H\+A\+L\+\_\+\+E\+R\+R\+OR}!stm32f4xx\+\_\+hal\+\_\+def.\+h@{stm32f4xx\+\_\+hal\+\_\+def.\+h}}\index{stm32f4xx\+\_\+hal\+\_\+def.\+h@{stm32f4xx\+\_\+hal\+\_\+def.\+h}!H\+A\+L\+\_\+\+E\+R\+R\+OR@{H\+A\+L\+\_\+\+E\+R\+R\+OR}}}\mbox{\Hypertarget{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478fa5a04e395e501e4e400172c610478c4a4}\label{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478fa5a04e395e501e4e400172c610478c4a4}} 
+H\+A\+L\+\_\+\+E\+R\+R\+OR&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{H\+A\+L\+\_\+\+B\+U\+SY@{H\+A\+L\+\_\+\+B\+U\+SY}!stm32f4xx\+\_\+hal\+\_\+def.\+h@{stm32f4xx\+\_\+hal\+\_\+def.\+h}}\index{stm32f4xx\+\_\+hal\+\_\+def.\+h@{stm32f4xx\+\_\+hal\+\_\+def.\+h}!H\+A\+L\+\_\+\+B\+U\+SY@{H\+A\+L\+\_\+\+B\+U\+SY}}}\mbox{\Hypertarget{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478fa8532fa3641ae7c14cb1b0554e2d9cbc7}\label{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478fa8532fa3641ae7c14cb1b0554e2d9cbc7}} 
+H\+A\+L\+\_\+\+B\+U\+SY&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{H\+A\+L\+\_\+\+T\+I\+M\+E\+O\+UT@{H\+A\+L\+\_\+\+T\+I\+M\+E\+O\+UT}!stm32f4xx\+\_\+hal\+\_\+def.\+h@{stm32f4xx\+\_\+hal\+\_\+def.\+h}}\index{stm32f4xx\+\_\+hal\+\_\+def.\+h@{stm32f4xx\+\_\+hal\+\_\+def.\+h}!H\+A\+L\+\_\+\+T\+I\+M\+E\+O\+UT@{H\+A\+L\+\_\+\+T\+I\+M\+E\+O\+UT}}}\mbox{\Hypertarget{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478fa00c89549bc881c35e8e4cd9e718337e5}\label{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478fa00c89549bc881c35e8e4cd9e718337e5}} 
+H\+A\+L\+\_\+\+T\+I\+M\+E\+O\+UT&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definicja w linii 39 pliku stm32f4xx\+\_\+hal\+\_\+def.\+h.
+

@@ -1,0 +1,4 @@
+<map id="Ui_MainWindow" name="Ui_MainWindow">
+<area shape="rect" id="node2" href="$class_wykres.html" title="Implementacja klasy Wykresy dziedziczącej klasę QWidget. " alt="" coords="9,81,75,108"/>
+<area shape="rect" id="node4" href="$class_wizualizacja_kosc.html" title="Implementacja klasy WizualizacjaKosc będącej reimplementacją klasy QOpenGlWidget. ..." alt="" coords="100,81,227,108"/>
+</map>

@@ -1,0 +1,423 @@
+\hypertarget{class_wizualizacja_kosc}{}\section{Dokumentacja klasy Wizualizacja\+Kosc}
+\label{class_wizualizacja_kosc}\index{Wizualizacja\+Kosc@{Wizualizacja\+Kosc}}
+
+
+Implementacja klasy \hyperlink{class_wizualizacja_kosc}{Wizualizacja\+Kosc} będącej reimplementacją klasy Q\+Open\+Gl\+Widget.  
+
+
+
+
+{\ttfamily \#include $<$wizualizacjakosc.\+h$>$}
+
+
+
+Diagram dziedziczenia dla Wizualizacja\+Kosc\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=292pt]{class_wizualizacja_kosc__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Diagram współpracy dla Wizualizacja\+Kosc\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=292pt]{class_wizualizacja_kosc__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Sloty publiczne}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_wizualizacja_kosc_acc8ddbf71bdee742b882390c73536b83}{obrocX} (int val)
+\begin{DoxyCompactList}\small\item\em Slot obrotu kości o zadany kąt wzdłuż osi OX. \end{DoxyCompactList}\item 
+void \hyperlink{class_wizualizacja_kosc_a05112c1b2321cc7ce5fc4123263ede7a}{obrocY} (int val)
+\begin{DoxyCompactList}\small\item\em Slot obrotu kości o zadany kąt wzdłuż osi OY. \end{DoxyCompactList}\item 
+void \hyperlink{class_wizualizacja_kosc_a3da3fdf570d1b5257992ee76b612792d}{obrocZ} (int val)
+\begin{DoxyCompactList}\small\item\em Slot obrotu kości o zadany kąt wzdłuż osi OZ. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Sygnały}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_wizualizacja_kosc_a75401957f09d9e9ce273cabfc262c52e}{emituj\+\_\+zmiane\+\_\+sciany} (int value)
+\begin{DoxyCompactList}\small\item\em Emituje zmianę wartości górnej ściany kostki. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_wizualizacja_kosc_aa0de8f8ca522fa9e18a7040dc0f4a5f4}{$\sim$\+Wizualizacja\+Kosc} ()
+\begin{DoxyCompactList}\small\item\em Destruktor obiektu klasy. \end{DoxyCompactList}\item 
+void \hyperlink{class_wizualizacja_kosc_abd638267982c1c65610501551ffec3b0}{obroc} (int x\+\_\+a, int y\+\_\+a, int z\+\_\+a)
+\begin{DoxyCompactList}\small\item\em Obrót wzdłuż trzech osi. \end{DoxyCompactList}\item 
+void \hyperlink{class_wizualizacja_kosc_a3569ad7deb2d9462dfc2d152d9a7c4b7}{set\+Clear\+Color} (const Q\+Color \&color)
+\begin{DoxyCompactList}\small\item\em Zmiana koloru tła widgetu. \end{DoxyCompactList}\item 
+Q\+Size \hyperlink{class_wizualizacja_kosc_a075e8afed64bd351d12a4d363e0259ad}{minimum\+Size\+Hint} () const override
+\begin{DoxyCompactList}\small\item\em Nadpisanie minimalnego preferowanego rozmiaru. \end{DoxyCompactList}\item 
+Q\+Size \hyperlink{class_wizualizacja_kosc_a24b1691336c8e00a17986a947316f96d}{size\+Hint} () const override
+\begin{DoxyCompactList}\small\item\em Nadpisanie preferowanego rozmiaru. \end{DoxyCompactList}\item 
+void \hyperlink{class_wizualizacja_kosc_acf840c00a6d9746acad3526c5ad9dbfc}{x\+\_\+okresl\+\_\+zakres} ()
+\begin{DoxyCompactList}\small\item\em Określenie położenia kości na osi OX. \end{DoxyCompactList}\item 
+void \hyperlink{class_wizualizacja_kosc_af254ebd2a7a13dc033dc48881c059c4b}{y\+\_\+okresl\+\_\+zakres} ()
+\begin{DoxyCompactList}\small\item\em Określenie położenia kości na osi OY. \end{DoxyCompactList}\item 
+void \hyperlink{class_wizualizacja_kosc_a01b68ff7aad0d8170bc675b988b0e2d6}{z\+\_\+okresl\+\_\+zakres} ()
+\begin{DoxyCompactList}\small\item\em Określenie położenia kości na osi OZ. \end{DoxyCompactList}\item 
+void \hyperlink{class_wizualizacja_kosc_af65c8f14882161876dad59a3d0e754c2}{okresl\+\_\+zakresy} ()
+\begin{DoxyCompactList}\small\item\em Określenie położenia kości we wszystkich trzech osiach. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Atrybuty publiczne}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{class_wizualizacja_kosc_aba059f3a46ffb74158786d2e74f34c94}{x\+\_\+zakres} = 0
+\item 
+int \hyperlink{class_wizualizacja_kosc_a61ee2d767b712866f93710c29cdd051d}{y\+\_\+zakres} = 0
+\item 
+int \hyperlink{class_wizualizacja_kosc_abec9f7c00196751f1f97e8845a9c7d21}{z\+\_\+zakres} = 0
+\item 
+int \hyperlink{class_wizualizacja_kosc_a2b489f7583deecf0d6b74ac0771e2ec2}{mem\+\_\+sciana} = 1
+\item 
+bool \hyperlink{class_wizualizacja_kosc_a25d14786810ffb0496b4cd8492fcb03f}{czy\+\_\+slider}
+\item 
+int \hyperlink{class_wizualizacja_kosc_a6565d01127ba28bc5c708b248881dec2}{sciany} \mbox{[}4\mbox{]}\mbox{[}4\mbox{]}\mbox{[}4\mbox{]}
+\end{DoxyCompactItemize}
+\subsection*{Metody chronione}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_wizualizacja_kosc_aaaef65ae5a984bf54ebfa56069670c5f}{initialize\+GL} () override
+\begin{DoxyCompactList}\small\item\em Inicjalizacja obiektu Open\+GL -\/ kości. \end{DoxyCompactList}\item 
+void \hyperlink{class_wizualizacja_kosc_a2b5ddee0e92d08a200b1749c4629d71d}{paint\+GL} () override
+\begin{DoxyCompactList}\small\item\em Odrysowanie kości. \end{DoxyCompactList}\item 
+void \hyperlink{class_wizualizacja_kosc_ad754ad7e1003c4ec6f4f29f126424701}{resize\+GL} (int w, int h) override
+\begin{DoxyCompactList}\small\item\em Zmiana rozmiarów kości. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Opis szczegółowy}
+Implementacja klasy \hyperlink{class_wizualizacja_kosc}{Wizualizacja\+Kosc} będącej reimplementacją klasy Q\+Open\+Gl\+Widget. 
+
+Klasa ta tworzy obiekt Open\+GL służący do wizualizacji kości. 
+
+Definicja w linii 29 pliku wizualizacjakosc.\+h.
+
+
+
+\subsection{Dokumentacja konstruktora i destruktora}
+\mbox{\Hypertarget{class_wizualizacja_kosc_aa0de8f8ca522fa9e18a7040dc0f4a5f4}\label{class_wizualizacja_kosc_aa0de8f8ca522fa9e18a7040dc0f4a5f4}} 
+\index{Wizualizacja\+Kosc@{Wizualizacja\+Kosc}!````~Wizualizacja\+Kosc@{$\sim$\+Wizualizacja\+Kosc}}
+\index{````~Wizualizacja\+Kosc@{$\sim$\+Wizualizacja\+Kosc}!Wizualizacja\+Kosc@{Wizualizacja\+Kosc}}
+\subsubsection{\texorpdfstring{$\sim$\+Wizualizacja\+Kosc()}{~WizualizacjaKosc()}}
+{\footnotesize\ttfamily Wizualizacja\+Kosc\+::$\sim$\+Wizualizacja\+Kosc (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destruktor obiektu klasy. 
+
+Ustawiamy make\+Current na \char`\"{}brak\char`\"{}, następnie usuwamy buffor Open\+GL\textquotesingle{}a, usuwamy każdą z tekstur, aż w końcu usuwamy Open\+G\+L\+Shader\+Program \hyperlink{}{program}. 
+
+Definicja w linii 207 pliku wizualizacjakosc.\+cpp.
+
+
+
+\subsection{Dokumentacja funkcji składowych}
+\mbox{\Hypertarget{class_wizualizacja_kosc_a75401957f09d9e9ce273cabfc262c52e}\label{class_wizualizacja_kosc_a75401957f09d9e9ce273cabfc262c52e}} 
+\index{Wizualizacja\+Kosc@{Wizualizacja\+Kosc}!emituj\+\_\+zmiane\+\_\+sciany@{emituj\+\_\+zmiane\+\_\+sciany}}
+\index{emituj\+\_\+zmiane\+\_\+sciany@{emituj\+\_\+zmiane\+\_\+sciany}!Wizualizacja\+Kosc@{Wizualizacja\+Kosc}}
+\subsubsection{\texorpdfstring{emituj\+\_\+zmiane\+\_\+sciany}{emituj\_zmiane\_sciany}}
+{\footnotesize\ttfamily void Wizualizacja\+Kosc\+::emituj\+\_\+zmiane\+\_\+sciany (\begin{DoxyParamCaption}\item[{int}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+
+
+Emituje zmianę wartości górnej ściany kostki. 
+
+\mbox{\Hypertarget{class_wizualizacja_kosc_aaaef65ae5a984bf54ebfa56069670c5f}\label{class_wizualizacja_kosc_aaaef65ae5a984bf54ebfa56069670c5f}} 
+\index{Wizualizacja\+Kosc@{Wizualizacja\+Kosc}!initialize\+GL@{initialize\+GL}}
+\index{initialize\+GL@{initialize\+GL}!Wizualizacja\+Kosc@{Wizualizacja\+Kosc}}
+\subsubsection{\texorpdfstring{initialize\+G\+L()}{initializeGL()}}
+{\footnotesize\ttfamily void Wizualizacja\+Kosc\+::initialize\+GL (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}}
+
+
+
+Inicjalizacja obiektu Open\+GL -\/ kości. 
+
+Wpierw inicjalizujemy kolor tła Widgetu, następnie inicjalizujemy Open\+G\+L\+Functions, i tworzymy naszą kość za pomocą funkcji \hyperlink{}{utworz\+\_\+kosc} i zadajemy kolor tła. Następnie inicjalizujemy G\+L\+\_\+\+D\+E\+P\+T\+H\+\_\+\+T\+E\+ST w celu uzyskania 3D widgetu. Potem inicjalizujemy vertex oraz fragment shadery i przekazujemy je do naszego Q\+Open\+G\+L\+Shader\+Program \hyperlink{}{program}. Następnie wiążemy \hyperlink{}{program} z atrybutami lokacji vertex, a następnie tex\+Coord. Potem wszystko łączymy i wiążemy. 
+
+Definicja w linii 235 pliku wizualizacjakosc.\+cpp.
+
+\mbox{\Hypertarget{class_wizualizacja_kosc_a075e8afed64bd351d12a4d363e0259ad}\label{class_wizualizacja_kosc_a075e8afed64bd351d12a4d363e0259ad}} 
+\index{Wizualizacja\+Kosc@{Wizualizacja\+Kosc}!minimum\+Size\+Hint@{minimum\+Size\+Hint}}
+\index{minimum\+Size\+Hint@{minimum\+Size\+Hint}!Wizualizacja\+Kosc@{Wizualizacja\+Kosc}}
+\subsubsection{\texorpdfstring{minimum\+Size\+Hint()}{minimumSizeHint()}}
+{\footnotesize\ttfamily Q\+Size Wizualizacja\+Kosc\+::minimum\+Size\+Hint (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}}
+
+
+
+Nadpisanie minimalnego preferowanego rozmiaru. 
+
+
+
+Definicja w linii 131 pliku wizualizacjakosc.\+cpp.
+
+\mbox{\Hypertarget{class_wizualizacja_kosc_abd638267982c1c65610501551ffec3b0}\label{class_wizualizacja_kosc_abd638267982c1c65610501551ffec3b0}} 
+\index{Wizualizacja\+Kosc@{Wizualizacja\+Kosc}!obroc@{obroc}}
+\index{obroc@{obroc}!Wizualizacja\+Kosc@{Wizualizacja\+Kosc}}
+\subsubsection{\texorpdfstring{obroc()}{obroc()}}
+{\footnotesize\ttfamily void Wizualizacja\+Kosc\+::obroc (\begin{DoxyParamCaption}\item[{int}]{x\+\_\+a,  }\item[{int}]{y\+\_\+a,  }\item[{int}]{z\+\_\+a }\end{DoxyParamCaption})}
+
+
+
+Obrót wzdłuż trzech osi. 
+
+Kość jest obracana o znormalizowane kąty\+: -\/$>$\hyperlink{}{x\+\_\+a} wzdłuż osi OX, -\/$>$\hyperlink{}{y\+\_\+a} wzdłuż osi OY, -\/$>$\hyperlink{}{z\+\_\+a} wzdłuż osi OZ.
+
+Następnie określana jest orientacja kości za pomocą \hyperlink{class_wizualizacja_kosc_af65c8f14882161876dad59a3d0e754c2}{okresl\+\_\+zakresy} oraz aktualizwana wizualizacja kości. 
+
+Definicja w linii 14 pliku wizualizacjakosc.\+cpp.
+
+\mbox{\Hypertarget{class_wizualizacja_kosc_acc8ddbf71bdee742b882390c73536b83}\label{class_wizualizacja_kosc_acc8ddbf71bdee742b882390c73536b83}} 
+\index{Wizualizacja\+Kosc@{Wizualizacja\+Kosc}!obrocX@{obrocX}}
+\index{obrocX@{obrocX}!Wizualizacja\+Kosc@{Wizualizacja\+Kosc}}
+\subsubsection{\texorpdfstring{obrocX}{obrocX}}
+{\footnotesize\ttfamily void Wizualizacja\+Kosc\+::obrocX (\begin{DoxyParamCaption}\item[{int}]{val }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Slot obrotu kości o zadany kąt wzdłuż osi OX. 
+
+Funkcja ta normalizuje wpierw wartość kątu zadaną przez sygnał, a następnie przypisuje ją do kątu kości wzdłuż osi OX, określa położenie oraz odrysowywuje kość. 
+
+Definicja w linii 156 pliku wizualizacjakosc.\+cpp.
+
+\mbox{\Hypertarget{class_wizualizacja_kosc_a05112c1b2321cc7ce5fc4123263ede7a}\label{class_wizualizacja_kosc_a05112c1b2321cc7ce5fc4123263ede7a}} 
+\index{Wizualizacja\+Kosc@{Wizualizacja\+Kosc}!obrocY@{obrocY}}
+\index{obrocY@{obrocY}!Wizualizacja\+Kosc@{Wizualizacja\+Kosc}}
+\subsubsection{\texorpdfstring{obrocY}{obrocY}}
+{\footnotesize\ttfamily void Wizualizacja\+Kosc\+::obrocY (\begin{DoxyParamCaption}\item[{int}]{val }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Slot obrotu kości o zadany kąt wzdłuż osi OY. 
+
+Funkcja ta normalizuje wpierw wartość kątu zadaną przez sygnał, a następnie przypisuje ją do kątu kości wzdłuż osi OY, określa położenie oraz odrysowywuje kość. 
+
+Definicja w linii 173 pliku wizualizacjakosc.\+cpp.
+
+\mbox{\Hypertarget{class_wizualizacja_kosc_a3da3fdf570d1b5257992ee76b612792d}\label{class_wizualizacja_kosc_a3da3fdf570d1b5257992ee76b612792d}} 
+\index{Wizualizacja\+Kosc@{Wizualizacja\+Kosc}!obrocZ@{obrocZ}}
+\index{obrocZ@{obrocZ}!Wizualizacja\+Kosc@{Wizualizacja\+Kosc}}
+\subsubsection{\texorpdfstring{obrocZ}{obrocZ}}
+{\footnotesize\ttfamily void Wizualizacja\+Kosc\+::obrocZ (\begin{DoxyParamCaption}\item[{int}]{val }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Slot obrotu kości o zadany kąt wzdłuż osi OZ. 
+
+Funkcja ta normalizuje wpierw wartość kątu zadaną przez sygnał, a następnie przypisuje ją do kątu kości wzdłuż osi OZ, określa położenie oraz odrysowywuje kość. 
+
+Definicja w linii 190 pliku wizualizacjakosc.\+cpp.
+
+\mbox{\Hypertarget{class_wizualizacja_kosc_af65c8f14882161876dad59a3d0e754c2}\label{class_wizualizacja_kosc_af65c8f14882161876dad59a3d0e754c2}} 
+\index{Wizualizacja\+Kosc@{Wizualizacja\+Kosc}!okresl\+\_\+zakresy@{okresl\+\_\+zakresy}}
+\index{okresl\+\_\+zakresy@{okresl\+\_\+zakresy}!Wizualizacja\+Kosc@{Wizualizacja\+Kosc}}
+\subsubsection{\texorpdfstring{okresl\+\_\+zakresy()}{okresl\_zakresy()}}
+{\footnotesize\ttfamily void Wizualizacja\+Kosc\+::okresl\+\_\+zakresy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Określenie położenia kości we wszystkich trzech osiach. 
+
+Funkcja ta określa położenie kości wzdłuż każdej z trzech osi. Dodatkowo w ramach optymalizacji kodu wykorzystano zmienną \hyperlink{class_wizualizacja_kosc_a25d14786810ffb0496b4cd8492fcb03f}{czy\+\_\+slider}, aby zapobiec zbędnemu wywoływaniu podczas sterowania kością z płytki.
+
+Na sam koniec, jeśli nastąpiła zmiana wartości na górnej ścianie, wysyłany jest sygnał z wartością nowej ściany. 
+
+Definicja w linii 47 pliku wizualizacjakosc.\+cpp.
+
+\mbox{\Hypertarget{class_wizualizacja_kosc_a2b5ddee0e92d08a200b1749c4629d71d}\label{class_wizualizacja_kosc_a2b5ddee0e92d08a200b1749c4629d71d}} 
+\index{Wizualizacja\+Kosc@{Wizualizacja\+Kosc}!paint\+GL@{paint\+GL}}
+\index{paint\+GL@{paint\+GL}!Wizualizacja\+Kosc@{Wizualizacja\+Kosc}}
+\subsubsection{\texorpdfstring{paint\+G\+L()}{paintGL()}}
+{\footnotesize\ttfamily void Wizualizacja\+Kosc\+::paint\+GL (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}}
+
+
+
+Odrysowanie kości. 
+
+Odrysowywujemy naszą kość. Kość odrysowywana jest według zadanej rotacji w obiekcie w miejscach\+: -\/$>$\hyperlink{}{x\+Rot} -\/ kąt wzdłuż osi OX -\/$>$\hyperlink{}{y\+Rot} -\/ kąt wzdłuż osi OY -\/$>$\hyperlink{}{z\+Rot} -\/ kąt wzdłuż osi OZ
+
+Następnie włączamy \hyperlink{wizualizacjakosc_8h_af540f470cb187c812771007568bc5138}{P\+R\+O\+G\+R\+A\+M\+\_\+\+V\+E\+R\+T\+E\+X\+\_\+\+A\+T\+T\+R\+I\+B\+U\+TE} oraz \hyperlink{wizualizacjakosc_8h_a7dce2afc0460b03f7535ad2d93c458e2}{P\+R\+O\+G\+R\+A\+M\+\_\+\+T\+E\+X\+C\+O\+O\+R\+D\+\_\+\+A\+T\+T\+R\+I\+B\+U\+TE}, ustawiamy buffery dla każdego z nich i wiążemy tekstury każdej ze ścian z zadanymi obrazami. 
+
+Definicja w linii 310 pliku wizualizacjakosc.\+cpp.
+
+\mbox{\Hypertarget{class_wizualizacja_kosc_ad754ad7e1003c4ec6f4f29f126424701}\label{class_wizualizacja_kosc_ad754ad7e1003c4ec6f4f29f126424701}} 
+\index{Wizualizacja\+Kosc@{Wizualizacja\+Kosc}!resize\+GL@{resize\+GL}}
+\index{resize\+GL@{resize\+GL}!Wizualizacja\+Kosc@{Wizualizacja\+Kosc}}
+\subsubsection{\texorpdfstring{resize\+G\+L()}{resizeGL()}}
+{\footnotesize\ttfamily void Wizualizacja\+Kosc\+::resize\+GL (\begin{DoxyParamCaption}\item[{int}]{w,  }\item[{int}]{h }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}}
+
+
+
+Zmiana rozmiarów kości. 
+
+
+
+Definicja w linii 290 pliku wizualizacjakosc.\+cpp.
+
+\mbox{\Hypertarget{class_wizualizacja_kosc_a3569ad7deb2d9462dfc2d152d9a7c4b7}\label{class_wizualizacja_kosc_a3569ad7deb2d9462dfc2d152d9a7c4b7}} 
+\index{Wizualizacja\+Kosc@{Wizualizacja\+Kosc}!set\+Clear\+Color@{set\+Clear\+Color}}
+\index{set\+Clear\+Color@{set\+Clear\+Color}!Wizualizacja\+Kosc@{Wizualizacja\+Kosc}}
+\subsubsection{\texorpdfstring{set\+Clear\+Color()}{setClearColor()}}
+{\footnotesize\ttfamily void Wizualizacja\+Kosc\+::set\+Clear\+Color (\begin{DoxyParamCaption}\item[{const Q\+Color \&}]{color }\end{DoxyParamCaption})}
+
+
+
+Zmiana koloru tła widgetu. 
+
+
+
+Definicja w linii 220 pliku wizualizacjakosc.\+cpp.
+
+\mbox{\Hypertarget{class_wizualizacja_kosc_a24b1691336c8e00a17986a947316f96d}\label{class_wizualizacja_kosc_a24b1691336c8e00a17986a947316f96d}} 
+\index{Wizualizacja\+Kosc@{Wizualizacja\+Kosc}!size\+Hint@{size\+Hint}}
+\index{size\+Hint@{size\+Hint}!Wizualizacja\+Kosc@{Wizualizacja\+Kosc}}
+\subsubsection{\texorpdfstring{size\+Hint()}{sizeHint()}}
+{\footnotesize\ttfamily Q\+Size Wizualizacja\+Kosc\+::size\+Hint (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}}
+
+
+
+Nadpisanie preferowanego rozmiaru. 
+
+
+
+Definicja w linii 32 pliku wizualizacjakosc.\+cpp.
+
+\mbox{\Hypertarget{class_wizualizacja_kosc_acf840c00a6d9746acad3526c5ad9dbfc}\label{class_wizualizacja_kosc_acf840c00a6d9746acad3526c5ad9dbfc}} 
+\index{Wizualizacja\+Kosc@{Wizualizacja\+Kosc}!x\+\_\+okresl\+\_\+zakres@{x\+\_\+okresl\+\_\+zakres}}
+\index{x\+\_\+okresl\+\_\+zakres@{x\+\_\+okresl\+\_\+zakres}!Wizualizacja\+Kosc@{Wizualizacja\+Kosc}}
+\subsubsection{\texorpdfstring{x\+\_\+okresl\+\_\+zakres()}{x\_okresl\_zakres()}}
+{\footnotesize\ttfamily void Wizualizacja\+Kosc\+::x\+\_\+okresl\+\_\+zakres (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Określenie położenia kości na osi OX. 
+
+Funkcja ta określa położenie kości wzdłuż osi OX i zapisuje je do zmiennej \hyperlink{class_wizualizacja_kosc_aba059f3a46ffb74158786d2e74f34c94}{x\+\_\+zakres}. Na sam koniec jeśli wywołanie funkcji pochodziło od Slidera to emitujemy sygnał z wartością nowej ściany, jeśli nastąpiła zmiana wartości górnej ściany. 
+
+Definicja w linii 65 pliku wizualizacjakosc.\+cpp.
+
+\mbox{\Hypertarget{class_wizualizacja_kosc_af254ebd2a7a13dc033dc48881c059c4b}\label{class_wizualizacja_kosc_af254ebd2a7a13dc033dc48881c059c4b}} 
+\index{Wizualizacja\+Kosc@{Wizualizacja\+Kosc}!y\+\_\+okresl\+\_\+zakres@{y\+\_\+okresl\+\_\+zakres}}
+\index{y\+\_\+okresl\+\_\+zakres@{y\+\_\+okresl\+\_\+zakres}!Wizualizacja\+Kosc@{Wizualizacja\+Kosc}}
+\subsubsection{\texorpdfstring{y\+\_\+okresl\+\_\+zakres()}{y\_okresl\_zakres()}}
+{\footnotesize\ttfamily void Wizualizacja\+Kosc\+::y\+\_\+okresl\+\_\+zakres (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Określenie położenia kości na osi OY. 
+
+Funkcja ta określa położenie kości wzdłuż osi OY i zapisuje je do zmiennej \hyperlink{class_wizualizacja_kosc_a61ee2d767b712866f93710c29cdd051d}{y\+\_\+zakres}. Na sam koniec jeśli wywołanie funkcji pochodziło od Slidera to emitujemy sygnał z wartością nowej ściany, jeśli nastąpiła zmiana wartości górnej ściany. 
+
+Definicja w linii 89 pliku wizualizacjakosc.\+cpp.
+
+\mbox{\Hypertarget{class_wizualizacja_kosc_a01b68ff7aad0d8170bc675b988b0e2d6}\label{class_wizualizacja_kosc_a01b68ff7aad0d8170bc675b988b0e2d6}} 
+\index{Wizualizacja\+Kosc@{Wizualizacja\+Kosc}!z\+\_\+okresl\+\_\+zakres@{z\+\_\+okresl\+\_\+zakres}}
+\index{z\+\_\+okresl\+\_\+zakres@{z\+\_\+okresl\+\_\+zakres}!Wizualizacja\+Kosc@{Wizualizacja\+Kosc}}
+\subsubsection{\texorpdfstring{z\+\_\+okresl\+\_\+zakres()}{z\_okresl\_zakres()}}
+{\footnotesize\ttfamily void Wizualizacja\+Kosc\+::z\+\_\+okresl\+\_\+zakres (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Określenie położenia kości na osi OZ. 
+
+Funkcja ta określa położenie kości wzdłuż osi OZ i zapisuje je do zmiennej \hyperlink{class_wizualizacja_kosc_abec9f7c00196751f1f97e8845a9c7d21}{z\+\_\+zakres}. Na sam koniec jeśli wywołanie funkcji pochodziło od Slidera to emitujemy sygnał z wartością nowej ściany, jeśli nastąpiła zmiana wartości górnej ściany. 
+
+Definicja w linii 112 pliku wizualizacjakosc.\+cpp.
+
+
+
+\subsection{Dokumentacja atrybutów składowych}
+\mbox{\Hypertarget{class_wizualizacja_kosc_a25d14786810ffb0496b4cd8492fcb03f}\label{class_wizualizacja_kosc_a25d14786810ffb0496b4cd8492fcb03f}} 
+\index{Wizualizacja\+Kosc@{Wizualizacja\+Kosc}!czy\+\_\+slider@{czy\+\_\+slider}}
+\index{czy\+\_\+slider@{czy\+\_\+slider}!Wizualizacja\+Kosc@{Wizualizacja\+Kosc}}
+\subsubsection{\texorpdfstring{czy\+\_\+slider}{czy\_slider}}
+{\footnotesize\ttfamily bool Wizualizacja\+Kosc\+::czy\+\_\+slider}
+
+
+
+Definicja w linii 103 pliku wizualizacjakosc.\+h.
+
+\mbox{\Hypertarget{class_wizualizacja_kosc_a2b489f7583deecf0d6b74ac0771e2ec2}\label{class_wizualizacja_kosc_a2b489f7583deecf0d6b74ac0771e2ec2}} 
+\index{Wizualizacja\+Kosc@{Wizualizacja\+Kosc}!mem\+\_\+sciana@{mem\+\_\+sciana}}
+\index{mem\+\_\+sciana@{mem\+\_\+sciana}!Wizualizacja\+Kosc@{Wizualizacja\+Kosc}}
+\subsubsection{\texorpdfstring{mem\+\_\+sciana}{mem\_sciana}}
+{\footnotesize\ttfamily int Wizualizacja\+Kosc\+::mem\+\_\+sciana = 1}
+
+
+\begin{DoxyParams}[1]{Parametry}
+\mbox{\tt in}  & {\em mem\+\_\+sciana} & -\/$>$ zmienna przechowująca poprzednią wartość ściany \\
+\hline
+\mbox{\tt in}  & {\em czy\+\_\+slider} & -\/$>$ zmienna określająca czy zmiana kąta odbyła się za pomocą slidera \\
+\hline
+\mbox{\tt in}  & {\em sciany} & -\/$>$ tablica3D przechowująca wartości górnej ściany dla każdego z możliwych położeń kości \\
+\hline
+\end{DoxyParams}
+
+
+Definicja w linii 101 pliku wizualizacjakosc.\+h.
+
+\mbox{\Hypertarget{class_wizualizacja_kosc_a6565d01127ba28bc5c708b248881dec2}\label{class_wizualizacja_kosc_a6565d01127ba28bc5c708b248881dec2}} 
+\index{Wizualizacja\+Kosc@{Wizualizacja\+Kosc}!sciany@{sciany}}
+\index{sciany@{sciany}!Wizualizacja\+Kosc@{Wizualizacja\+Kosc}}
+\subsubsection{\texorpdfstring{sciany}{sciany}}
+{\footnotesize\ttfamily int Wizualizacja\+Kosc\+::sciany\mbox{[}4\mbox{]}\mbox{[}4\mbox{]}\mbox{[}4\mbox{]}}
+
+{\bfseries Wartość początkowa\+:}
+\begin{DoxyCode}
+= \{\{\{1,1,1,1\},\{3,5,4,2\},\{6,6,6,6\},\{4,2,3,5\}\},
+                           \{\{5,4,2,3\},\{5,4,2,3\},\{5,4,2,3\},\{5,4,2,3\}\},
+                           \{\{6,6,6,6\},\{4,2,3,5\},\{1,1,1,1\},\{3,5,4,2\}\},
+                           \{\{2,3,5,4\},\{2,3,5,4\},\{2,3,5,4\},\{2,3,5,4\}\}\}
+\end{DoxyCode}
+
+
+Definicja w linii 105 pliku wizualizacjakosc.\+h.
+
+\mbox{\Hypertarget{class_wizualizacja_kosc_aba059f3a46ffb74158786d2e74f34c94}\label{class_wizualizacja_kosc_aba059f3a46ffb74158786d2e74f34c94}} 
+\index{Wizualizacja\+Kosc@{Wizualizacja\+Kosc}!x\+\_\+zakres@{x\+\_\+zakres}}
+\index{x\+\_\+zakres@{x\+\_\+zakres}!Wizualizacja\+Kosc@{Wizualizacja\+Kosc}}
+\subsubsection{\texorpdfstring{x\+\_\+zakres}{x\_zakres}}
+{\footnotesize\ttfamily int Wizualizacja\+Kosc\+::x\+\_\+zakres = 0}
+
+
+\begin{DoxyParams}[1]{Parametry}
+\mbox{\tt in}  & {\em x\+\_\+zakres} & -\/$>$ zmienna przechowująca położenie w osi OX \\
+\hline
+\mbox{\tt in}  & {\em y\+\_\+zakres} & -\/$>$ zmienna przechowująca położenie w osi OY \\
+\hline
+\mbox{\tt in}  & {\em z\+\_\+zakres} & -\/$>$ zmienna przechowująca położenie w osi OZ \\
+\hline
+\end{DoxyParams}
+
+
+Definicja w linii 92 pliku wizualizacjakosc.\+h.
+
+\mbox{\Hypertarget{class_wizualizacja_kosc_a61ee2d767b712866f93710c29cdd051d}\label{class_wizualizacja_kosc_a61ee2d767b712866f93710c29cdd051d}} 
+\index{Wizualizacja\+Kosc@{Wizualizacja\+Kosc}!y\+\_\+zakres@{y\+\_\+zakres}}
+\index{y\+\_\+zakres@{y\+\_\+zakres}!Wizualizacja\+Kosc@{Wizualizacja\+Kosc}}
+\subsubsection{\texorpdfstring{y\+\_\+zakres}{y\_zakres}}
+{\footnotesize\ttfamily int Wizualizacja\+Kosc\+::y\+\_\+zakres = 0}
+
+
+
+Definicja w linii 93 pliku wizualizacjakosc.\+h.
+
+\mbox{\Hypertarget{class_wizualizacja_kosc_abec9f7c00196751f1f97e8845a9c7d21}\label{class_wizualizacja_kosc_abec9f7c00196751f1f97e8845a9c7d21}} 
+\index{Wizualizacja\+Kosc@{Wizualizacja\+Kosc}!z\+\_\+zakres@{z\+\_\+zakres}}
+\index{z\+\_\+zakres@{z\+\_\+zakres}!Wizualizacja\+Kosc@{Wizualizacja\+Kosc}}
+\subsubsection{\texorpdfstring{z\+\_\+zakres}{z\_zakres}}
+{\footnotesize\ttfamily int Wizualizacja\+Kosc\+::z\+\_\+zakres = 0}
+
+
+
+Definicja w linii 94 pliku wizualizacjakosc.\+h.
+
+
+
+Dokumentacja dla tej klasy została wygenerowana z plików\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{wizualizacjakosc_8h}{wizualizacjakosc.\+h}\item 
+\hyperlink{wizualizacjakosc_8cpp}{wizualizacjakosc.\+cpp}\end{DoxyCompactItemize}

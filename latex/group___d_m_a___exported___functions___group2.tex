@@ -1,0 +1,97 @@
+\hypertarget{group___d_m_a___exported___functions___group2}{}\section{I/O operation functions}
+\label{group___d_m_a___exported___functions___group2}\index{I/\+O operation functions@{I/\+O operation functions}}
+
+
+I/O operation functions.  
+
+
+Diagram współpracy dla I/O operation functions\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{group___d_m_a___exported___functions___group2}
+\end{center}
+\end{figure}
+\subsection*{Funkcje}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{H\+A\+L\+\_\+\+Status\+Type\+Def} \hyperlink{group___d_m_a___exported___functions___group2_ga96fbd9c285135f558fd9283a57406330}{H\+A\+L\+\_\+\+D\+M\+A\+\_\+\+Start} (\hyperlink{group___d_m_a___exported___types_ga41b754a906b86bce54dc79938970138b}{D\+M\+A\+\_\+\+Handle\+Type\+Def} $\ast$hdma, uint32\+\_\+t Src\+Address, uint32\+\_\+t Dst\+Address, uint32\+\_\+t Data\+Length)
+\item 
+\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{H\+A\+L\+\_\+\+Status\+Type\+Def} \hyperlink{group___d_m_a___exported___functions___group2_ga7eddc0931ac8a3d77b23d6d5e68407c7}{H\+A\+L\+\_\+\+D\+M\+A\+\_\+\+Start\+\_\+\+IT} (\hyperlink{group___d_m_a___exported___types_ga41b754a906b86bce54dc79938970138b}{D\+M\+A\+\_\+\+Handle\+Type\+Def} $\ast$hdma, uint32\+\_\+t Src\+Address, uint32\+\_\+t Dst\+Address, uint32\+\_\+t Data\+Length)
+\item 
+\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{H\+A\+L\+\_\+\+Status\+Type\+Def} \hyperlink{group___d_m_a___exported___functions___group2_ga001f9fb04328a7460f9ff16908ff987c}{H\+A\+L\+\_\+\+D\+M\+A\+\_\+\+Abort} (\hyperlink{group___d_m_a___exported___types_ga41b754a906b86bce54dc79938970138b}{D\+M\+A\+\_\+\+Handle\+Type\+Def} $\ast$hdma)
+\item 
+\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{H\+A\+L\+\_\+\+Status\+Type\+Def} \hyperlink{group___d_m_a___exported___functions___group2_ga6677d7e614747341a58ffd7a048fd390}{H\+A\+L\+\_\+\+D\+M\+A\+\_\+\+Abort\+\_\+\+IT} (\hyperlink{group___d_m_a___exported___types_ga41b754a906b86bce54dc79938970138b}{D\+M\+A\+\_\+\+Handle\+Type\+Def} $\ast$hdma)
+\item 
+\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{H\+A\+L\+\_\+\+Status\+Type\+Def} \hyperlink{group___d_m_a___exported___functions___group2_ga976a30472df973e3ad983f21289c9b5d}{H\+A\+L\+\_\+\+D\+M\+A\+\_\+\+Poll\+For\+Transfer} (\hyperlink{group___d_m_a___exported___types_ga41b754a906b86bce54dc79938970138b}{D\+M\+A\+\_\+\+Handle\+Type\+Def} $\ast$hdma, \hyperlink{group___d_m_a___exported___types_gaee3245eea8fa938edeb35a6c9596fd86}{H\+A\+L\+\_\+\+D\+M\+A\+\_\+\+Level\+Complete\+Type\+Def} Complete\+Level, uint32\+\_\+t Timeout)
+\item 
+void \hyperlink{group___d_m_a___exported___functions___group2_ga8c8564d06f6d39b702af1c5cbb7dd54a}{H\+A\+L\+\_\+\+D\+M\+A\+\_\+\+I\+R\+Q\+Handler} (\hyperlink{group___d_m_a___exported___types_ga41b754a906b86bce54dc79938970138b}{D\+M\+A\+\_\+\+Handle\+Type\+Def} $\ast$hdma)
+\item 
+\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{H\+A\+L\+\_\+\+Status\+Type\+Def} \hyperlink{group___d_m_a___exported___functions___group2_gaf511e4e6e0653fafdd9b40ce4a08b1db}{H\+A\+L\+\_\+\+D\+M\+A\+\_\+\+Clean\+Callbacks} (\hyperlink{group___d_m_a___exported___types_ga41b754a906b86bce54dc79938970138b}{D\+M\+A\+\_\+\+Handle\+Type\+Def} $\ast$hdma)
+\item 
+\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{H\+A\+L\+\_\+\+Status\+Type\+Def} \hyperlink{group___d_m_a___exported___functions___group2_gaabec77de08a59c94f2c6265ce7ae8261}{H\+A\+L\+\_\+\+D\+M\+A\+\_\+\+Register\+Callback} (\hyperlink{group___d_m_a___exported___types_ga41b754a906b86bce54dc79938970138b}{D\+M\+A\+\_\+\+Handle\+Type\+Def} $\ast$hdma, \hyperlink{group___d_m_a___exported___types_gafbe8b2bd9ce2128de6cdc08ccde7e8ad}{H\+A\+L\+\_\+\+D\+M\+A\+\_\+\+Callback\+I\+D\+Type\+Def} Callback\+ID, void($\ast$p\+Callback)(\hyperlink{group___d_m_a___exported___types_ga41b754a906b86bce54dc79938970138b}{D\+M\+A\+\_\+\+Handle\+Type\+Def} $\ast$\+\_\+hdma))
+\item 
+\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{H\+A\+L\+\_\+\+Status\+Type\+Def} \hyperlink{group___d_m_a___exported___functions___group2_ga87842d3780f0e54c7fb29a003e6b5ac4}{H\+A\+L\+\_\+\+D\+M\+A\+\_\+\+Un\+Register\+Callback} (\hyperlink{group___d_m_a___exported___types_ga41b754a906b86bce54dc79938970138b}{D\+M\+A\+\_\+\+Handle\+Type\+Def} $\ast$hdma, \hyperlink{group___d_m_a___exported___types_gafbe8b2bd9ce2128de6cdc08ccde7e8ad}{H\+A\+L\+\_\+\+D\+M\+A\+\_\+\+Callback\+I\+D\+Type\+Def} Callback\+ID)
+\end{DoxyCompactItemize}
+
+
+\subsection{Opis szczegółowy}
+I/O operation functions. 
+
+
+
+\subsection{Dokumentacja funkcji}
+\mbox{\Hypertarget{group___d_m_a___exported___functions___group2_ga001f9fb04328a7460f9ff16908ff987c}\label{group___d_m_a___exported___functions___group2_ga001f9fb04328a7460f9ff16908ff987c}} 
+\index{I/\+O operation functions@{I/\+O operation functions}!H\+A\+L\+\_\+\+D\+M\+A\+\_\+\+Abort@{H\+A\+L\+\_\+\+D\+M\+A\+\_\+\+Abort}}
+\index{H\+A\+L\+\_\+\+D\+M\+A\+\_\+\+Abort@{H\+A\+L\+\_\+\+D\+M\+A\+\_\+\+Abort}!I/\+O operation functions@{I/\+O operation functions}}
+\subsubsection{\texorpdfstring{H\+A\+L\+\_\+\+D\+M\+A\+\_\+\+Abort()}{HAL\_DMA\_Abort()}}
+{\footnotesize\ttfamily \hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{H\+A\+L\+\_\+\+Status\+Type\+Def} H\+A\+L\+\_\+\+D\+M\+A\+\_\+\+Abort (\begin{DoxyParamCaption}\item[{\hyperlink{group___d_m_a___exported___types_ga41b754a906b86bce54dc79938970138b}{D\+M\+A\+\_\+\+Handle\+Type\+Def} $\ast$}]{hdma }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{group___d_m_a___exported___functions___group2_ga6677d7e614747341a58ffd7a048fd390}\label{group___d_m_a___exported___functions___group2_ga6677d7e614747341a58ffd7a048fd390}} 
+\index{I/\+O operation functions@{I/\+O operation functions}!H\+A\+L\+\_\+\+D\+M\+A\+\_\+\+Abort\+\_\+\+IT@{H\+A\+L\+\_\+\+D\+M\+A\+\_\+\+Abort\+\_\+\+IT}}
+\index{H\+A\+L\+\_\+\+D\+M\+A\+\_\+\+Abort\+\_\+\+IT@{H\+A\+L\+\_\+\+D\+M\+A\+\_\+\+Abort\+\_\+\+IT}!I/\+O operation functions@{I/\+O operation functions}}
+\subsubsection{\texorpdfstring{H\+A\+L\+\_\+\+D\+M\+A\+\_\+\+Abort\+\_\+\+I\+T()}{HAL\_DMA\_Abort\_IT()}}
+{\footnotesize\ttfamily \hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{H\+A\+L\+\_\+\+Status\+Type\+Def} H\+A\+L\+\_\+\+D\+M\+A\+\_\+\+Abort\+\_\+\+IT (\begin{DoxyParamCaption}\item[{\hyperlink{group___d_m_a___exported___types_ga41b754a906b86bce54dc79938970138b}{D\+M\+A\+\_\+\+Handle\+Type\+Def} $\ast$}]{hdma }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{group___d_m_a___exported___functions___group2_gaf511e4e6e0653fafdd9b40ce4a08b1db}\label{group___d_m_a___exported___functions___group2_gaf511e4e6e0653fafdd9b40ce4a08b1db}} 
+\index{I/\+O operation functions@{I/\+O operation functions}!H\+A\+L\+\_\+\+D\+M\+A\+\_\+\+Clean\+Callbacks@{H\+A\+L\+\_\+\+D\+M\+A\+\_\+\+Clean\+Callbacks}}
+\index{H\+A\+L\+\_\+\+D\+M\+A\+\_\+\+Clean\+Callbacks@{H\+A\+L\+\_\+\+D\+M\+A\+\_\+\+Clean\+Callbacks}!I/\+O operation functions@{I/\+O operation functions}}
+\subsubsection{\texorpdfstring{H\+A\+L\+\_\+\+D\+M\+A\+\_\+\+Clean\+Callbacks()}{HAL\_DMA\_CleanCallbacks()}}
+{\footnotesize\ttfamily \hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{H\+A\+L\+\_\+\+Status\+Type\+Def} H\+A\+L\+\_\+\+D\+M\+A\+\_\+\+Clean\+Callbacks (\begin{DoxyParamCaption}\item[{\hyperlink{group___d_m_a___exported___types_ga41b754a906b86bce54dc79938970138b}{D\+M\+A\+\_\+\+Handle\+Type\+Def} $\ast$}]{hdma }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{group___d_m_a___exported___functions___group2_ga8c8564d06f6d39b702af1c5cbb7dd54a}\label{group___d_m_a___exported___functions___group2_ga8c8564d06f6d39b702af1c5cbb7dd54a}} 
+\index{I/\+O operation functions@{I/\+O operation functions}!H\+A\+L\+\_\+\+D\+M\+A\+\_\+\+I\+R\+Q\+Handler@{H\+A\+L\+\_\+\+D\+M\+A\+\_\+\+I\+R\+Q\+Handler}}
+\index{H\+A\+L\+\_\+\+D\+M\+A\+\_\+\+I\+R\+Q\+Handler@{H\+A\+L\+\_\+\+D\+M\+A\+\_\+\+I\+R\+Q\+Handler}!I/\+O operation functions@{I/\+O operation functions}}
+\subsubsection{\texorpdfstring{H\+A\+L\+\_\+\+D\+M\+A\+\_\+\+I\+R\+Q\+Handler()}{HAL\_DMA\_IRQHandler()}}
+{\footnotesize\ttfamily void H\+A\+L\+\_\+\+D\+M\+A\+\_\+\+I\+R\+Q\+Handler (\begin{DoxyParamCaption}\item[{\hyperlink{group___d_m_a___exported___types_ga41b754a906b86bce54dc79938970138b}{D\+M\+A\+\_\+\+Handle\+Type\+Def} $\ast$}]{hdma }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{group___d_m_a___exported___functions___group2_ga976a30472df973e3ad983f21289c9b5d}\label{group___d_m_a___exported___functions___group2_ga976a30472df973e3ad983f21289c9b5d}} 
+\index{I/\+O operation functions@{I/\+O operation functions}!H\+A\+L\+\_\+\+D\+M\+A\+\_\+\+Poll\+For\+Transfer@{H\+A\+L\+\_\+\+D\+M\+A\+\_\+\+Poll\+For\+Transfer}}
+\index{H\+A\+L\+\_\+\+D\+M\+A\+\_\+\+Poll\+For\+Transfer@{H\+A\+L\+\_\+\+D\+M\+A\+\_\+\+Poll\+For\+Transfer}!I/\+O operation functions@{I/\+O operation functions}}
+\subsubsection{\texorpdfstring{H\+A\+L\+\_\+\+D\+M\+A\+\_\+\+Poll\+For\+Transfer()}{HAL\_DMA\_PollForTransfer()}}
+{\footnotesize\ttfamily \hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{H\+A\+L\+\_\+\+Status\+Type\+Def} H\+A\+L\+\_\+\+D\+M\+A\+\_\+\+Poll\+For\+Transfer (\begin{DoxyParamCaption}\item[{\hyperlink{group___d_m_a___exported___types_ga41b754a906b86bce54dc79938970138b}{D\+M\+A\+\_\+\+Handle\+Type\+Def} $\ast$}]{hdma,  }\item[{\hyperlink{group___d_m_a___exported___types_gaee3245eea8fa938edeb35a6c9596fd86}{H\+A\+L\+\_\+\+D\+M\+A\+\_\+\+Level\+Complete\+Type\+Def}}]{Complete\+Level,  }\item[{uint32\+\_\+t}]{Timeout }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{group___d_m_a___exported___functions___group2_gaabec77de08a59c94f2c6265ce7ae8261}\label{group___d_m_a___exported___functions___group2_gaabec77de08a59c94f2c6265ce7ae8261}} 
+\index{I/\+O operation functions@{I/\+O operation functions}!H\+A\+L\+\_\+\+D\+M\+A\+\_\+\+Register\+Callback@{H\+A\+L\+\_\+\+D\+M\+A\+\_\+\+Register\+Callback}}
+\index{H\+A\+L\+\_\+\+D\+M\+A\+\_\+\+Register\+Callback@{H\+A\+L\+\_\+\+D\+M\+A\+\_\+\+Register\+Callback}!I/\+O operation functions@{I/\+O operation functions}}
+\subsubsection{\texorpdfstring{H\+A\+L\+\_\+\+D\+M\+A\+\_\+\+Register\+Callback()}{HAL\_DMA\_RegisterCallback()}}
+{\footnotesize\ttfamily \hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{H\+A\+L\+\_\+\+Status\+Type\+Def} H\+A\+L\+\_\+\+D\+M\+A\+\_\+\+Register\+Callback (\begin{DoxyParamCaption}\item[{\hyperlink{group___d_m_a___exported___types_ga41b754a906b86bce54dc79938970138b}{D\+M\+A\+\_\+\+Handle\+Type\+Def} $\ast$}]{hdma,  }\item[{\hyperlink{group___d_m_a___exported___types_gafbe8b2bd9ce2128de6cdc08ccde7e8ad}{H\+A\+L\+\_\+\+D\+M\+A\+\_\+\+Callback\+I\+D\+Type\+Def}}]{Callback\+ID,  }\item[{void($\ast$)(\hyperlink{group___d_m_a___exported___types_ga41b754a906b86bce54dc79938970138b}{D\+M\+A\+\_\+\+Handle\+Type\+Def} $\ast$\+\_\+hdma)}]{p\+Callback }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{group___d_m_a___exported___functions___group2_ga96fbd9c285135f558fd9283a57406330}\label{group___d_m_a___exported___functions___group2_ga96fbd9c285135f558fd9283a57406330}} 
+\index{I/\+O operation functions@{I/\+O operation functions}!H\+A\+L\+\_\+\+D\+M\+A\+\_\+\+Start@{H\+A\+L\+\_\+\+D\+M\+A\+\_\+\+Start}}
+\index{H\+A\+L\+\_\+\+D\+M\+A\+\_\+\+Start@{H\+A\+L\+\_\+\+D\+M\+A\+\_\+\+Start}!I/\+O operation functions@{I/\+O operation functions}}
+\subsubsection{\texorpdfstring{H\+A\+L\+\_\+\+D\+M\+A\+\_\+\+Start()}{HAL\_DMA\_Start()}}
+{\footnotesize\ttfamily \hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{H\+A\+L\+\_\+\+Status\+Type\+Def} H\+A\+L\+\_\+\+D\+M\+A\+\_\+\+Start (\begin{DoxyParamCaption}\item[{\hyperlink{group___d_m_a___exported___types_ga41b754a906b86bce54dc79938970138b}{D\+M\+A\+\_\+\+Handle\+Type\+Def} $\ast$}]{hdma,  }\item[{uint32\+\_\+t}]{Src\+Address,  }\item[{uint32\+\_\+t}]{Dst\+Address,  }\item[{uint32\+\_\+t}]{Data\+Length }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{group___d_m_a___exported___functions___group2_ga7eddc0931ac8a3d77b23d6d5e68407c7}\label{group___d_m_a___exported___functions___group2_ga7eddc0931ac8a3d77b23d6d5e68407c7}} 
+\index{I/\+O operation functions@{I/\+O operation functions}!H\+A\+L\+\_\+\+D\+M\+A\+\_\+\+Start\+\_\+\+IT@{H\+A\+L\+\_\+\+D\+M\+A\+\_\+\+Start\+\_\+\+IT}}
+\index{H\+A\+L\+\_\+\+D\+M\+A\+\_\+\+Start\+\_\+\+IT@{H\+A\+L\+\_\+\+D\+M\+A\+\_\+\+Start\+\_\+\+IT}!I/\+O operation functions@{I/\+O operation functions}}
+\subsubsection{\texorpdfstring{H\+A\+L\+\_\+\+D\+M\+A\+\_\+\+Start\+\_\+\+I\+T()}{HAL\_DMA\_Start\_IT()}}
+{\footnotesize\ttfamily \hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{H\+A\+L\+\_\+\+Status\+Type\+Def} H\+A\+L\+\_\+\+D\+M\+A\+\_\+\+Start\+\_\+\+IT (\begin{DoxyParamCaption}\item[{\hyperlink{group___d_m_a___exported___types_ga41b754a906b86bce54dc79938970138b}{D\+M\+A\+\_\+\+Handle\+Type\+Def} $\ast$}]{hdma,  }\item[{uint32\+\_\+t}]{Src\+Address,  }\item[{uint32\+\_\+t}]{Dst\+Address,  }\item[{uint32\+\_\+t}]{Data\+Length }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{group___d_m_a___exported___functions___group2_ga87842d3780f0e54c7fb29a003e6b5ac4}\label{group___d_m_a___exported___functions___group2_ga87842d3780f0e54c7fb29a003e6b5ac4}} 
+\index{I/\+O operation functions@{I/\+O operation functions}!H\+A\+L\+\_\+\+D\+M\+A\+\_\+\+Un\+Register\+Callback@{H\+A\+L\+\_\+\+D\+M\+A\+\_\+\+Un\+Register\+Callback}}
+\index{H\+A\+L\+\_\+\+D\+M\+A\+\_\+\+Un\+Register\+Callback@{H\+A\+L\+\_\+\+D\+M\+A\+\_\+\+Un\+Register\+Callback}!I/\+O operation functions@{I/\+O operation functions}}
+\subsubsection{\texorpdfstring{H\+A\+L\+\_\+\+D\+M\+A\+\_\+\+Un\+Register\+Callback()}{HAL\_DMA\_UnRegisterCallback()}}
+{\footnotesize\ttfamily \hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{H\+A\+L\+\_\+\+Status\+Type\+Def} H\+A\+L\+\_\+\+D\+M\+A\+\_\+\+Un\+Register\+Callback (\begin{DoxyParamCaption}\item[{\hyperlink{group___d_m_a___exported___types_ga41b754a906b86bce54dc79938970138b}{D\+M\+A\+\_\+\+Handle\+Type\+Def} $\ast$}]{hdma,  }\item[{\hyperlink{group___d_m_a___exported___types_gafbe8b2bd9ce2128de6cdc08ccde7e8ad}{H\+A\+L\+\_\+\+D\+M\+A\+\_\+\+Callback\+I\+D\+Type\+Def}}]{Callback\+ID }\end{DoxyParamCaption})}
+

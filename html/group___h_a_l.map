@@ -1,0 +1,10 @@
+<map id="HAL" name="HAL">
+<area shape="rect" id="node1" href="$group___h_a_l___exported___constants.html" title="HAL Exported Constants" alt="" coords="317,5,485,32"/>
+<area shape="rect" id="node2" href="$group___h_a_l___private___macros.html" title="HAL Private Macros" alt="" coords="331,56,471,83"/>
+<area shape="rect" id="node4" href="$group___h_a_l___exported___variables.html" title="HAL_Exported_Variables" alt="" coords="317,107,485,133"/>
+<area shape="rect" id="node5" href="$group___h_a_l___private___constants.html" title="HAL Private Constants" alt="" coords="323,157,480,184"/>
+<area shape="rect" id="node6" href="$group___h_a_l___exported___macros.html" title="HAL Exported Macros" alt="" coords="326,208,477,235"/>
+<area shape="rect" id="node8" href="$group___h_a_l___exported___functions.html" title="HAL Exported Functions" alt="" coords="319,259,484,285"/>
+<area shape="rect" id="node9" href="$group___h_a_l___private___variables.html" title="HAL Private Variables" alt="" coords="326,309,477,336"/>
+<area shape="rect" id="node7" href="$group___s_t_m32_f4xx___h_a_l___driver.html" title="STM32F4xx_HAL_Driver" alt="" coords="5,157,173,184"/>
+</map>

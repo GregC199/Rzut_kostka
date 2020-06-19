@@ -1,0 +1,9 @@
+<map id="inc/ui_mainwindow.h" name="inc/ui_mainwindow.h">
+<area shape="rect" id="node2" href="$inc_2mainwindow_8h.html" title="inc/mainwindow.h" alt="" coords="322,80,449,107"/>
+<area shape="rect" id="node3" href="$src_2bluetooth_8cpp.html" title="src/bluetooth.cpp" alt="" coords="5,155,128,181"/>
+<area shape="rect" id="node4" href="$src_2diody_8cpp.html" title="src/diody.cpp" alt="" coords="153,155,253,181"/>
+<area shape="rect" id="node5" href="$src_2kosc_8cpp.html" title="src/kosc.cpp" alt="" coords="277,155,374,181"/>
+<area shape="rect" id="node6" href="$src_2main_8cpp.html" title="src/main.cpp" alt="" coords="398,155,495,181"/>
+<area shape="rect" id="node7" href="$src_2mainwindow_8cpp.html" title="src/mainwindow.cpp" alt="" coords="520,155,661,181"/>
+<area shape="rect" id="node8" href="$src_2wykresy_8cpp.html" title="src/wykresy.cpp" alt="" coords="686,155,805,181"/>
+</map>

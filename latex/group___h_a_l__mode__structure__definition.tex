@@ -1,0 +1,75 @@
+\hypertarget{group___h_a_l__mode__structure__definition}{}\section{H\+AL mode structure definition}
+\label{group___h_a_l__mode__structure__definition}\index{H\+A\+L mode structure definition@{H\+A\+L mode structure definition}}
+
+
+H\+AL Mode structure definition.  
+
+
+Diagram współpracy dla H\+AL mode structure definition\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=324pt]{group___h_a_l__mode__structure__definition}
+\end{center}
+\end{figure}
+\subsection*{Wyliczenia}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{group___h_a_l__mode__structure__definition_gabcbb7b844f2ffd63c4e530c117882062}{H\+A\+L\+\_\+\+I2\+C\+\_\+\+Mode\+Type\+Def} \{ \hyperlink{group___h_a_l__mode__structure__definition_ggabcbb7b844f2ffd63c4e530c117882062a98c8fd642b7ac45a23479bd597fc7a71}{H\+A\+L\+\_\+\+I2\+C\+\_\+\+M\+O\+D\+E\+\_\+\+N\+O\+NE} = 0x00U, 
+\hyperlink{group___h_a_l__mode__structure__definition_ggabcbb7b844f2ffd63c4e530c117882062a1eea98660a170dd7b191c9dfe46da6d2}{H\+A\+L\+\_\+\+I2\+C\+\_\+\+M\+O\+D\+E\+\_\+\+M\+A\+S\+T\+ER} = 0x10U, 
+\hyperlink{group___h_a_l__mode__structure__definition_ggabcbb7b844f2ffd63c4e530c117882062a817358d19d278261f2047a5ec8ec6b53}{H\+A\+L\+\_\+\+I2\+C\+\_\+\+M\+O\+D\+E\+\_\+\+S\+L\+A\+VE} = 0x20U, 
+\hyperlink{group___h_a_l__mode__structure__definition_ggabcbb7b844f2ffd63c4e530c117882062a3f592bd942f973242aac6b7df79f3f1e}{H\+A\+L\+\_\+\+I2\+C\+\_\+\+M\+O\+D\+E\+\_\+\+M\+EM} = 0x40U
+ \}
+\end{DoxyCompactItemize}
+
+
+\subsection{Opis szczegółowy}
+H\+AL Mode structure definition. 
+
+\begin{DoxyNote}{Nota}
+H\+AL I2C Mode value coding follow below described bitmap \+:~\newline
+ b7 (not used)~\newline
+ x \+: Should be set to 0~\newline
+ b6~\newline
+ 0 \+: None~\newline
+ 1 \+: Memory (H\+AL I2C communication is in Memory Mode)~\newline
+ b5~\newline
+ 0 \+: None~\newline
+ 1 \+: Slave (H\+AL I2C communication is in Slave Mode)~\newline
+ b4~\newline
+ 0 \+: None~\newline
+ 1 \+: Master (H\+AL I2C communication is in Master Mode)~\newline
+ b3-\/b2-\/b1-\/b0 (not used)~\newline
+ xxxx \+: Should be set to 0000 
+\end{DoxyNote}
+
+
+\subsection{Dokumentacja typów wyliczanych}
+\mbox{\Hypertarget{group___h_a_l__mode__structure__definition_gabcbb7b844f2ffd63c4e530c117882062}\label{group___h_a_l__mode__structure__definition_gabcbb7b844f2ffd63c4e530c117882062}} 
+\index{H\+A\+L mode structure definition@{H\+A\+L mode structure definition}!H\+A\+L\+\_\+\+I2\+C\+\_\+\+Mode\+Type\+Def@{H\+A\+L\+\_\+\+I2\+C\+\_\+\+Mode\+Type\+Def}}
+\index{H\+A\+L\+\_\+\+I2\+C\+\_\+\+Mode\+Type\+Def@{H\+A\+L\+\_\+\+I2\+C\+\_\+\+Mode\+Type\+Def}!H\+A\+L mode structure definition@{H\+A\+L mode structure definition}}
+\subsubsection{\texorpdfstring{H\+A\+L\+\_\+\+I2\+C\+\_\+\+Mode\+Type\+Def}{HAL\_I2C\_ModeTypeDef}}
+{\footnotesize\ttfamily enum \hyperlink{group___h_a_l__mode__structure__definition_gabcbb7b844f2ffd63c4e530c117882062}{H\+A\+L\+\_\+\+I2\+C\+\_\+\+Mode\+Type\+Def}}
+
+\begin{DoxyEnumFields}{Wartości wyliczeń}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{H\+A\+L\+\_\+\+I2\+C\+\_\+\+M\+O\+D\+E\+\_\+\+N\+O\+NE@{H\+A\+L\+\_\+\+I2\+C\+\_\+\+M\+O\+D\+E\+\_\+\+N\+O\+NE}!H\+A\+L mode structure definition@{H\+A\+L mode structure definition}}\index{H\+A\+L mode structure definition@{H\+A\+L mode structure definition}!H\+A\+L\+\_\+\+I2\+C\+\_\+\+M\+O\+D\+E\+\_\+\+N\+O\+NE@{H\+A\+L\+\_\+\+I2\+C\+\_\+\+M\+O\+D\+E\+\_\+\+N\+O\+NE}}}\mbox{\Hypertarget{group___h_a_l__mode__structure__definition_ggabcbb7b844f2ffd63c4e530c117882062a98c8fd642b7ac45a23479bd597fc7a71}\label{group___h_a_l__mode__structure__definition_ggabcbb7b844f2ffd63c4e530c117882062a98c8fd642b7ac45a23479bd597fc7a71}} 
+H\+A\+L\+\_\+\+I2\+C\+\_\+\+M\+O\+D\+E\+\_\+\+N\+O\+NE&No I2C communication on going \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{H\+A\+L\+\_\+\+I2\+C\+\_\+\+M\+O\+D\+E\+\_\+\+M\+A\+S\+T\+ER@{H\+A\+L\+\_\+\+I2\+C\+\_\+\+M\+O\+D\+E\+\_\+\+M\+A\+S\+T\+ER}!H\+A\+L mode structure definition@{H\+A\+L mode structure definition}}\index{H\+A\+L mode structure definition@{H\+A\+L mode structure definition}!H\+A\+L\+\_\+\+I2\+C\+\_\+\+M\+O\+D\+E\+\_\+\+M\+A\+S\+T\+ER@{H\+A\+L\+\_\+\+I2\+C\+\_\+\+M\+O\+D\+E\+\_\+\+M\+A\+S\+T\+ER}}}\mbox{\Hypertarget{group___h_a_l__mode__structure__definition_ggabcbb7b844f2ffd63c4e530c117882062a1eea98660a170dd7b191c9dfe46da6d2}\label{group___h_a_l__mode__structure__definition_ggabcbb7b844f2ffd63c4e530c117882062a1eea98660a170dd7b191c9dfe46da6d2}} 
+H\+A\+L\+\_\+\+I2\+C\+\_\+\+M\+O\+D\+E\+\_\+\+M\+A\+S\+T\+ER&I2C communication is in Master Mode \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{H\+A\+L\+\_\+\+I2\+C\+\_\+\+M\+O\+D\+E\+\_\+\+S\+L\+A\+VE@{H\+A\+L\+\_\+\+I2\+C\+\_\+\+M\+O\+D\+E\+\_\+\+S\+L\+A\+VE}!H\+A\+L mode structure definition@{H\+A\+L mode structure definition}}\index{H\+A\+L mode structure definition@{H\+A\+L mode structure definition}!H\+A\+L\+\_\+\+I2\+C\+\_\+\+M\+O\+D\+E\+\_\+\+S\+L\+A\+VE@{H\+A\+L\+\_\+\+I2\+C\+\_\+\+M\+O\+D\+E\+\_\+\+S\+L\+A\+VE}}}\mbox{\Hypertarget{group___h_a_l__mode__structure__definition_ggabcbb7b844f2ffd63c4e530c117882062a817358d19d278261f2047a5ec8ec6b53}\label{group___h_a_l__mode__structure__definition_ggabcbb7b844f2ffd63c4e530c117882062a817358d19d278261f2047a5ec8ec6b53}} 
+H\+A\+L\+\_\+\+I2\+C\+\_\+\+M\+O\+D\+E\+\_\+\+S\+L\+A\+VE&I2C communication is in Slave Mode \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{H\+A\+L\+\_\+\+I2\+C\+\_\+\+M\+O\+D\+E\+\_\+\+M\+EM@{H\+A\+L\+\_\+\+I2\+C\+\_\+\+M\+O\+D\+E\+\_\+\+M\+EM}!H\+A\+L mode structure definition@{H\+A\+L mode structure definition}}\index{H\+A\+L mode structure definition@{H\+A\+L mode structure definition}!H\+A\+L\+\_\+\+I2\+C\+\_\+\+M\+O\+D\+E\+\_\+\+M\+EM@{H\+A\+L\+\_\+\+I2\+C\+\_\+\+M\+O\+D\+E\+\_\+\+M\+EM}}}\mbox{\Hypertarget{group___h_a_l__mode__structure__definition_ggabcbb7b844f2ffd63c4e530c117882062a3f592bd942f973242aac6b7df79f3f1e}\label{group___h_a_l__mode__structure__definition_ggabcbb7b844f2ffd63c4e530c117882062a3f592bd942f973242aac6b7df79f3f1e}} 
+H\+A\+L\+\_\+\+I2\+C\+\_\+\+M\+O\+D\+E\+\_\+\+M\+EM&I2C communication is in Memory Mode \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definicja w linii 147 pliku stm32f4xx\+\_\+hal\+\_\+i2c.\+h.
+

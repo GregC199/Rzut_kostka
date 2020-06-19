@@ -1,0 +1,376 @@
+\hypertarget{class_main_window}{}\section{Dokumentacja klasy Main\+Window}
+\label{class_main_window}\index{Main\+Window@{Main\+Window}}
+
+
+Implementacja klasy \hyperlink{class_main_window}{Main\+Window} będącej reimplementacją klasy Q\+Main\+Window.  
+
+
+
+
+{\ttfamily \#include $<$mainwindow.\+h$>$}
+
+
+
+Diagram dziedziczenia dla Main\+Window\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=160pt]{class_main_window__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Diagram współpracy dla Main\+Window\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=160pt]{class_main_window__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_main_window_a996c5a2b6f77944776856f08ec30858d}{Main\+Window} (Q\+Widget $\ast$parent=nullptr)
+\begin{DoxyCompactList}\small\item\em Konstruktor aplikacji. \end{DoxyCompactList}\item 
+\hyperlink{class_main_window_ae98d00a93bc118200eeef9f9bba1dba7}{$\sim$\+Main\+Window} ()
+\begin{DoxyCompactList}\small\item\em Destruktor aplikacji. \end{DoxyCompactList}\item 
+void \hyperlink{class_main_window_a39f01fe1c593f844a0c531b872ee0d7c}{tworz\+\_\+diode} ()
+\begin{DoxyCompactList}\small\item\em Tworzenie diód. \end{DoxyCompactList}\item 
+void \hyperlink{class_main_window_a24aadb4c1aaf83ce170dcf849ec6aa51}{zapal\+\_\+zielone} ()
+\begin{DoxyCompactList}\small\item\em Zmiana kolorow diód na zielony. \end{DoxyCompactList}\item 
+void \hyperlink{class_main_window_ad62f0406504e4f43af6fd9ebe5e96a58}{zapal\+\_\+czerwone} ()
+\begin{DoxyCompactList}\small\item\em Zmiana kolorow diód na czerowny. \end{DoxyCompactList}\item 
+void \hyperlink{class_main_window_a0669fa55d3cd37cef0e9e3d6e296ebd2}{stworz\+\_\+wykresy} ()
+\begin{DoxyCompactList}\small\item\em Obsługa tworzenia wykresów. \end{DoxyCompactList}\item 
+void \hyperlink{class_main_window_a2f5ead67e758baf55cf71b746e870192}{obsluga\+\_\+bt} ()
+\begin{DoxyCompactList}\small\item\em Inicjalizacja obsługi bluetooth. \end{DoxyCompactList}\item 
+void \hyperlink{class_main_window_a7b1012fca99df34abcdc108974ab583c}{inicjalizuj\+\_\+info} ()
+\begin{DoxyCompactList}\small\item\em Informacje o nawiązanym połączeniu. \end{DoxyCompactList}\item 
+void \hyperlink{class_main_window_ac3bcbf1dc657f039bf90254b24e023a5}{informacje\+\_\+bluetooth} ()
+\begin{DoxyCompactList}\small\item\em Szczegóły parametrów połączenia. \end{DoxyCompactList}\item 
+void \hyperlink{class_main_window_ad6eb500a681306e95262d1c55dab9594}{aktualizuj\+\_\+wykres} (float a\+\_\+x, float a\+\_\+y, float a\+\_\+z, float g\+\_\+x, float g\+\_\+y, double g\+\_\+z, double rkom, double pkom, unsigned long long czas)
+\begin{DoxyCompactList}\small\item\em Aktualizacja danych na wykresie. \end{DoxyCompactList}\item 
+void \hyperlink{class_main_window_a5c39c76ab1f6edbff934e87a385bd5bd}{wczytanie\+\_\+danych\+\_\+z\+\_\+logu} (unsigned long long czas\+\_\+zmierzony)
+\begin{DoxyCompactList}\small\item\em Wczytanie danych z pliku będącego logiem połączenia bluetooth. \end{DoxyCompactList}\item 
+void \hyperlink{class_main_window_a94be5a5d63c0b8f071923a32f0215198}{utworz\+\_\+osie} ()
+\begin{DoxyCompactList}\small\item\em Utworzenie osi do wykresów. \end{DoxyCompactList}\item 
+void \hyperlink{class_main_window_a7c108455f05b3e2532088b38870e2ca2}{utworz\+\_\+serie} ()
+\begin{DoxyCompactList}\small\item\em Utworzenie serii do wykresów. \end{DoxyCompactList}\item 
+void \hyperlink{class_main_window_a01486cea6f70518576b42f372c7fbf7a}{utworz\+\_\+wykresy} ()
+\begin{DoxyCompactList}\small\item\em Utworzenie wykresów. \end{DoxyCompactList}\item 
+void \hyperlink{class_main_window_a1efac5efcb844bf7db47b844f7c6d87e}{wizualizuj\+\_\+wykresy} ()
+\begin{DoxyCompactList}\small\item\em Utworzenie wizualizacji do wykresów. \end{DoxyCompactList}\item 
+void \hyperlink{class_main_window_a07cf16cd47bfdef75cebcfc3e2e02c4d}{przypnij\+\_\+serie\+\_\+do\+\_\+osi} ()
+\begin{DoxyCompactList}\small\item\em Przypięcie wartości serii do osi wykresów. \end{DoxyCompactList}\item 
+void \hyperlink{class_main_window_a36136fd65f9fbac0ed55909c48657958}{rotuj\+\_\+kostke} (double xa, double ya, double za)
+\begin{DoxyCompactList}\small\item\em Obrót kości o kąty xa, ya, za. \end{DoxyCompactList}\item 
+void \hyperlink{class_main_window_a7d6f7650da80dc76a49f89be8a87e856}{przemiesc\+\_\+kostke} ()
+\begin{DoxyCompactList}\small\item\em Niedokończone -\/ służy za przemieszczenie kostki. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Atrybuty publiczne}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{class_main_window_a7801ba2425266ceee18c478629a27186}{mem\+\_\+rzut} = 0
+\end{DoxyCompactItemize}
+
+
+\subsection{Opis szczegółowy}
+Implementacja klasy \hyperlink{class_main_window}{Main\+Window} będącej reimplementacją klasy Q\+Main\+Window. 
+
+Klasa ta tworzy obiekt obsługujący działanie całej aplikacji. W ramach obiektów tej klasy realizowane są\+: -\/$>$obsługa połączenia bluetooth w pliku \hyperlink{bluetooth_8cpp}{bluetooth.\+cpp}, -\/$>$obsługa tworzenia diód w pliku \hyperlink{diody_8cpp}{diody.\+cpp}, -\/$>$obsługa tworzenia wykresów w pliku \hyperlink{wykresy_8cpp}{wykresy.\+cpp}, -\/$>$obsługa wizualizacji kości w pliku \hyperlink{kosc_8cpp}{kosc.\+cpp}, -\/$>$obsługa wyświetlania informacji na temat połączenia oraz odczyt danych i aktualizacja wykresów w pliku \hyperlink{mainwindow_8cpp}{mainwindow.\+cpp}, 
+
+Definicja w linii 59 pliku mainwindow.\+h.
+
+
+
+\subsection{Dokumentacja konstruktora i destruktora}
+\mbox{\Hypertarget{class_main_window_a996c5a2b6f77944776856f08ec30858d}\label{class_main_window_a996c5a2b6f77944776856f08ec30858d}} 
+\index{Main\+Window@{Main\+Window}!Main\+Window@{Main\+Window}}
+\index{Main\+Window@{Main\+Window}!Main\+Window@{Main\+Window}}
+\subsubsection{\texorpdfstring{Main\+Window()}{MainWindow()}}
+{\footnotesize\ttfamily Main\+Window\+::\+Main\+Window (\begin{DoxyParamCaption}\item[{Q\+Widget $\ast$}]{parent = {\ttfamily nullptr} }\end{DoxyParamCaption})}
+
+
+
+Konstruktor aplikacji. 
+
+Zapisujemy do \hyperlink{}{current\+G\+L\+Widget} nasz obiekt odpowiedzialny za wizualizację. Następnie dodajemy połączenia sygnałów i slotów odpowiedzialne za aktualizację Wartości rzutów oraz aktualizację orientacji samej kostki. 
+
+Definicja w linii 11 pliku mainwindow.\+cpp.
+
+\mbox{\Hypertarget{class_main_window_ae98d00a93bc118200eeef9f9bba1dba7}\label{class_main_window_ae98d00a93bc118200eeef9f9bba1dba7}} 
+\index{Main\+Window@{Main\+Window}!````~Main\+Window@{$\sim$\+Main\+Window}}
+\index{````~Main\+Window@{$\sim$\+Main\+Window}!Main\+Window@{Main\+Window}}
+\subsubsection{\texorpdfstring{$\sim$\+Main\+Window()}{~MainWindow()}}
+{\footnotesize\ttfamily Main\+Window\+::$\sim$\+Main\+Window (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destruktor aplikacji. 
+
+
+
+Definicja w linii 241 pliku mainwindow.\+cpp.
+
+
+
+\subsection{Dokumentacja funkcji składowych}
+\mbox{\Hypertarget{class_main_window_ad6eb500a681306e95262d1c55dab9594}\label{class_main_window_ad6eb500a681306e95262d1c55dab9594}} 
+\index{Main\+Window@{Main\+Window}!aktualizuj\+\_\+wykres@{aktualizuj\+\_\+wykres}}
+\index{aktualizuj\+\_\+wykres@{aktualizuj\+\_\+wykres}!Main\+Window@{Main\+Window}}
+\subsubsection{\texorpdfstring{aktualizuj\+\_\+wykres()}{aktualizuj\_wykres()}}
+{\footnotesize\ttfamily void Main\+Window\+::aktualizuj\+\_\+wykres (\begin{DoxyParamCaption}\item[{float}]{a\+\_\+x,  }\item[{float}]{a\+\_\+y,  }\item[{float}]{a\+\_\+z,  }\item[{float}]{g\+\_\+x,  }\item[{float}]{g\+\_\+y,  }\item[{double}]{g\+\_\+z,  }\item[{double}]{rkom,  }\item[{double}]{pkom,  }\item[{unsigned long long}]{czas }\end{DoxyParamCaption})}
+
+
+
+Aktualizacja danych na wykresie. 
+
+Na podstawie wczytanych danych do funkcji aktualizowane są wykresy poprzez dodanie wartości do serii danych oraz przesuwana jest oś czasu o 50 sekund jeśli obecna nie mieści się w skali. 
+
+Definicja w linii 187 pliku mainwindow.\+cpp.
+
+\mbox{\Hypertarget{class_main_window_ac3bcbf1dc657f039bf90254b24e023a5}\label{class_main_window_ac3bcbf1dc657f039bf90254b24e023a5}} 
+\index{Main\+Window@{Main\+Window}!informacje\+\_\+bluetooth@{informacje\+\_\+bluetooth}}
+\index{informacje\+\_\+bluetooth@{informacje\+\_\+bluetooth}!Main\+Window@{Main\+Window}}
+\subsubsection{\texorpdfstring{informacje\+\_\+bluetooth()}{informacje\_bluetooth()}}
+{\footnotesize\ttfamily void Main\+Window\+::informacje\+\_\+bluetooth (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Szczegóły parametrów połączenia. 
+
+Czyści pole tekstowe \hyperlink{}{informacje\+\_\+o\+\_\+polaczeniu} oraz wpisuje nowe specyfikacje parametrów do owego pola tekstowego. 
+
+Definicja w linii 100 pliku mainwindow.\+cpp.
+
+\mbox{\Hypertarget{class_main_window_a7b1012fca99df34abcdc108974ab583c}\label{class_main_window_a7b1012fca99df34abcdc108974ab583c}} 
+\index{Main\+Window@{Main\+Window}!inicjalizuj\+\_\+info@{inicjalizuj\+\_\+info}}
+\index{inicjalizuj\+\_\+info@{inicjalizuj\+\_\+info}!Main\+Window@{Main\+Window}}
+\subsubsection{\texorpdfstring{inicjalizuj\+\_\+info()}{inicjalizuj\_info()}}
+{\footnotesize\ttfamily void Main\+Window\+::inicjalizuj\+\_\+info (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Informacje o nawiązanym połączeniu. 
+
+Najpierw czyści pole tekstowe \hyperlink{}{parametry\+\_\+polaczenia}, a następnie inicjuje wpisy dla tego pola. Aktualizuje również wpisy dla sąsiadującego pola tekstowego odpowiedzialne za specyfikację informacji o paramtrach -\/ \hyperlink{}{informacje\+\_\+o\+\_\+polaczeniu} 
+
+Definicja w linii 70 pliku mainwindow.\+cpp.
+
+\mbox{\Hypertarget{class_main_window_a2f5ead67e758baf55cf71b746e870192}\label{class_main_window_a2f5ead67e758baf55cf71b746e870192}} 
+\index{Main\+Window@{Main\+Window}!obsluga\+\_\+bt@{obsluga\+\_\+bt}}
+\index{obsluga\+\_\+bt@{obsluga\+\_\+bt}!Main\+Window@{Main\+Window}}
+\subsubsection{\texorpdfstring{obsluga\+\_\+bt()}{obsluga\_bt()}}
+{\footnotesize\ttfamily void Main\+Window\+::obsluga\+\_\+bt (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Inicjalizacja obsługi bluetooth. 
+
+Funkcje czy też połączenia wywoływane w momencie konstrukcji aplikacji. 
+
+Definicja w linii 7 pliku bluetooth.\+cpp.
+
+\mbox{\Hypertarget{class_main_window_a7d6f7650da80dc76a49f89be8a87e856}\label{class_main_window_a7d6f7650da80dc76a49f89be8a87e856}} 
+\index{Main\+Window@{Main\+Window}!przemiesc\+\_\+kostke@{przemiesc\+\_\+kostke}}
+\index{przemiesc\+\_\+kostke@{przemiesc\+\_\+kostke}!Main\+Window@{Main\+Window}}
+\subsubsection{\texorpdfstring{przemiesc\+\_\+kostke()}{przemiesc\_kostke()}}
+{\footnotesize\ttfamily void Main\+Window\+::przemiesc\+\_\+kostke (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Niedokończone -\/ służy za przemieszczenie kostki. 
+
+Niedokończone -\/$>$ służy za przemieszczenie kostki.
+
+Prototyp niedokończonej funkcji odpowiedzialnej za przemieszczanie wizualizacji kostki. 
+
+Definicja w linii 148 pliku kosc.\+cpp.
+
+\mbox{\Hypertarget{class_main_window_a07cf16cd47bfdef75cebcfc3e2e02c4d}\label{class_main_window_a07cf16cd47bfdef75cebcfc3e2e02c4d}} 
+\index{Main\+Window@{Main\+Window}!przypnij\+\_\+serie\+\_\+do\+\_\+osi@{przypnij\+\_\+serie\+\_\+do\+\_\+osi}}
+\index{przypnij\+\_\+serie\+\_\+do\+\_\+osi@{przypnij\+\_\+serie\+\_\+do\+\_\+osi}!Main\+Window@{Main\+Window}}
+\subsubsection{\texorpdfstring{przypnij\+\_\+serie\+\_\+do\+\_\+osi()}{przypnij\_serie\_do\_osi()}}
+{\footnotesize\ttfamily void Main\+Window\+::przypnij\+\_\+serie\+\_\+do\+\_\+osi (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Przypięcie wartości serii do osi wykresów. 
+
+Przypina każdą z serii danych do wpierw osi czasu a potem osi wartości. 
+
+Definicja w linii 280 pliku wykresy.\+cpp.
+
+\mbox{\Hypertarget{class_main_window_a36136fd65f9fbac0ed55909c48657958}\label{class_main_window_a36136fd65f9fbac0ed55909c48657958}} 
+\index{Main\+Window@{Main\+Window}!rotuj\+\_\+kostke@{rotuj\+\_\+kostke}}
+\index{rotuj\+\_\+kostke@{rotuj\+\_\+kostke}!Main\+Window@{Main\+Window}}
+\subsubsection{\texorpdfstring{rotuj\+\_\+kostke()}{rotuj\_kostke()}}
+{\footnotesize\ttfamily void Main\+Window\+::rotuj\+\_\+kostke (\begin{DoxyParamCaption}\item[{double}]{xa,  }\item[{double}]{ya,  }\item[{double}]{za }\end{DoxyParamCaption})}
+
+
+
+Obrót kości o kąty xa, ya, za. 
+
+Funkcja realizująca obrót kości na podstawie zczytań z żyroskopu/filtru komplementarnego. W celu obniżenia częstotliwości szumów i drgań zastosowano buffory dla każdej z osi. 
+
+Definicja w linii 96 pliku kosc.\+cpp.
+
+\mbox{\Hypertarget{class_main_window_a0669fa55d3cd37cef0e9e3d6e296ebd2}\label{class_main_window_a0669fa55d3cd37cef0e9e3d6e296ebd2}} 
+\index{Main\+Window@{Main\+Window}!stworz\+\_\+wykresy@{stworz\+\_\+wykresy}}
+\index{stworz\+\_\+wykresy@{stworz\+\_\+wykresy}!Main\+Window@{Main\+Window}}
+\subsubsection{\texorpdfstring{stworz\+\_\+wykresy()}{stworz\_wykresy()}}
+{\footnotesize\ttfamily void Main\+Window\+::stworz\+\_\+wykresy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Obsługa tworzenia wykresów. 
+
+Wywołuje funkcje odpowiedzialne za kolejno\+: -\/$>$tworzenie serii \hyperlink{class_main_window_a7c108455f05b3e2532088b38870e2ca2}{utworz\+\_\+serie}, -\/$>$tworzenie osi \hyperlink{class_main_window_a94be5a5d63c0b8f071923a32f0215198}{utworz\+\_\+osie}, -\/$>$tworzenie wykresów \hyperlink{class_main_window_a01486cea6f70518576b42f372c7fbf7a}{utworz\+\_\+wykresy}, -\/$>$przypięcie serii danych do osi \hyperlink{class_main_window_a07cf16cd47bfdef75cebcfc3e2e02c4d}{przypnij\+\_\+serie\+\_\+do\+\_\+osi}, -\/$>$wizualizację wykresów \hyperlink{class_main_window_a1efac5efcb844bf7db47b844f7c6d87e}{wizualizuj\+\_\+wykresy}.
+
+Na sam koniec zadaje początkowe rozmiary wykresom. 
+
+Definicja w linii 314 pliku wykresy.\+cpp.
+
+\mbox{\Hypertarget{class_main_window_a39f01fe1c593f844a0c531b872ee0d7c}\label{class_main_window_a39f01fe1c593f844a0c531b872ee0d7c}} 
+\index{Main\+Window@{Main\+Window}!tworz\+\_\+diode@{tworz\+\_\+diode}}
+\index{tworz\+\_\+diode@{tworz\+\_\+diode}!Main\+Window@{Main\+Window}}
+\subsubsection{\texorpdfstring{tworz\+\_\+diode()}{tworz\_diode()}}
+{\footnotesize\ttfamily void Main\+Window\+::tworz\+\_\+diode (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Tworzenie diód. 
+
+Najpierw ustalane są stałe rozmiary dla każdej z diód, a następnie zadawany kształt i zapalane diody czerwone 
+
+Definicja w linii 10 pliku diody.\+cpp.
+
+\mbox{\Hypertarget{class_main_window_a94be5a5d63c0b8f071923a32f0215198}\label{class_main_window_a94be5a5d63c0b8f071923a32f0215198}} 
+\index{Main\+Window@{Main\+Window}!utworz\+\_\+osie@{utworz\+\_\+osie}}
+\index{utworz\+\_\+osie@{utworz\+\_\+osie}!Main\+Window@{Main\+Window}}
+\subsubsection{\texorpdfstring{utworz\+\_\+osie()}{utworz\_osie()}}
+{\footnotesize\ttfamily void Main\+Window\+::utworz\+\_\+osie (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Utworzenie osi do wykresów. 
+
+Funkcja tworzące osie. Ustawia zakresy odpowiednie dla każdej z osi oraz zmienia domyślną czcionę dla osi danych na mniejszą. 
+
+Definicja w linii 9 pliku wykresy.\+cpp.
+
+\mbox{\Hypertarget{class_main_window_a7c108455f05b3e2532088b38870e2ca2}\label{class_main_window_a7c108455f05b3e2532088b38870e2ca2}} 
+\index{Main\+Window@{Main\+Window}!utworz\+\_\+serie@{utworz\+\_\+serie}}
+\index{utworz\+\_\+serie@{utworz\+\_\+serie}!Main\+Window@{Main\+Window}}
+\subsubsection{\texorpdfstring{utworz\+\_\+serie()}{utworz\_serie()}}
+{\footnotesize\ttfamily void Main\+Window\+::utworz\+\_\+serie (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Utworzenie serii do wykresów. 
+
+Funkcja tworząca serie danych dla każdego typu zczytywanych danych oraz dodająca punkty (0,0) na początek wykresu. 
+
+Definicja w linii 106 pliku wykresy.\+cpp.
+
+\mbox{\Hypertarget{class_main_window_a01486cea6f70518576b42f372c7fbf7a}\label{class_main_window_a01486cea6f70518576b42f372c7fbf7a}} 
+\index{Main\+Window@{Main\+Window}!utworz\+\_\+wykresy@{utworz\+\_\+wykresy}}
+\index{utworz\+\_\+wykresy@{utworz\+\_\+wykresy}!Main\+Window@{Main\+Window}}
+\subsubsection{\texorpdfstring{utworz\+\_\+wykresy()}{utworz\_wykresy()}}
+{\footnotesize\ttfamily void Main\+Window\+::utworz\+\_\+wykresy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Utworzenie wykresów. 
+
+Funkcja tworząca wykresy dla trzech osi akcelerometru i trzech osi żyroskopu. Każdy z wykresów ma nadawany tytuł, dodawane serie danych, osie oraz ukrywane legendy w celu poprawienia widoczności. 
+
+Definicja w linii 143 pliku wykresy.\+cpp.
+
+\mbox{\Hypertarget{class_main_window_a5c39c76ab1f6edbff934e87a385bd5bd}\label{class_main_window_a5c39c76ab1f6edbff934e87a385bd5bd}} 
+\index{Main\+Window@{Main\+Window}!wczytanie\+\_\+danych\+\_\+z\+\_\+logu@{wczytanie\+\_\+danych\+\_\+z\+\_\+logu}}
+\index{wczytanie\+\_\+danych\+\_\+z\+\_\+logu@{wczytanie\+\_\+danych\+\_\+z\+\_\+logu}!Main\+Window@{Main\+Window}}
+\subsubsection{\texorpdfstring{wczytanie\+\_\+danych\+\_\+z\+\_\+logu()}{wczytanie\_danych\_z\_logu()}}
+{\footnotesize\ttfamily void Main\+Window\+::wczytanie\+\_\+danych\+\_\+z\+\_\+logu (\begin{DoxyParamCaption}\item[{unsigned long long}]{czas\+\_\+zmierzony }\end{DoxyParamCaption})}
+
+
+
+Wczytanie danych z pliku będącego logiem połączenia bluetooth. 
+
+Funkcja odpowiedzialna za wczytanie danych z pliku log\+\_\+polaczenia.\+txt . Wczytywane są kolejno\+: -\/$>$\hyperlink{}{acc\+\_\+x} -\/ wskazania akcelerometru wzdłuż osi OX, -\/$>$\hyperlink{}{acc\+\_\+y} -\/ wskazania akcelerometru wzdłuż osi OY, -\/$>$\hyperlink{}{acc\+\_\+z} -\/ wskazania akcelerometru wzdłuż osi OZ, -\/$>$\hyperlink{}{gyr\+\_\+x} -\/ wskazania żyroskopu wzdłuż osi OX, -\/$>$\hyperlink{}{gyr\+\_\+y} -\/ wskazania żyroskopu wzdłuż osi OY, -\/$>$\hyperlink{}{gyr\+\_\+z} -\/ wskazania żyroskopu wzdłuż osi OZ, -\/$>$\hyperlink{main_8c_a26fd84d522945b6038221d9e38c7cc39}{roll} -\/ kąt roll, -\/$>$\hyperlink{main_8c_a282e7d4378d4a18a805b8980295ac86c}{pitch} -\/ kąt pitch, -\/$>$\hyperlink{}{button} -\/ stan przycisku B1.
+
+Na sam koniec wywoływana jest funkcja aktualizująca wykresy \hyperlink{class_main_window_ad6eb500a681306e95262d1c55dab9594}{aktualizuj\+\_\+wykres} oraz funkcja aktualizująca orientację kostki \hyperlink{class_main_window_a36136fd65f9fbac0ed55909c48657958}{rotuj\+\_\+kostke}. 
+
+Definicja w linii 133 pliku mainwindow.\+cpp.
+
+\mbox{\Hypertarget{class_main_window_a1efac5efcb844bf7db47b844f7c6d87e}\label{class_main_window_a1efac5efcb844bf7db47b844f7c6d87e}} 
+\index{Main\+Window@{Main\+Window}!wizualizuj\+\_\+wykresy@{wizualizuj\+\_\+wykresy}}
+\index{wizualizuj\+\_\+wykresy@{wizualizuj\+\_\+wykresy}!Main\+Window@{Main\+Window}}
+\subsubsection{\texorpdfstring{wizualizuj\+\_\+wykresy()}{wizualizuj\_wykresy()}}
+{\footnotesize\ttfamily void Main\+Window\+::wizualizuj\+\_\+wykresy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Utworzenie wizualizacji do wykresów. 
+
+Na podstawie wcześniej utworzonych wykresów tworzona jeszcze jest ich wizualizacja. W tym celu zadajemy każdemu z wykresów odpowiedniego rodzica z ui. 
+
+Definicja w linii 241 pliku wykresy.\+cpp.
+
+\mbox{\Hypertarget{class_main_window_ad62f0406504e4f43af6fd9ebe5e96a58}\label{class_main_window_ad62f0406504e4f43af6fd9ebe5e96a58}} 
+\index{Main\+Window@{Main\+Window}!zapal\+\_\+czerwone@{zapal\+\_\+czerwone}}
+\index{zapal\+\_\+czerwone@{zapal\+\_\+czerwone}!Main\+Window@{Main\+Window}}
+\subsubsection{\texorpdfstring{zapal\+\_\+czerwone()}{zapal\_czerwone()}}
+{\footnotesize\ttfamily void Main\+Window\+::zapal\+\_\+czerwone (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Zmiana kolorow diód na czerowny. 
+
+Zmiana kolorow diód na czerwony.
+
+Zapalane są diody czerwone (zawsze z prawej strony) i poszarzane diody zielone (zawsze dioda z lewej strony). 
+
+Definicja w linii 40 pliku diody.\+cpp.
+
+\mbox{\Hypertarget{class_main_window_a24aadb4c1aaf83ce170dcf849ec6aa51}\label{class_main_window_a24aadb4c1aaf83ce170dcf849ec6aa51}} 
+\index{Main\+Window@{Main\+Window}!zapal\+\_\+zielone@{zapal\+\_\+zielone}}
+\index{zapal\+\_\+zielone@{zapal\+\_\+zielone}!Main\+Window@{Main\+Window}}
+\subsubsection{\texorpdfstring{zapal\+\_\+zielone()}{zapal\_zielone()}}
+{\footnotesize\ttfamily void Main\+Window\+::zapal\+\_\+zielone (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Zmiana kolorow diód na zielony. 
+
+Zapalane są diody zielone (zawsze dioda z lewej strony) i poszarzane diody czerwone (zawsze z prawej strony). 
+
+Definicja w linii 57 pliku diody.\+cpp.
+
+
+
+\subsection{Dokumentacja atrybutów składowych}
+\mbox{\Hypertarget{class_main_window_a7801ba2425266ceee18c478629a27186}\label{class_main_window_a7801ba2425266ceee18c478629a27186}} 
+\index{Main\+Window@{Main\+Window}!mem\+\_\+rzut@{mem\+\_\+rzut}}
+\index{mem\+\_\+rzut@{mem\+\_\+rzut}!Main\+Window@{Main\+Window}}
+\subsubsection{\texorpdfstring{mem\+\_\+rzut}{mem\_rzut}}
+{\footnotesize\ttfamily int Main\+Window\+::mem\+\_\+rzut = 0}
+
+
+\begin{DoxyParams}{Parametry}
+{\em Niedokończone} & -\/ służy za przemieszczenie kostki \\
+\hline
+\end{DoxyParams}
+
+
+Definicja w linii 172 pliku mainwindow.\+h.
+
+
+
+Dokumentacja dla tej klasy została wygenerowana z plików\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{mainwindow_8h}{mainwindow.\+h}\item 
+\hyperlink{bluetooth_8cpp}{bluetooth.\+cpp}\item 
+\hyperlink{diody_8cpp}{diody.\+cpp}\item 
+\hyperlink{kosc_8cpp}{kosc.\+cpp}\item 
+\hyperlink{mainwindow_8cpp}{mainwindow.\+cpp}\item 
+\hyperlink{wykresy_8cpp}{wykresy.\+cpp}\end{DoxyCompactItemize}

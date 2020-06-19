@@ -1,0 +1,153 @@
+\hypertarget{tz__context_8h}{}\section{Dokumentacja pliku S\+T\+M/\+W\+D\+S\+\_\+\+Kosc\+\_\+\+Linux/\+Drivers/\+C\+M\+S\+I\+S/\+Include/tz\+\_\+context.h}
+\label{tz__context_8h}\index{S\+T\+M/\+W\+D\+S\+\_\+\+Kosc\+\_\+\+Linux/\+Drivers/\+C\+M\+S\+I\+S/\+Include/tz\+\_\+context.\+h@{S\+T\+M/\+W\+D\+S\+\_\+\+Kosc\+\_\+\+Linux/\+Drivers/\+C\+M\+S\+I\+S/\+Include/tz\+\_\+context.\+h}}
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+Wykres zależności załączania dla tz\+\_\+context.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=201pt]{tz__context_8h__incl}
+\end{center}
+\end{figure}
+\subsection*{Definicje}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{tz__context_8h_a0200b87f7b7d4ee2d4e12149f51f5302}{T\+Z\+\_\+\+C\+O\+N\+T\+E\+X\+T\+\_\+H}
+\item 
+\#define \hyperlink{tz__context_8h_a78775dae56f0c9698cdab6e1ca74503f}{T\+Z\+\_\+\+M\+O\+D\+U\+L\+E\+I\+D\+\_\+T}
+\end{DoxyCompactItemize}
+\subsection*{Definicje typów}
+\begin{DoxyCompactItemize}
+\item 
+typedef uint32\+\_\+t \hyperlink{tz__context_8h_ad5ef21485fe5f60263bc0b48006202cb}{T\+Z\+\_\+\+Module\+Id\+\_\+t}
+\item 
+typedef uint32\+\_\+t \hyperlink{tz__context_8h_a7acd18a8eb2350fe7ad5715fdbfa8f8c}{T\+Z\+\_\+\+Memory\+Id\+\_\+t}
+\end{DoxyCompactItemize}
+\subsection*{Funkcje}
+\begin{DoxyCompactItemize}
+\item 
+uint32\+\_\+t \hyperlink{tz__context_8h_a926e2ec472535a6d2b8125be1a79e3c0}{T\+Z\+\_\+\+Init\+Context\+System\+\_\+S} (void)
+\item 
+\hyperlink{tz__context_8h_a7acd18a8eb2350fe7ad5715fdbfa8f8c}{T\+Z\+\_\+\+Memory\+Id\+\_\+t} \hyperlink{tz__context_8h_acd016f166bee549a0d3e970132e64a90}{T\+Z\+\_\+\+Alloc\+Module\+Context\+\_\+S} (\hyperlink{tz__context_8h_ad5ef21485fe5f60263bc0b48006202cb}{T\+Z\+\_\+\+Module\+Id\+\_\+t} module)
+\item 
+uint32\+\_\+t \hyperlink{tz__context_8h_ac84f678fbe974f8b02c683e0b8046524}{T\+Z\+\_\+\+Free\+Module\+Context\+\_\+S} (\hyperlink{tz__context_8h_a7acd18a8eb2350fe7ad5715fdbfa8f8c}{T\+Z\+\_\+\+Memory\+Id\+\_\+t} id)
+\item 
+uint32\+\_\+t \hyperlink{tz__context_8h_a4748f6bcdd5fed279ac5a6cd7eca2689}{T\+Z\+\_\+\+Load\+Context\+\_\+S} (\hyperlink{tz__context_8h_a7acd18a8eb2350fe7ad5715fdbfa8f8c}{T\+Z\+\_\+\+Memory\+Id\+\_\+t} id)
+\item 
+uint32\+\_\+t \hyperlink{tz__context_8h_ac106570f4905f82922fd335aeb08a1bf}{T\+Z\+\_\+\+Store\+Context\+\_\+S} (\hyperlink{tz__context_8h_a7acd18a8eb2350fe7ad5715fdbfa8f8c}{T\+Z\+\_\+\+Memory\+Id\+\_\+t} id)
+\end{DoxyCompactItemize}
+
+
+\subsection{Dokumentacja definicji}
+\mbox{\Hypertarget{tz__context_8h_a0200b87f7b7d4ee2d4e12149f51f5302}\label{tz__context_8h_a0200b87f7b7d4ee2d4e12149f51f5302}} 
+\index{tz\+\_\+context.\+h@{tz\+\_\+context.\+h}!T\+Z\+\_\+\+C\+O\+N\+T\+E\+X\+T\+\_\+H@{T\+Z\+\_\+\+C\+O\+N\+T\+E\+X\+T\+\_\+H}}
+\index{T\+Z\+\_\+\+C\+O\+N\+T\+E\+X\+T\+\_\+H@{T\+Z\+\_\+\+C\+O\+N\+T\+E\+X\+T\+\_\+H}!tz\+\_\+context.\+h@{tz\+\_\+context.\+h}}
+\subsubsection{\texorpdfstring{T\+Z\+\_\+\+C\+O\+N\+T\+E\+X\+T\+\_\+H}{TZ\_CONTEXT\_H}}
+{\footnotesize\ttfamily \#define T\+Z\+\_\+\+C\+O\+N\+T\+E\+X\+T\+\_\+H}
+
+
+
+Definicja w linii 32 pliku tz\+\_\+context.\+h.
+
+\mbox{\Hypertarget{tz__context_8h_a78775dae56f0c9698cdab6e1ca74503f}\label{tz__context_8h_a78775dae56f0c9698cdab6e1ca74503f}} 
+\index{tz\+\_\+context.\+h@{tz\+\_\+context.\+h}!T\+Z\+\_\+\+M\+O\+D\+U\+L\+E\+I\+D\+\_\+T@{T\+Z\+\_\+\+M\+O\+D\+U\+L\+E\+I\+D\+\_\+T}}
+\index{T\+Z\+\_\+\+M\+O\+D\+U\+L\+E\+I\+D\+\_\+T@{T\+Z\+\_\+\+M\+O\+D\+U\+L\+E\+I\+D\+\_\+T}!tz\+\_\+context.\+h@{tz\+\_\+context.\+h}}
+\subsubsection{\texorpdfstring{T\+Z\+\_\+\+M\+O\+D\+U\+L\+E\+I\+D\+\_\+T}{TZ\_MODULEID\_T}}
+{\footnotesize\ttfamily \#define T\+Z\+\_\+\+M\+O\+D\+U\+L\+E\+I\+D\+\_\+T}
+
+
+
+Definicja w linii 37 pliku tz\+\_\+context.\+h.
+
+
+
+\subsection{Dokumentacja definicji typów}
+\mbox{\Hypertarget{tz__context_8h_a7acd18a8eb2350fe7ad5715fdbfa8f8c}\label{tz__context_8h_a7acd18a8eb2350fe7ad5715fdbfa8f8c}} 
+\index{tz\+\_\+context.\+h@{tz\+\_\+context.\+h}!T\+Z\+\_\+\+Memory\+Id\+\_\+t@{T\+Z\+\_\+\+Memory\+Id\+\_\+t}}
+\index{T\+Z\+\_\+\+Memory\+Id\+\_\+t@{T\+Z\+\_\+\+Memory\+Id\+\_\+t}!tz\+\_\+context.\+h@{tz\+\_\+context.\+h}}
+\subsubsection{\texorpdfstring{T\+Z\+\_\+\+Memory\+Id\+\_\+t}{TZ\_MemoryId\_t}}
+{\footnotesize\ttfamily typedef uint32\+\_\+t \hyperlink{tz__context_8h_a7acd18a8eb2350fe7ad5715fdbfa8f8c}{T\+Z\+\_\+\+Memory\+Id\+\_\+t}}
+
+TZ Memory ID identifies an allocated memory slot. 
+
+Definicja w linii 43 pliku tz\+\_\+context.\+h.
+
+\mbox{\Hypertarget{tz__context_8h_ad5ef21485fe5f60263bc0b48006202cb}\label{tz__context_8h_ad5ef21485fe5f60263bc0b48006202cb}} 
+\index{tz\+\_\+context.\+h@{tz\+\_\+context.\+h}!T\+Z\+\_\+\+Module\+Id\+\_\+t@{T\+Z\+\_\+\+Module\+Id\+\_\+t}}
+\index{T\+Z\+\_\+\+Module\+Id\+\_\+t@{T\+Z\+\_\+\+Module\+Id\+\_\+t}!tz\+\_\+context.\+h@{tz\+\_\+context.\+h}}
+\subsubsection{\texorpdfstring{T\+Z\+\_\+\+Module\+Id\+\_\+t}{TZ\_ModuleId\_t}}
+{\footnotesize\ttfamily typedef uint32\+\_\+t \hyperlink{tz__context_8h_ad5ef21485fe5f60263bc0b48006202cb}{T\+Z\+\_\+\+Module\+Id\+\_\+t}}
+
+Data type that identifies secure software modules called by a process. 
+
+Definicja w linii 39 pliku tz\+\_\+context.\+h.
+
+
+
+\subsection{Dokumentacja funkcji}
+\mbox{\Hypertarget{tz__context_8h_acd016f166bee549a0d3e970132e64a90}\label{tz__context_8h_acd016f166bee549a0d3e970132e64a90}} 
+\index{tz\+\_\+context.\+h@{tz\+\_\+context.\+h}!T\+Z\+\_\+\+Alloc\+Module\+Context\+\_\+S@{T\+Z\+\_\+\+Alloc\+Module\+Context\+\_\+S}}
+\index{T\+Z\+\_\+\+Alloc\+Module\+Context\+\_\+S@{T\+Z\+\_\+\+Alloc\+Module\+Context\+\_\+S}!tz\+\_\+context.\+h@{tz\+\_\+context.\+h}}
+\subsubsection{\texorpdfstring{T\+Z\+\_\+\+Alloc\+Module\+Context\+\_\+\+S()}{TZ\_AllocModuleContext\_S()}}
+{\footnotesize\ttfamily \hyperlink{tz__context_8h_a7acd18a8eb2350fe7ad5715fdbfa8f8c}{T\+Z\+\_\+\+Memory\+Id\+\_\+t} T\+Z\+\_\+\+Alloc\+Module\+Context\+\_\+S (\begin{DoxyParamCaption}\item[{\hyperlink{tz__context_8h_ad5ef21485fe5f60263bc0b48006202cb}{T\+Z\+\_\+\+Module\+Id\+\_\+t}}]{module }\end{DoxyParamCaption})}
+
+Allocate context memory for calling secure software modules in Trust\+Zone 
+\begin{DoxyParams}[1]{Parametry}
+\mbox{\tt in}  & {\em module} & identifies software modules called from non-\/secure mode \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+value != 0 id Trust\+Zone memory slot identifier 
+
+value 0 no memory available or internal error 
+\end{DoxyReturn}
+\mbox{\Hypertarget{tz__context_8h_ac84f678fbe974f8b02c683e0b8046524}\label{tz__context_8h_ac84f678fbe974f8b02c683e0b8046524}} 
+\index{tz\+\_\+context.\+h@{tz\+\_\+context.\+h}!T\+Z\+\_\+\+Free\+Module\+Context\+\_\+S@{T\+Z\+\_\+\+Free\+Module\+Context\+\_\+S}}
+\index{T\+Z\+\_\+\+Free\+Module\+Context\+\_\+S@{T\+Z\+\_\+\+Free\+Module\+Context\+\_\+S}!tz\+\_\+context.\+h@{tz\+\_\+context.\+h}}
+\subsubsection{\texorpdfstring{T\+Z\+\_\+\+Free\+Module\+Context\+\_\+\+S()}{TZ\_FreeModuleContext\_S()}}
+{\footnotesize\ttfamily uint32\+\_\+t T\+Z\+\_\+\+Free\+Module\+Context\+\_\+S (\begin{DoxyParamCaption}\item[{\hyperlink{tz__context_8h_a7acd18a8eb2350fe7ad5715fdbfa8f8c}{T\+Z\+\_\+\+Memory\+Id\+\_\+t}}]{id }\end{DoxyParamCaption})}
+
+Free context memory that was previously allocated with \hyperlink{tz__context_8h_acd016f166bee549a0d3e970132e64a90}{T\+Z\+\_\+\+Alloc\+Module\+Context\+\_\+S} 
+\begin{DoxyParams}[1]{Parametry}
+\mbox{\tt in}  & {\em id} & Trust\+Zone memory slot identifier \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+execution status (1\+: success, 0\+: error) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{tz__context_8h_a926e2ec472535a6d2b8125be1a79e3c0}\label{tz__context_8h_a926e2ec472535a6d2b8125be1a79e3c0}} 
+\index{tz\+\_\+context.\+h@{tz\+\_\+context.\+h}!T\+Z\+\_\+\+Init\+Context\+System\+\_\+S@{T\+Z\+\_\+\+Init\+Context\+System\+\_\+S}}
+\index{T\+Z\+\_\+\+Init\+Context\+System\+\_\+S@{T\+Z\+\_\+\+Init\+Context\+System\+\_\+S}!tz\+\_\+context.\+h@{tz\+\_\+context.\+h}}
+\subsubsection{\texorpdfstring{T\+Z\+\_\+\+Init\+Context\+System\+\_\+\+S()}{TZ\_InitContextSystem\_S()}}
+{\footnotesize\ttfamily uint32\+\_\+t T\+Z\+\_\+\+Init\+Context\+System\+\_\+S (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Initialize secure context memory system \begin{DoxyReturn}{Zwraca}
+execution status (1\+: success, 0\+: error) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{tz__context_8h_a4748f6bcdd5fed279ac5a6cd7eca2689}\label{tz__context_8h_a4748f6bcdd5fed279ac5a6cd7eca2689}} 
+\index{tz\+\_\+context.\+h@{tz\+\_\+context.\+h}!T\+Z\+\_\+\+Load\+Context\+\_\+S@{T\+Z\+\_\+\+Load\+Context\+\_\+S}}
+\index{T\+Z\+\_\+\+Load\+Context\+\_\+S@{T\+Z\+\_\+\+Load\+Context\+\_\+S}!tz\+\_\+context.\+h@{tz\+\_\+context.\+h}}
+\subsubsection{\texorpdfstring{T\+Z\+\_\+\+Load\+Context\+\_\+\+S()}{TZ\_LoadContext\_S()}}
+{\footnotesize\ttfamily uint32\+\_\+t T\+Z\+\_\+\+Load\+Context\+\_\+S (\begin{DoxyParamCaption}\item[{\hyperlink{tz__context_8h_a7acd18a8eb2350fe7ad5715fdbfa8f8c}{T\+Z\+\_\+\+Memory\+Id\+\_\+t}}]{id }\end{DoxyParamCaption})}
+
+Load secure context (called on R\+T\+OS thread context switch) 
+\begin{DoxyParams}[1]{Parametry}
+\mbox{\tt in}  & {\em id} & Trust\+Zone memory slot identifier \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+execution status (1\+: success, 0\+: error) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{tz__context_8h_ac106570f4905f82922fd335aeb08a1bf}\label{tz__context_8h_ac106570f4905f82922fd335aeb08a1bf}} 
+\index{tz\+\_\+context.\+h@{tz\+\_\+context.\+h}!T\+Z\+\_\+\+Store\+Context\+\_\+S@{T\+Z\+\_\+\+Store\+Context\+\_\+S}}
+\index{T\+Z\+\_\+\+Store\+Context\+\_\+S@{T\+Z\+\_\+\+Store\+Context\+\_\+S}!tz\+\_\+context.\+h@{tz\+\_\+context.\+h}}
+\subsubsection{\texorpdfstring{T\+Z\+\_\+\+Store\+Context\+\_\+\+S()}{TZ\_StoreContext\_S()}}
+{\footnotesize\ttfamily uint32\+\_\+t T\+Z\+\_\+\+Store\+Context\+\_\+S (\begin{DoxyParamCaption}\item[{\hyperlink{tz__context_8h_a7acd18a8eb2350fe7ad5715fdbfa8f8c}{T\+Z\+\_\+\+Memory\+Id\+\_\+t}}]{id }\end{DoxyParamCaption})}
+
+Store secure context (called on R\+T\+OS thread context switch) 
+\begin{DoxyParams}[1]{Parametry}
+\mbox{\tt in}  & {\em id} & Trust\+Zone memory slot identifier \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+execution status (1\+: success, 0\+: error) 
+\end{DoxyReturn}

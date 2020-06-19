@@ -1,0 +1,201 @@
+\hypertarget{group___i2_c___private___macros}{}\section{I2C Private Macros}
+\label{group___i2_c___private___macros}\index{I2\+C Private Macros@{I2\+C Private Macros}}
+Diagram współpracy dla I2C Private Macros\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{group___i2_c___private___macros}
+\end{center}
+\end{figure}
+\subsection*{Moduły}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group___i2_c___i_s___r_t_c___definitions}{I2\+C Private macros to check input parameters}
+\end{DoxyCompactItemize}
+\subsection*{Definicje}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{group___i2_c___private___macros_ga30bf3d43ca9c1d9eb665bda03d84ec4a}{I2\+C\+\_\+\+M\+I\+N\+\_\+\+P\+C\+L\+K\+\_\+\+F\+R\+EQ}(\+\_\+\+\_\+\+P\+C\+L\+K\+\_\+\+\_\+,  \+\_\+\+\_\+\+S\+P\+E\+E\+D\+\_\+\+\_\+)~(((\+\_\+\+\_\+\+S\+P\+E\+E\+D\+\_\+\+\_\+) $<$= 100000\+U) ? ((\+\_\+\+\_\+\+P\+C\+L\+K\+\_\+\+\_\+) $<$ I2\+C\+\_\+\+M\+I\+N\+\_\+\+P\+C\+L\+K\+\_\+\+F\+R\+E\+Q\+\_\+\+S\+T\+A\+N\+D\+A\+R\+D) \+: ((\+\_\+\+\_\+\+P\+C\+L\+K\+\_\+\+\_\+) $<$ I2\+C\+\_\+\+M\+I\+N\+\_\+\+P\+C\+L\+K\+\_\+\+F\+R\+E\+Q\+\_\+\+F\+A\+S\+T))
+\item 
+\#define \hyperlink{group___i2_c___private___macros_ga647da9b3c71c56e2e1b49417bc557233}{I2\+C\+\_\+\+C\+C\+R\+\_\+\+C\+A\+L\+C\+U\+L\+A\+T\+I\+ON}(\+\_\+\+\_\+\+P\+C\+L\+K\+\_\+\+\_\+,  \+\_\+\+\_\+\+S\+P\+E\+E\+D\+\_\+\+\_\+,  \+\_\+\+\_\+\+C\+O\+E\+F\+F\+\_\+\+\_\+)~(((((\+\_\+\+\_\+\+P\+C\+L\+K\+\_\+\+\_\+) -\/ 1\+U)/((\+\_\+\+\_\+\+S\+P\+E\+E\+D\+\_\+\+\_\+) $\ast$ (\+\_\+\+\_\+\+C\+O\+E\+F\+F\+\_\+\+\_\+))) + 1\+U) \& I2\+C\+\_\+\+C\+C\+R\+\_\+\+C\+C\+R)
+\item 
+\#define \hyperlink{group___i2_c___private___macros_ga9b4e4686872c7b0bd9daed9049d0c431}{I2\+C\+\_\+\+F\+R\+E\+Q\+R\+A\+N\+GE}(\+\_\+\+\_\+\+P\+C\+L\+K\+\_\+\+\_\+)~((\+\_\+\+\_\+\+P\+C\+L\+K\+\_\+\+\_\+)/1000000\+U)
+\item 
+\#define \hyperlink{group___i2_c___private___macros_ga27cae7b1432cd160ab708e1548ba3165}{I2\+C\+\_\+\+R\+I\+S\+E\+\_\+\+T\+I\+ME}(\+\_\+\+\_\+\+F\+R\+E\+Q\+R\+A\+N\+G\+E\+\_\+\+\_\+,  \+\_\+\+\_\+\+S\+P\+E\+E\+D\+\_\+\+\_\+)~(((\+\_\+\+\_\+\+S\+P\+E\+E\+D\+\_\+\+\_\+) $<$= 100000\+U) ? ((\+\_\+\+\_\+\+F\+R\+E\+Q\+R\+A\+N\+G\+E\+\_\+\+\_\+) + 1\+U) \+: ((((\+\_\+\+\_\+\+F\+R\+E\+Q\+R\+A\+N\+G\+E\+\_\+\+\_\+) $\ast$ 300\+U) / 1000\+U) + 1\+U))
+\item 
+\#define \hyperlink{group___i2_c___private___macros_gaa71590c93b126e79fc86afbc819742b3}{I2\+C\+\_\+\+S\+P\+E\+E\+D\+\_\+\+S\+T\+A\+N\+D\+A\+RD}(\+\_\+\+\_\+\+P\+C\+L\+K\+\_\+\+\_\+,  \+\_\+\+\_\+\+S\+P\+E\+E\+D\+\_\+\+\_\+)~((\hyperlink{group___i2_c___private___macros_ga647da9b3c71c56e2e1b49417bc557233}{I2\+C\+\_\+\+C\+C\+R\+\_\+\+C\+A\+L\+C\+U\+L\+A\+T\+I\+ON}((\+\_\+\+\_\+\+P\+C\+L\+K\+\_\+\+\_\+), (\+\_\+\+\_\+\+S\+P\+E\+E\+D\+\_\+\+\_\+), 2\+U) $<$ 4\+U)? 4\+U\+:\+I2\+C\+\_\+\+C\+C\+R\+\_\+\+C\+A\+L\+C\+U\+L\+A\+T\+I\+O\+N((\+\_\+\+\_\+\+P\+C\+L\+K\+\_\+\+\_\+), (\+\_\+\+\_\+\+S\+P\+E\+E\+D\+\_\+\+\_\+), 2\+U))
+\item 
+\#define \hyperlink{group___i2_c___private___macros_ga9e5a85344d70ab05020e41ba24566f57}{I2\+C\+\_\+\+S\+P\+E\+E\+D\+\_\+\+F\+A\+ST}(\+\_\+\+\_\+\+P\+C\+L\+K\+\_\+\+\_\+,  \+\_\+\+\_\+\+S\+P\+E\+E\+D\+\_\+\+\_\+,  \+\_\+\+\_\+\+D\+U\+T\+Y\+C\+Y\+C\+L\+E\+\_\+\+\_\+)~(((\+\_\+\+\_\+\+D\+U\+T\+Y\+C\+Y\+C\+L\+E\+\_\+\+\_\+) == \hyperlink{group___i2_c__duty__cycle__in__fast__mode_ga414df076d339793a7c761033346fd4ca}{I2\+C\+\_\+\+D\+U\+T\+Y\+C\+Y\+C\+L\+E\+\_\+2})? \hyperlink{group___i2_c___private___macros_ga647da9b3c71c56e2e1b49417bc557233}{I2\+C\+\_\+\+C\+C\+R\+\_\+\+C\+A\+L\+C\+U\+L\+A\+T\+I\+ON}((\+\_\+\+\_\+\+P\+C\+L\+K\+\_\+\+\_\+), (\+\_\+\+\_\+\+S\+P\+E\+E\+D\+\_\+\+\_\+), 3\+U) \+: (\+I2\+C\+\_\+\+C\+C\+R\+\_\+\+C\+A\+L\+C\+U\+L\+A\+T\+I\+O\+N((\+\_\+\+\_\+\+P\+C\+L\+K\+\_\+\+\_\+), (\+\_\+\+\_\+\+S\+P\+E\+E\+D\+\_\+\+\_\+), 25\+U) $\vert$ I2\+C\+\_\+\+D\+U\+T\+Y\+C\+Y\+C\+L\+E\+\_\+16\+\_\+9))
+\item 
+\#define \hyperlink{group___i2_c___private___macros_ga0e871b470a0f7a9d641156f07e37c810}{I2\+C\+\_\+\+S\+P\+E\+ED}(\+\_\+\+\_\+\+P\+C\+L\+K\+\_\+\+\_\+,  \+\_\+\+\_\+\+S\+P\+E\+E\+D\+\_\+\+\_\+,  \+\_\+\+\_\+\+D\+U\+T\+Y\+C\+Y\+C\+L\+E\+\_\+\+\_\+)
+\item 
+\#define \hyperlink{group___i2_c___private___macros_gad83949bd18eca67258b05763a90d0128}{I2\+C\+\_\+7\+B\+I\+T\+\_\+\+A\+D\+D\+\_\+\+W\+R\+I\+TE}(\+\_\+\+\_\+\+A\+D\+D\+R\+E\+S\+S\+\_\+\+\_\+)~((uint8\+\_\+t)((\+\_\+\+\_\+\+A\+D\+D\+R\+E\+S\+S\+\_\+\+\_\+) \& (uint8\+\_\+t)($\sim$\hyperlink{group___peripheral___registers___bits___definition_ga8b7c20c81f79d17921718412b8fca6d7}{I2\+C\+\_\+\+O\+A\+R1\+\_\+\+A\+D\+D0})))
+\item 
+\#define \hyperlink{group___i2_c___private___macros_gacec6f0d6fde48a24327d2db15387fed8}{I2\+C\+\_\+7\+B\+I\+T\+\_\+\+A\+D\+D\+\_\+\+R\+E\+AD}(\+\_\+\+\_\+\+A\+D\+D\+R\+E\+S\+S\+\_\+\+\_\+)~((uint8\+\_\+t)((\+\_\+\+\_\+\+A\+D\+D\+R\+E\+S\+S\+\_\+\+\_\+) $\vert$ \hyperlink{group___peripheral___registers___bits___definition_ga8b7c20c81f79d17921718412b8fca6d7}{I2\+C\+\_\+\+O\+A\+R1\+\_\+\+A\+D\+D0}))
+\item 
+\#define \hyperlink{group___i2_c___private___macros_ga51ad2b93ef13577d3d437507e09191cd}{I2\+C\+\_\+10\+B\+I\+T\+\_\+\+A\+D\+D\+R\+E\+SS}(\+\_\+\+\_\+\+A\+D\+D\+R\+E\+S\+S\+\_\+\+\_\+)~((uint8\+\_\+t)((uint16\+\_\+t)((\+\_\+\+\_\+\+A\+D\+D\+R\+E\+S\+S\+\_\+\+\_\+) \& (uint16\+\_\+t)0x00\+F\+F)))
+\item 
+\#define \hyperlink{group___i2_c___private___macros_ga0edd591eaa2ce5511148bf1ebf533e1a}{I2\+C\+\_\+10\+B\+I\+T\+\_\+\+H\+E\+A\+D\+E\+R\+\_\+\+W\+R\+I\+TE}(\+\_\+\+\_\+\+A\+D\+D\+R\+E\+S\+S\+\_\+\+\_\+)~((uint8\+\_\+t)((uint16\+\_\+t)((uint16\+\_\+t)(((uint16\+\_\+t)((\+\_\+\+\_\+\+A\+D\+D\+R\+E\+S\+S\+\_\+\+\_\+) \& (uint16\+\_\+t)0x0300)) $>$$>$ 7) $\vert$ (uint16\+\_\+t)0x00\+F0)))
+\item 
+\#define \hyperlink{group___i2_c___private___macros_ga8d833802aafa40a959f62965e498108c}{I2\+C\+\_\+10\+B\+I\+T\+\_\+\+H\+E\+A\+D\+E\+R\+\_\+\+R\+E\+AD}(\+\_\+\+\_\+\+A\+D\+D\+R\+E\+S\+S\+\_\+\+\_\+)~((uint8\+\_\+t)((uint16\+\_\+t)((uint16\+\_\+t)(((uint16\+\_\+t)((\+\_\+\+\_\+\+A\+D\+D\+R\+E\+S\+S\+\_\+\+\_\+) \& (uint16\+\_\+t)0x0300)) $>$$>$ 7) $\vert$ (uint16\+\_\+t)(0x00\+F1))))
+\item 
+\#define \hyperlink{group___i2_c___private___macros_ga2e42fa55be22240dc5a54a0304d01cfb}{I2\+C\+\_\+\+M\+E\+M\+\_\+\+A\+D\+D\+\_\+\+M\+SB}(\+\_\+\+\_\+\+A\+D\+D\+R\+E\+S\+S\+\_\+\+\_\+)~((uint8\+\_\+t)((uint16\+\_\+t)(((uint16\+\_\+t)((\+\_\+\+\_\+\+A\+D\+D\+R\+E\+S\+S\+\_\+\+\_\+) \& (uint16\+\_\+t)0x\+F\+F00)) $>$$>$ 8)))
+\item 
+\#define \hyperlink{group___i2_c___private___macros_ga9c8f1a763307d0c37bb4e2dcfdf3bb9f}{I2\+C\+\_\+\+M\+E\+M\+\_\+\+A\+D\+D\+\_\+\+L\+SB}(\+\_\+\+\_\+\+A\+D\+D\+R\+E\+S\+S\+\_\+\+\_\+)~((uint8\+\_\+t)((uint16\+\_\+t)((\+\_\+\+\_\+\+A\+D\+D\+R\+E\+S\+S\+\_\+\+\_\+) \& (uint16\+\_\+t)0x00\+F\+F)))
+\end{DoxyCompactItemize}
+
+
+\subsection{Opis szczegółowy}
+
+
+\subsection{Dokumentacja definicji}
+\mbox{\Hypertarget{group___i2_c___private___macros_ga51ad2b93ef13577d3d437507e09191cd}\label{group___i2_c___private___macros_ga51ad2b93ef13577d3d437507e09191cd}} 
+\index{I2\+C Private Macros@{I2\+C Private Macros}!I2\+C\+\_\+10\+B\+I\+T\+\_\+\+A\+D\+D\+R\+E\+SS@{I2\+C\+\_\+10\+B\+I\+T\+\_\+\+A\+D\+D\+R\+E\+SS}}
+\index{I2\+C\+\_\+10\+B\+I\+T\+\_\+\+A\+D\+D\+R\+E\+SS@{I2\+C\+\_\+10\+B\+I\+T\+\_\+\+A\+D\+D\+R\+E\+SS}!I2\+C Private Macros@{I2\+C Private Macros}}
+\subsubsection{\texorpdfstring{I2\+C\+\_\+10\+B\+I\+T\+\_\+\+A\+D\+D\+R\+E\+SS}{I2C\_10BIT\_ADDRESS}}
+{\footnotesize\ttfamily \#define I2\+C\+\_\+10\+B\+I\+T\+\_\+\+A\+D\+D\+R\+E\+SS(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+A\+D\+D\+R\+E\+S\+S\+\_\+\+\_\+ }\end{DoxyParamCaption})~((uint8\+\_\+t)((uint16\+\_\+t)((\+\_\+\+\_\+\+A\+D\+D\+R\+E\+S\+S\+\_\+\+\_\+) \& (uint16\+\_\+t)0x00\+F\+F)))}
+
+
+
+Definicja w linii 669 pliku stm32f4xx\+\_\+hal\+\_\+i2c.\+h.
+
+\mbox{\Hypertarget{group___i2_c___private___macros_ga8d833802aafa40a959f62965e498108c}\label{group___i2_c___private___macros_ga8d833802aafa40a959f62965e498108c}} 
+\index{I2\+C Private Macros@{I2\+C Private Macros}!I2\+C\+\_\+10\+B\+I\+T\+\_\+\+H\+E\+A\+D\+E\+R\+\_\+\+R\+E\+AD@{I2\+C\+\_\+10\+B\+I\+T\+\_\+\+H\+E\+A\+D\+E\+R\+\_\+\+R\+E\+AD}}
+\index{I2\+C\+\_\+10\+B\+I\+T\+\_\+\+H\+E\+A\+D\+E\+R\+\_\+\+R\+E\+AD@{I2\+C\+\_\+10\+B\+I\+T\+\_\+\+H\+E\+A\+D\+E\+R\+\_\+\+R\+E\+AD}!I2\+C Private Macros@{I2\+C Private Macros}}
+\subsubsection{\texorpdfstring{I2\+C\+\_\+10\+B\+I\+T\+\_\+\+H\+E\+A\+D\+E\+R\+\_\+\+R\+E\+AD}{I2C\_10BIT\_HEADER\_READ}}
+{\footnotesize\ttfamily \#define I2\+C\+\_\+10\+B\+I\+T\+\_\+\+H\+E\+A\+D\+E\+R\+\_\+\+R\+E\+AD(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+A\+D\+D\+R\+E\+S\+S\+\_\+\+\_\+ }\end{DoxyParamCaption})~((uint8\+\_\+t)((uint16\+\_\+t)((uint16\+\_\+t)(((uint16\+\_\+t)((\+\_\+\+\_\+\+A\+D\+D\+R\+E\+S\+S\+\_\+\+\_\+) \& (uint16\+\_\+t)0x0300)) $>$$>$ 7) $\vert$ (uint16\+\_\+t)(0x00\+F1))))}
+
+
+
+Definicja w linii 671 pliku stm32f4xx\+\_\+hal\+\_\+i2c.\+h.
+
+\mbox{\Hypertarget{group___i2_c___private___macros_ga0edd591eaa2ce5511148bf1ebf533e1a}\label{group___i2_c___private___macros_ga0edd591eaa2ce5511148bf1ebf533e1a}} 
+\index{I2\+C Private Macros@{I2\+C Private Macros}!I2\+C\+\_\+10\+B\+I\+T\+\_\+\+H\+E\+A\+D\+E\+R\+\_\+\+W\+R\+I\+TE@{I2\+C\+\_\+10\+B\+I\+T\+\_\+\+H\+E\+A\+D\+E\+R\+\_\+\+W\+R\+I\+TE}}
+\index{I2\+C\+\_\+10\+B\+I\+T\+\_\+\+H\+E\+A\+D\+E\+R\+\_\+\+W\+R\+I\+TE@{I2\+C\+\_\+10\+B\+I\+T\+\_\+\+H\+E\+A\+D\+E\+R\+\_\+\+W\+R\+I\+TE}!I2\+C Private Macros@{I2\+C Private Macros}}
+\subsubsection{\texorpdfstring{I2\+C\+\_\+10\+B\+I\+T\+\_\+\+H\+E\+A\+D\+E\+R\+\_\+\+W\+R\+I\+TE}{I2C\_10BIT\_HEADER\_WRITE}}
+{\footnotesize\ttfamily \#define I2\+C\+\_\+10\+B\+I\+T\+\_\+\+H\+E\+A\+D\+E\+R\+\_\+\+W\+R\+I\+TE(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+A\+D\+D\+R\+E\+S\+S\+\_\+\+\_\+ }\end{DoxyParamCaption})~((uint8\+\_\+t)((uint16\+\_\+t)((uint16\+\_\+t)(((uint16\+\_\+t)((\+\_\+\+\_\+\+A\+D\+D\+R\+E\+S\+S\+\_\+\+\_\+) \& (uint16\+\_\+t)0x0300)) $>$$>$ 7) $\vert$ (uint16\+\_\+t)0x00\+F0)))}
+
+
+
+Definicja w linii 670 pliku stm32f4xx\+\_\+hal\+\_\+i2c.\+h.
+
+\mbox{\Hypertarget{group___i2_c___private___macros_gacec6f0d6fde48a24327d2db15387fed8}\label{group___i2_c___private___macros_gacec6f0d6fde48a24327d2db15387fed8}} 
+\index{I2\+C Private Macros@{I2\+C Private Macros}!I2\+C\+\_\+7\+B\+I\+T\+\_\+\+A\+D\+D\+\_\+\+R\+E\+AD@{I2\+C\+\_\+7\+B\+I\+T\+\_\+\+A\+D\+D\+\_\+\+R\+E\+AD}}
+\index{I2\+C\+\_\+7\+B\+I\+T\+\_\+\+A\+D\+D\+\_\+\+R\+E\+AD@{I2\+C\+\_\+7\+B\+I\+T\+\_\+\+A\+D\+D\+\_\+\+R\+E\+AD}!I2\+C Private Macros@{I2\+C Private Macros}}
+\subsubsection{\texorpdfstring{I2\+C\+\_\+7\+B\+I\+T\+\_\+\+A\+D\+D\+\_\+\+R\+E\+AD}{I2C\_7BIT\_ADD\_READ}}
+{\footnotesize\ttfamily \#define I2\+C\+\_\+7\+B\+I\+T\+\_\+\+A\+D\+D\+\_\+\+R\+E\+AD(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+A\+D\+D\+R\+E\+S\+S\+\_\+\+\_\+ }\end{DoxyParamCaption})~((uint8\+\_\+t)((\+\_\+\+\_\+\+A\+D\+D\+R\+E\+S\+S\+\_\+\+\_\+) $\vert$ \hyperlink{group___peripheral___registers___bits___definition_ga8b7c20c81f79d17921718412b8fca6d7}{I2\+C\+\_\+\+O\+A\+R1\+\_\+\+A\+D\+D0}))}
+
+
+
+Definicja w linii 667 pliku stm32f4xx\+\_\+hal\+\_\+i2c.\+h.
+
+\mbox{\Hypertarget{group___i2_c___private___macros_gad83949bd18eca67258b05763a90d0128}\label{group___i2_c___private___macros_gad83949bd18eca67258b05763a90d0128}} 
+\index{I2\+C Private Macros@{I2\+C Private Macros}!I2\+C\+\_\+7\+B\+I\+T\+\_\+\+A\+D\+D\+\_\+\+W\+R\+I\+TE@{I2\+C\+\_\+7\+B\+I\+T\+\_\+\+A\+D\+D\+\_\+\+W\+R\+I\+TE}}
+\index{I2\+C\+\_\+7\+B\+I\+T\+\_\+\+A\+D\+D\+\_\+\+W\+R\+I\+TE@{I2\+C\+\_\+7\+B\+I\+T\+\_\+\+A\+D\+D\+\_\+\+W\+R\+I\+TE}!I2\+C Private Macros@{I2\+C Private Macros}}
+\subsubsection{\texorpdfstring{I2\+C\+\_\+7\+B\+I\+T\+\_\+\+A\+D\+D\+\_\+\+W\+R\+I\+TE}{I2C\_7BIT\_ADD\_WRITE}}
+{\footnotesize\ttfamily \#define I2\+C\+\_\+7\+B\+I\+T\+\_\+\+A\+D\+D\+\_\+\+W\+R\+I\+TE(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+A\+D\+D\+R\+E\+S\+S\+\_\+\+\_\+ }\end{DoxyParamCaption})~((uint8\+\_\+t)((\+\_\+\+\_\+\+A\+D\+D\+R\+E\+S\+S\+\_\+\+\_\+) \& (uint8\+\_\+t)($\sim$\hyperlink{group___peripheral___registers___bits___definition_ga8b7c20c81f79d17921718412b8fca6d7}{I2\+C\+\_\+\+O\+A\+R1\+\_\+\+A\+D\+D0})))}
+
+
+
+Definicja w linii 666 pliku stm32f4xx\+\_\+hal\+\_\+i2c.\+h.
+
+\mbox{\Hypertarget{group___i2_c___private___macros_ga647da9b3c71c56e2e1b49417bc557233}\label{group___i2_c___private___macros_ga647da9b3c71c56e2e1b49417bc557233}} 
+\index{I2\+C Private Macros@{I2\+C Private Macros}!I2\+C\+\_\+\+C\+C\+R\+\_\+\+C\+A\+L\+C\+U\+L\+A\+T\+I\+ON@{I2\+C\+\_\+\+C\+C\+R\+\_\+\+C\+A\+L\+C\+U\+L\+A\+T\+I\+ON}}
+\index{I2\+C\+\_\+\+C\+C\+R\+\_\+\+C\+A\+L\+C\+U\+L\+A\+T\+I\+ON@{I2\+C\+\_\+\+C\+C\+R\+\_\+\+C\+A\+L\+C\+U\+L\+A\+T\+I\+ON}!I2\+C Private Macros@{I2\+C Private Macros}}
+\subsubsection{\texorpdfstring{I2\+C\+\_\+\+C\+C\+R\+\_\+\+C\+A\+L\+C\+U\+L\+A\+T\+I\+ON}{I2C\_CCR\_CALCULATION}}
+{\footnotesize\ttfamily \#define I2\+C\+\_\+\+C\+C\+R\+\_\+\+C\+A\+L\+C\+U\+L\+A\+T\+I\+ON(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+P\+C\+L\+K\+\_\+\+\_\+,  }\item[{}]{\+\_\+\+\_\+\+S\+P\+E\+E\+D\+\_\+\+\_\+,  }\item[{}]{\+\_\+\+\_\+\+C\+O\+E\+F\+F\+\_\+\+\_\+ }\end{DoxyParamCaption})~(((((\+\_\+\+\_\+\+P\+C\+L\+K\+\_\+\+\_\+) -\/ 1\+U)/((\+\_\+\+\_\+\+S\+P\+E\+E\+D\+\_\+\+\_\+) $\ast$ (\+\_\+\+\_\+\+C\+O\+E\+F\+F\+\_\+\+\_\+))) + 1\+U) \& I2\+C\+\_\+\+C\+C\+R\+\_\+\+C\+C\+R)}
+
+
+
+Definicja w linii 657 pliku stm32f4xx\+\_\+hal\+\_\+i2c.\+h.
+
+\mbox{\Hypertarget{group___i2_c___private___macros_ga9b4e4686872c7b0bd9daed9049d0c431}\label{group___i2_c___private___macros_ga9b4e4686872c7b0bd9daed9049d0c431}} 
+\index{I2\+C Private Macros@{I2\+C Private Macros}!I2\+C\+\_\+\+F\+R\+E\+Q\+R\+A\+N\+GE@{I2\+C\+\_\+\+F\+R\+E\+Q\+R\+A\+N\+GE}}
+\index{I2\+C\+\_\+\+F\+R\+E\+Q\+R\+A\+N\+GE@{I2\+C\+\_\+\+F\+R\+E\+Q\+R\+A\+N\+GE}!I2\+C Private Macros@{I2\+C Private Macros}}
+\subsubsection{\texorpdfstring{I2\+C\+\_\+\+F\+R\+E\+Q\+R\+A\+N\+GE}{I2C\_FREQRANGE}}
+{\footnotesize\ttfamily \#define I2\+C\+\_\+\+F\+R\+E\+Q\+R\+A\+N\+GE(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+P\+C\+L\+K\+\_\+\+\_\+ }\end{DoxyParamCaption})~((\+\_\+\+\_\+\+P\+C\+L\+K\+\_\+\+\_\+)/1000000\+U)}
+
+
+
+Definicja w linii 658 pliku stm32f4xx\+\_\+hal\+\_\+i2c.\+h.
+
+\mbox{\Hypertarget{group___i2_c___private___macros_ga9c8f1a763307d0c37bb4e2dcfdf3bb9f}\label{group___i2_c___private___macros_ga9c8f1a763307d0c37bb4e2dcfdf3bb9f}} 
+\index{I2\+C Private Macros@{I2\+C Private Macros}!I2\+C\+\_\+\+M\+E\+M\+\_\+\+A\+D\+D\+\_\+\+L\+SB@{I2\+C\+\_\+\+M\+E\+M\+\_\+\+A\+D\+D\+\_\+\+L\+SB}}
+\index{I2\+C\+\_\+\+M\+E\+M\+\_\+\+A\+D\+D\+\_\+\+L\+SB@{I2\+C\+\_\+\+M\+E\+M\+\_\+\+A\+D\+D\+\_\+\+L\+SB}!I2\+C Private Macros@{I2\+C Private Macros}}
+\subsubsection{\texorpdfstring{I2\+C\+\_\+\+M\+E\+M\+\_\+\+A\+D\+D\+\_\+\+L\+SB}{I2C\_MEM\_ADD\_LSB}}
+{\footnotesize\ttfamily \#define I2\+C\+\_\+\+M\+E\+M\+\_\+\+A\+D\+D\+\_\+\+L\+SB(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+A\+D\+D\+R\+E\+S\+S\+\_\+\+\_\+ }\end{DoxyParamCaption})~((uint8\+\_\+t)((uint16\+\_\+t)((\+\_\+\+\_\+\+A\+D\+D\+R\+E\+S\+S\+\_\+\+\_\+) \& (uint16\+\_\+t)0x00\+F\+F)))}
+
+
+
+Definicja w linii 674 pliku stm32f4xx\+\_\+hal\+\_\+i2c.\+h.
+
+\mbox{\Hypertarget{group___i2_c___private___macros_ga2e42fa55be22240dc5a54a0304d01cfb}\label{group___i2_c___private___macros_ga2e42fa55be22240dc5a54a0304d01cfb}} 
+\index{I2\+C Private Macros@{I2\+C Private Macros}!I2\+C\+\_\+\+M\+E\+M\+\_\+\+A\+D\+D\+\_\+\+M\+SB@{I2\+C\+\_\+\+M\+E\+M\+\_\+\+A\+D\+D\+\_\+\+M\+SB}}
+\index{I2\+C\+\_\+\+M\+E\+M\+\_\+\+A\+D\+D\+\_\+\+M\+SB@{I2\+C\+\_\+\+M\+E\+M\+\_\+\+A\+D\+D\+\_\+\+M\+SB}!I2\+C Private Macros@{I2\+C Private Macros}}
+\subsubsection{\texorpdfstring{I2\+C\+\_\+\+M\+E\+M\+\_\+\+A\+D\+D\+\_\+\+M\+SB}{I2C\_MEM\_ADD\_MSB}}
+{\footnotesize\ttfamily \#define I2\+C\+\_\+\+M\+E\+M\+\_\+\+A\+D\+D\+\_\+\+M\+SB(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+A\+D\+D\+R\+E\+S\+S\+\_\+\+\_\+ }\end{DoxyParamCaption})~((uint8\+\_\+t)((uint16\+\_\+t)(((uint16\+\_\+t)((\+\_\+\+\_\+\+A\+D\+D\+R\+E\+S\+S\+\_\+\+\_\+) \& (uint16\+\_\+t)0x\+F\+F00)) $>$$>$ 8)))}
+
+
+
+Definicja w linii 673 pliku stm32f4xx\+\_\+hal\+\_\+i2c.\+h.
+
+\mbox{\Hypertarget{group___i2_c___private___macros_ga30bf3d43ca9c1d9eb665bda03d84ec4a}\label{group___i2_c___private___macros_ga30bf3d43ca9c1d9eb665bda03d84ec4a}} 
+\index{I2\+C Private Macros@{I2\+C Private Macros}!I2\+C\+\_\+\+M\+I\+N\+\_\+\+P\+C\+L\+K\+\_\+\+F\+R\+EQ@{I2\+C\+\_\+\+M\+I\+N\+\_\+\+P\+C\+L\+K\+\_\+\+F\+R\+EQ}}
+\index{I2\+C\+\_\+\+M\+I\+N\+\_\+\+P\+C\+L\+K\+\_\+\+F\+R\+EQ@{I2\+C\+\_\+\+M\+I\+N\+\_\+\+P\+C\+L\+K\+\_\+\+F\+R\+EQ}!I2\+C Private Macros@{I2\+C Private Macros}}
+\subsubsection{\texorpdfstring{I2\+C\+\_\+\+M\+I\+N\+\_\+\+P\+C\+L\+K\+\_\+\+F\+R\+EQ}{I2C\_MIN\_PCLK\_FREQ}}
+{\footnotesize\ttfamily \#define I2\+C\+\_\+\+M\+I\+N\+\_\+\+P\+C\+L\+K\+\_\+\+F\+R\+EQ(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+P\+C\+L\+K\+\_\+\+\_\+,  }\item[{}]{\+\_\+\+\_\+\+S\+P\+E\+E\+D\+\_\+\+\_\+ }\end{DoxyParamCaption})~(((\+\_\+\+\_\+\+S\+P\+E\+E\+D\+\_\+\+\_\+) $<$= 100000\+U) ? ((\+\_\+\+\_\+\+P\+C\+L\+K\+\_\+\+\_\+) $<$ I2\+C\+\_\+\+M\+I\+N\+\_\+\+P\+C\+L\+K\+\_\+\+F\+R\+E\+Q\+\_\+\+S\+T\+A\+N\+D\+A\+R\+D) \+: ((\+\_\+\+\_\+\+P\+C\+L\+K\+\_\+\+\_\+) $<$ I2\+C\+\_\+\+M\+I\+N\+\_\+\+P\+C\+L\+K\+\_\+\+F\+R\+E\+Q\+\_\+\+F\+A\+S\+T))}
+
+
+
+Definicja w linii 656 pliku stm32f4xx\+\_\+hal\+\_\+i2c.\+h.
+
+\mbox{\Hypertarget{group___i2_c___private___macros_ga27cae7b1432cd160ab708e1548ba3165}\label{group___i2_c___private___macros_ga27cae7b1432cd160ab708e1548ba3165}} 
+\index{I2\+C Private Macros@{I2\+C Private Macros}!I2\+C\+\_\+\+R\+I\+S\+E\+\_\+\+T\+I\+ME@{I2\+C\+\_\+\+R\+I\+S\+E\+\_\+\+T\+I\+ME}}
+\index{I2\+C\+\_\+\+R\+I\+S\+E\+\_\+\+T\+I\+ME@{I2\+C\+\_\+\+R\+I\+S\+E\+\_\+\+T\+I\+ME}!I2\+C Private Macros@{I2\+C Private Macros}}
+\subsubsection{\texorpdfstring{I2\+C\+\_\+\+R\+I\+S\+E\+\_\+\+T\+I\+ME}{I2C\_RISE\_TIME}}
+{\footnotesize\ttfamily \#define I2\+C\+\_\+\+R\+I\+S\+E\+\_\+\+T\+I\+ME(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+F\+R\+E\+Q\+R\+A\+N\+G\+E\+\_\+\+\_\+,  }\item[{}]{\+\_\+\+\_\+\+S\+P\+E\+E\+D\+\_\+\+\_\+ }\end{DoxyParamCaption})~(((\+\_\+\+\_\+\+S\+P\+E\+E\+D\+\_\+\+\_\+) $<$= 100000\+U) ? ((\+\_\+\+\_\+\+F\+R\+E\+Q\+R\+A\+N\+G\+E\+\_\+\+\_\+) + 1\+U) \+: ((((\+\_\+\+\_\+\+F\+R\+E\+Q\+R\+A\+N\+G\+E\+\_\+\+\_\+) $\ast$ 300\+U) / 1000\+U) + 1\+U))}
+
+
+
+Definicja w linii 659 pliku stm32f4xx\+\_\+hal\+\_\+i2c.\+h.
+
+\mbox{\Hypertarget{group___i2_c___private___macros_ga0e871b470a0f7a9d641156f07e37c810}\label{group___i2_c___private___macros_ga0e871b470a0f7a9d641156f07e37c810}} 
+\index{I2\+C Private Macros@{I2\+C Private Macros}!I2\+C\+\_\+\+S\+P\+E\+ED@{I2\+C\+\_\+\+S\+P\+E\+ED}}
+\index{I2\+C\+\_\+\+S\+P\+E\+ED@{I2\+C\+\_\+\+S\+P\+E\+ED}!I2\+C Private Macros@{I2\+C Private Macros}}
+\subsubsection{\texorpdfstring{I2\+C\+\_\+\+S\+P\+E\+ED}{I2C\_SPEED}}
+{\footnotesize\ttfamily \#define I2\+C\+\_\+\+S\+P\+E\+ED(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+P\+C\+L\+K\+\_\+\+\_\+,  }\item[{}]{\+\_\+\+\_\+\+S\+P\+E\+E\+D\+\_\+\+\_\+,  }\item[{}]{\+\_\+\+\_\+\+D\+U\+T\+Y\+C\+Y\+C\+L\+E\+\_\+\+\_\+ }\end{DoxyParamCaption})}
+
+{\bfseries Wartość\+:}
+\begin{DoxyCode}
+(((\_\_SPEED\_\_) <= 100000U)? (\hyperlink{group___i2_c___private___macros_gaa71590c93b126e79fc86afbc819742b3}{I2C\_SPEED\_STANDARD}((\_\_PCLK\_\_), (\_\_SPEED\_\_))) : \(\backslash\)
+                                                                  ((
+      \hyperlink{group___i2_c___private___macros_ga9e5a85344d70ab05020e41ba24566f57}{I2C\_SPEED\_FAST}((\_\_PCLK\_\_), (\_\_SPEED\_\_), (\_\_DUTYCYCLE\_\_)) & 
+      \hyperlink{group___peripheral___registers___bits___definition_ga5c8cb2bd83dd7dbdcf6ca4bbf4a841de}{I2C\_CCR\_CCR}) == 0U)? 1U : \(\backslash\)
+                                                                  ((
+      \hyperlink{group___i2_c___private___macros_ga9e5a85344d70ab05020e41ba24566f57}{I2C\_SPEED\_FAST}((\_\_PCLK\_\_), (\_\_SPEED\_\_), (\_\_DUTYCYCLE\_\_))) | 
+      \hyperlink{group___peripheral___registers___bits___definition_gaea64e5d7eba609ac9a84964bc0bc2def}{I2C\_CCR\_FS}))
+\end{DoxyCode}
+
+
+Definicja w linii 662 pliku stm32f4xx\+\_\+hal\+\_\+i2c.\+h.
+
+\mbox{\Hypertarget{group___i2_c___private___macros_ga9e5a85344d70ab05020e41ba24566f57}\label{group___i2_c___private___macros_ga9e5a85344d70ab05020e41ba24566f57}} 
+\index{I2\+C Private Macros@{I2\+C Private Macros}!I2\+C\+\_\+\+S\+P\+E\+E\+D\+\_\+\+F\+A\+ST@{I2\+C\+\_\+\+S\+P\+E\+E\+D\+\_\+\+F\+A\+ST}}
+\index{I2\+C\+\_\+\+S\+P\+E\+E\+D\+\_\+\+F\+A\+ST@{I2\+C\+\_\+\+S\+P\+E\+E\+D\+\_\+\+F\+A\+ST}!I2\+C Private Macros@{I2\+C Private Macros}}
+\subsubsection{\texorpdfstring{I2\+C\+\_\+\+S\+P\+E\+E\+D\+\_\+\+F\+A\+ST}{I2C\_SPEED\_FAST}}
+{\footnotesize\ttfamily \#define I2\+C\+\_\+\+S\+P\+E\+E\+D\+\_\+\+F\+A\+ST(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+P\+C\+L\+K\+\_\+\+\_\+,  }\item[{}]{\+\_\+\+\_\+\+S\+P\+E\+E\+D\+\_\+\+\_\+,  }\item[{}]{\+\_\+\+\_\+\+D\+U\+T\+Y\+C\+Y\+C\+L\+E\+\_\+\+\_\+ }\end{DoxyParamCaption})~(((\+\_\+\+\_\+\+D\+U\+T\+Y\+C\+Y\+C\+L\+E\+\_\+\+\_\+) == \hyperlink{group___i2_c__duty__cycle__in__fast__mode_ga414df076d339793a7c761033346fd4ca}{I2\+C\+\_\+\+D\+U\+T\+Y\+C\+Y\+C\+L\+E\+\_\+2})? \hyperlink{group___i2_c___private___macros_ga647da9b3c71c56e2e1b49417bc557233}{I2\+C\+\_\+\+C\+C\+R\+\_\+\+C\+A\+L\+C\+U\+L\+A\+T\+I\+ON}((\+\_\+\+\_\+\+P\+C\+L\+K\+\_\+\+\_\+), (\+\_\+\+\_\+\+S\+P\+E\+E\+D\+\_\+\+\_\+), 3\+U) \+: (\+I2\+C\+\_\+\+C\+C\+R\+\_\+\+C\+A\+L\+C\+U\+L\+A\+T\+I\+O\+N((\+\_\+\+\_\+\+P\+C\+L\+K\+\_\+\+\_\+), (\+\_\+\+\_\+\+S\+P\+E\+E\+D\+\_\+\+\_\+), 25\+U) $\vert$ I2\+C\+\_\+\+D\+U\+T\+Y\+C\+Y\+C\+L\+E\+\_\+16\+\_\+9))}
+
+
+
+Definicja w linii 661 pliku stm32f4xx\+\_\+hal\+\_\+i2c.\+h.
+
+\mbox{\Hypertarget{group___i2_c___private___macros_gaa71590c93b126e79fc86afbc819742b3}\label{group___i2_c___private___macros_gaa71590c93b126e79fc86afbc819742b3}} 
+\index{I2\+C Private Macros@{I2\+C Private Macros}!I2\+C\+\_\+\+S\+P\+E\+E\+D\+\_\+\+S\+T\+A\+N\+D\+A\+RD@{I2\+C\+\_\+\+S\+P\+E\+E\+D\+\_\+\+S\+T\+A\+N\+D\+A\+RD}}
+\index{I2\+C\+\_\+\+S\+P\+E\+E\+D\+\_\+\+S\+T\+A\+N\+D\+A\+RD@{I2\+C\+\_\+\+S\+P\+E\+E\+D\+\_\+\+S\+T\+A\+N\+D\+A\+RD}!I2\+C Private Macros@{I2\+C Private Macros}}
+\subsubsection{\texorpdfstring{I2\+C\+\_\+\+S\+P\+E\+E\+D\+\_\+\+S\+T\+A\+N\+D\+A\+RD}{I2C\_SPEED\_STANDARD}}
+{\footnotesize\ttfamily \#define I2\+C\+\_\+\+S\+P\+E\+E\+D\+\_\+\+S\+T\+A\+N\+D\+A\+RD(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+P\+C\+L\+K\+\_\+\+\_\+,  }\item[{}]{\+\_\+\+\_\+\+S\+P\+E\+E\+D\+\_\+\+\_\+ }\end{DoxyParamCaption})~((\hyperlink{group___i2_c___private___macros_ga647da9b3c71c56e2e1b49417bc557233}{I2\+C\+\_\+\+C\+C\+R\+\_\+\+C\+A\+L\+C\+U\+L\+A\+T\+I\+ON}((\+\_\+\+\_\+\+P\+C\+L\+K\+\_\+\+\_\+), (\+\_\+\+\_\+\+S\+P\+E\+E\+D\+\_\+\+\_\+), 2\+U) $<$ 4\+U)? 4\+U\+:\+I2\+C\+\_\+\+C\+C\+R\+\_\+\+C\+A\+L\+C\+U\+L\+A\+T\+I\+O\+N((\+\_\+\+\_\+\+P\+C\+L\+K\+\_\+\+\_\+), (\+\_\+\+\_\+\+S\+P\+E\+E\+D\+\_\+\+\_\+), 2\+U))}
+
+
+
+Definicja w linii 660 pliku stm32f4xx\+\_\+hal\+\_\+i2c.\+h.
+
