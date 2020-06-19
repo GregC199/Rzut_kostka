@@ -1,5 +1,11 @@
 #include "mainwindow.h"
-
+/*!
+ *
+ * \brief Utworzenie osi do wykresów
+ *
+ * Funkcja tworzące osie. Ustawia zakresy odpowiednie dla każdej z osi oraz zmienia
+ * domyślną czcionę dla osi danych na mniejszą.
+ */
 void MainWindow::utworz_osie(){
 
     //zmiana rozmiarow czcionki w celu poprawienia widoczności wartości na osiach
@@ -90,7 +96,13 @@ void MainWindow::utworz_osie(){
     this->gyr_z_wartosci_y->setTickCount(9);
     this->gyr_z_wartosci_y->setLabelsFont(czcionka_osi);
 }
-
+/*!
+ *
+ * \brief Utworzenie serii do wykresów
+ *
+ * Funkcja tworząca serie danych dla każdego typu zczytywanych danych oraz
+ * dodająca punkty (0,0) na początek wykresu.
+ */
 void MainWindow::utworz_serie(){
     //tworzenie serii
     //acc x,y,z
@@ -120,7 +132,14 @@ void MainWindow::utworz_serie(){
     this->series_gyr_wykres_z = new QLineSeries();
     this->series_gyr_wykres_z->append(0,0);
 }
-
+/*!
+ *
+ * \brief Utworzenie wykresów
+ *
+ * Funkcja tworząca wykresy dla trzech osi akcelerometru i trzech osi żyroskopu.
+ * Każdy z wykresów ma nadawany tytuł, dodawane serie danych, osie oraz
+ * ukrywane legendy w celu poprawienia widoczności.
+ */
 void MainWindow::utworz_wykresy(){
     //stworzenie wykresu liniowego z serii - acc_x
     this->line_acc_wykres_x = new QChart();
@@ -212,7 +231,13 @@ void MainWindow::utworz_wykresy(){
 
     this->line_gyr_wykres_z->legend()->hide();
 }
-
+/*!
+ *
+ * \brief Utworzenie wizualizacji do wykresów
+ *
+ * Na podstawie wcześniej utworzonych wykresów tworzona jeszcze jest ich wizualizacja.
+ * W tym celu zadajemy każdemu z wykresów odpowiedniego rodzica z ui.
+ */
 void MainWindow::wizualizuj_wykresy(){
 
     //wyswietlanie utworzonych wykresow - acc_x
@@ -246,7 +271,12 @@ void MainWindow::wizualizuj_wykresy(){
     this->view_gyr_wykres_z->setRenderHint(QPainter::Antialiasing);
     this->view_gyr_wykres_z->setParent(ui->gyr_wykres_z);
 }
-
+/*!
+ *
+ * \brief Przypięcie wartości serii do osi wykresów
+ *
+ * Przypina każdą z serii danych do wpierw osi czasu a potem osi wartości.
+ */
 void MainWindow::przypnij_serie_do_osi(){
     //laczenie osi czasu z seriami danych
     this->series_acc_wykres_x->attachAxis(this->timeline_acc_x);
@@ -268,7 +298,19 @@ void MainWindow::przypnij_serie_do_osi(){
     this->series_kom_wykres_y->attachAxis(gyr_y_wartosci_y);
     this->series_gyr_wykres_z->attachAxis(gyr_z_wartosci_y);
 }
-
+/*!
+ *
+ * \brief Obsługa tworzenia wykresów
+ *
+ * Wywołuje funkcje odpowiedzialne za kolejno:
+ * ->tworzenie serii \link utworz_serie \endlink,
+ * ->tworzenie osi \link utworz_osie \endlink,
+ * ->tworzenie wykresów \link utworz_wykresy \endlink,
+ * ->przypięcie serii danych do osi \link przypnij_serie_do_osi \endlink,
+ * ->wizualizację wykresów \link wizualizuj_wykresy \endlink.
+ *
+ * Na sam koniec zadaje początkowe rozmiary wykresom.
+ */
 void MainWindow::stworz_wykresy(){
 
     this->utworz_serie();

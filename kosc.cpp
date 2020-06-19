@@ -13,7 +13,7 @@
  * a dokładnie poprzez \link WizualizacjaKosc::emituj_zmiane_sciany(int value) \endlink
  *
  * Obraz aktualizowany jest za pomocą plików x.png, gdzie:
- * x - odpowiada liczbie wyrzuconych oczek.
+ * x -> odpowiada liczbie wyrzuconych oczek.
  *
  */
 void MainWindow::aktualizuj_obraz(int val){
@@ -140,7 +140,7 @@ void MainWindow::rotuj_kostke(double xa, double ya, double za){
 }
 /*!
  *
- * \brief Niedokończone - służy za przemieszczenie kostki
+ * \brief Niedokończone -> służy za przemieszczenie kostki
  *
  * Prototyp niedokończonej funkcji odpowiedzialnej za przemieszczanie wizualizacji kostki.
  *

@@ -154,6 +154,11 @@ void MainWindow::connectionEstablished() {
 }
 /*!
  *
+ * \brief Socket odpowowiedzialny za przechwycenie przerwania połączenia
+ *
+ * Dodaje informacje na temat zerwania połączenia do Logu połączenia oraz
+ * aktywuje przycisk połącz i dezaktywuje przycisk rozłącz. Zapala również czerwone
+ * diody.
  *
  */
 void MainWindow::connectionInterrupted() {
@@ -166,7 +171,14 @@ void MainWindow::connectionInterrupted() {
 
     zapal_czerwone();
 }
-
+/*!
+ * \brief Socket odpowiedzialny za odczytywanie wiadomości z bluetooth
+ *
+ * Odczytuje wiadomość z bluetooth jeżeli taka się pojawiła oraz dodaje
+ * ją do pliku log_polaczenia.txt oraz dodaje otrzymaną wiadomość do pola
+ * tekstowego Log połączenia
+ *
+ */
 void MainWindow::socketReadyToRead() {
 
     unsigned long long zmierzony;

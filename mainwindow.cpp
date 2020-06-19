@@ -1,7 +1,13 @@
 #include "mainwindow.h"
 
 
-
+/*!
+ * \brief Konstruktor aplikacji
+ *
+ * Zapisujemy do \link currentGLWidget \endlink nasz obiekt odpowiedzialny za wizualizację.
+ * Następnie dodajemy połączenia sygnałów i slotów odpowiedzialne za aktualizację Wartości rzutów
+ * oraz aktualizację orientacji samej kostki.
+ */
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
@@ -53,7 +59,14 @@ MainWindow::MainWindow(QWidget *parent)
 
 
 }
-
+/*!
+ *
+ * \brief Informacje o nawiązanym połączeniu
+ *
+ * Najpierw czyści pole tekstowe \link parametry_polaczenia \endlink, a następnie
+ * inicjuje wpisy dla tego pola. Aktualizuje również wpisy dla sąsiadującego pola
+ * tekstowego odpowiedzialne za specyfikację informacji o paramtrach - \link informacje_o_polaczeniu \endlink
+ */
 void MainWindow::inicjalizuj_info(){
 
     ui->parametry_polaczenia->clear();
@@ -76,6 +89,14 @@ void MainWindow::inicjalizuj_info(){
     informacje_bluetooth();
 }
 
+/*!
+ *
+ * \brief Szczegóły parametrów połączenia
+ *
+ * Czyści pole tekstowe \link informacje_o_polaczeniu \endlink oraz wpisuje nowe
+ * specyfikacje parametrów do owego pola tekstowego.
+ */
+
 void MainWindow::informacje_bluetooth(){
 
     ui->informacje_o_polaczeniu->clear();
@@ -90,7 +111,25 @@ void MainWindow::informacje_bluetooth(){
 
 }
 
-
+/*!
+ *
+ * \brief Wczytanie danych z pliku będącego logiem połączenia bluetooth
+ *
+ * Funkcja odpowiedzialna za wczytanie danych z pliku log_polaczenia.txt .
+ * Wczytywane są kolejno:
+ * ->\link acc_x\endlink - wskazania akcelerometru wzdłuż osi OX,
+ * ->\link acc_y\endlink - wskazania akcelerometru wzdłuż osi OY,
+ * ->\link acc_z\endlink - wskazania akcelerometru wzdłuż osi OZ,
+ * ->\link gyr_x\endlink - wskazania żyroskopu wzdłuż osi OX,
+ * ->\link gyr_y\endlink - wskazania żyroskopu wzdłuż osi OY,
+ * ->\link gyr_z\endlink - wskazania żyroskopu wzdłuż osi OZ,
+ * ->\link roll\endlink - kąt roll,
+ * ->\link pitch\endlink - kąt pitch,
+ * ->\link button\endlink - stan przycisku B1.
+ *
+ * Na sam koniec wywoływana jest funkcja aktualizująca wykresy \link aktualizuj_wykres \endlink
+ * oraz funkcja aktualizująca orientację kostki \link rotuj_kostke \endlink.
+ */
 void MainWindow::wczytanie_danych_z_logu(unsigned long long czas_zmierzony){
 
     //zmienne pomocnicze do realizacji zczytywania danych
@@ -137,7 +176,14 @@ void MainWindow::wczytanie_danych_z_logu(unsigned long long czas_zmierzony){
     }
 
 }
-
+/*!
+ *
+ * \brief Aktualizacja danych na wykresie
+ *
+ * Na podstawie wczytanych danych do funkcji aktualizowane są wykresy poprzez
+ * dodanie wartości do serii danych oraz przesuwana jest oś czasu o 50 sekund
+ * jeśli obecna nie mieści się w skali.
+ */
 void MainWindow::aktualizuj_wykres(float a_x,float a_y,float a_z,float g_x,float g_y,double g_z,double rkom,double pkom, unsigned long long czas){
 
     //os czasu - zmienne pomocnicze sluzace do jej przesuwania
@@ -189,7 +235,9 @@ void MainWindow::aktualizuj_wykres(float a_x,float a_y,float a_z,float g_x,float
     this->series_gyr_wykres_z->append(test,g_z);
 
 }
-
+/*!
+ * \brief Destruktor aplikacji
+ */
 MainWindow::~MainWindow()
 {
     delete ui;

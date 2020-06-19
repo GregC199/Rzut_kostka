@@ -42,15 +42,34 @@ QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
 QT_END_NAMESPACE
 
+
 class WizualizacjaKosc;
 
-
+/*!
+ * \brief Implementacja klasy \link MainWindow\endlink będącej reimplementacją klasy QMainWindow
+ *
+ * Klasa ta tworzy obiekt obsługujący działanie całej aplikacji. W ramach obiektów tej klasy realizowane są:
+ * ->obsługa połączenia bluetooth w pliku \link bluetooth.cpp\endlink,
+ * ->obsługa tworzenia diód w pliku \link diody.cpp\endlink,
+ * ->obsługa tworzenia wykresów w pliku \link wykresy.cpp\endlink,
+ * ->obsługa wizualizacji kości w pliku \link kosc.cpp\endlink,
+ * ->obsługa wyświetlania informacji na temat połączenia oraz odczyt danych i aktualizacja wykresów w pliku \link mainwindow.cpp\endlink,
+ *
+ */
 class MainWindow : public QMainWindow
 {
     Q_OBJECT
 
 public:
+    /*!
+     * \brief Konstruktor aplikacji
+     *
+     */
     MainWindow(QWidget *parent = nullptr);
+    /*!
+     * \brief Destruktor aplikacji
+     *
+     */
     ~MainWindow();
 
 
@@ -188,8 +207,15 @@ private slots:
      * \brief Slot nawiązania połączenia
      */
     void connectionEstablished();
+    /*!
+     *
+     * \brief Socket odpowowiedzialny za przechwycenie przerwania połączenia
+     */
     void connectionInterrupted();
 
+    /*!
+     * \brief Socket odpowiedzialny za odczytywanie wiadomości z bluetooth
+     */
     void socketReadyToRead();
 
 
@@ -266,9 +292,16 @@ private:
 
     Ui::MainWindow* ui;
 
+    /*!
+     * \brief Funkcja odpowiedzialna za dodanie informacji do pola Log połączenia
+     */
     //aktualizacja logu polaczenia
     void addToLogs(QString message);
 
+    /*!
+     *
+     * \brief Zmiana wartości poprzedniego rzutu
+     */
     void zmien_lcd(int wartosc);
 
     //obsluga bt
