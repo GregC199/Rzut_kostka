@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>940</width>
-    <height>698</height>
+    <height>748</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -1758,6 +1758,12 @@
                  <horstretch>0</horstretch>
                  <verstretch>0</verstretch>
                 </sizepolicy>
+               </property>
+               <property name="minimumSize">
+                <size>
+                 <width>50</width>
+                 <height>50</height>
+                </size>
                </property>
                <property name="mouseTracking">
                 <bool>true</bool>
@@ -3724,7 +3730,7 @@
                     <number>0</number>
                    </property>
                    <property name="maximum">
-                    <number>56</number>
+                    <number>360</number>
                    </property>
                    <property name="pageStep">
                     <number>1</number>
@@ -4178,7 +4184,7 @@
                     </palette>
                    </property>
                    <property name="maximum">
-                    <number>56</number>
+                    <number>360</number>
                    </property>
                    <property name="pageStep">
                     <number>1</number>
@@ -4629,7 +4635,7 @@
                     </palette>
                    </property>
                    <property name="maximum">
-                    <number>56</number>
+                    <number>360</number>
                    </property>
                    <property name="pageStep">
                     <number>1</number>

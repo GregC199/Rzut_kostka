@@ -1,30 +1,129 @@
 #include "wizualizacjakosc.h"
-
+#include <iostream>
 void WizualizacjaKosc::obroc(int x_a, int y_a, int z_a)
 {
-    this->xRot += x_a/6.0f;
-    this->yRot += y_a/6.0f;
-    this->zRot += z_a/6.0f;
+    this->xRot += x_a;
+    this->yRot += y_a;
+    this->zRot += z_a;
+    normalizuj_kat(this->xRot);
+    normalizuj_kat(this->yRot);
+    normalizuj_kat(this->zRot);
+
+    okres_zakresy();
+
     this->paintGL();
     update();
+}
+QSize WizualizacjaKosc::sizeHint() const
+{
+    return QSize(200, 200);
+}
+void WizualizacjaKosc::okres_zakresy(){
+    czy_slider = 0;
+    x_okresl_zakres();
+    y_okresl_zakres();
+    z_okresl_zakres();
+    czy_slider = 1;
+    if(mem_sciana != sciany[x_zakres][y_zakres][z_zakres]){
+        emit emituj_zmiane_sciany(sciany[x_zakres][y_zakres][z_zakres]);
+        mem_sciana = sciany[x_zakres][y_zakres][z_zakres];
+    }
+}
+void WizualizacjaKosc::x_okresl_zakres()
+{
+    for(int i = 0; i < 4;++i){
+        if(xRot<(i*90+45) && xRot>((i-1)*90+45)){
+            x_zakres = i;
+        }
+    }
+    if(xRot>315 || xRot<45)x_zakres = 0;
+    if(mem_sciana != sciany[x_zakres][y_zakres][z_zakres]){
+        if(czy_slider == 1){
+            emit emituj_zmiane_sciany(sciany[x_zakres][y_zakres][z_zakres]);
+            mem_sciana = sciany[x_zakres][y_zakres][z_zakres];
+
+        }
+    }
+    mem_sciana = sciany[x_zakres][y_zakres][z_zakres];
+}
+
+void WizualizacjaKosc::y_okresl_zakres()
+{
+    for(int i = 0; i <= 4;++i){
+        if(yRot<(i*90+45) && yRot>((i-1)*90+45)){
+            y_zakres = i;
+        }
+    }
+    if(yRot>315 || yRot<45)y_zakres = 0;
+    if(mem_sciana != sciany[x_zakres][y_zakres][z_zakres]){
+        if(czy_slider == 1){
+            emit emituj_zmiane_sciany(sciany[x_zakres][y_zakres][z_zakres]);
+            mem_sciana = sciany[x_zakres][y_zakres][z_zakres];
+
+        }
+    }
+}
+void WizualizacjaKosc::z_okresl_zakres()
+{
+    for(int i = 1; i < 4;++i){
+        if(zRot<(i*90+45) && zRot>((i-1)*90+45)){
+            z_zakres = i;
+        }
+    }
+    if(zRot>315 || zRot<45)z_zakres = 0;
+    if(mem_sciana != sciany[x_zakres][y_zakres][z_zakres]){
+        if(czy_slider == 1){
+            emit emituj_zmiane_sciany(sciany[x_zakres][y_zakres][z_zakres]);
+            mem_sciana = sciany[x_zakres][y_zakres][z_zakres];
+        }
+    }
+}
+QSize WizualizacjaKosc::minimumSizeHint() const
+{
+    return QSize(50, 50);
+}
+void WizualizacjaKosc::normalizuj_kat(int &kat)
+{
+    while (kat < 0)
+        kat += 360;
+    while (kat > 360)
+        kat -= 360;
 }
 void WizualizacjaKosc::obrocX(int val)
 {
     Sender = qobject_cast<QSlider *>(sender());
     val = Sender->value();
-    obroc(val,0,0);
+    normalizuj_kat(val);
+    xRot = val;
+
+    x_okresl_zakres();
+
+    this->paintGL();
+    update();
 }
 void WizualizacjaKosc::obrocY(int val)
 {
     Sender = qobject_cast<QSlider *>(sender());
     val = Sender->value();
-    obroc(0,val,0);
+    normalizuj_kat(val);
+    yRot = val;
+
+    y_okresl_zakres();
+
+    this->paintGL();
+    update();
 }
 void WizualizacjaKosc::obrocZ(int val)
 {
     Sender = qobject_cast<QSlider *>(sender());
     val = Sender->value();
-    obroc(0,0,val);
+    normalizuj_kat(val);
+    zRot = val;
+
+    z_okresl_zakres();
+
+    this->paintGL();
+    update();
 }
 WizualizacjaKosc::~WizualizacjaKosc(){
     makeCurrent();
@@ -103,17 +202,21 @@ void WizualizacjaKosc::resizeGL(int w, int h)
 }
 
 
+
 void WizualizacjaKosc::paintGL()
 {
     glClearColor(clearColor.redF(), clearColor.greenF(), clearColor.blueF(), clearColor.alphaF());
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
+    glLoadIdentity();
+
     QMatrix4x4 m;
     m.ortho(-0.5f, +0.5f, +0.5f, -0.5f, 4.0f, 15.0f);
     m.translate(0.0f, 0.0f, -10.0f);
-    m.rotate(xRot , 1.0f, 0.0f, 0.0f);
-    m.rotate(yRot , 0.0f, 1.0f, 0.0f);
-    m.rotate(zRot , 0.0f, 0.0f, 1.0f);
+    m.rotate(xRot, 1.0f, 0.0f, 0.0f);
+    m.rotate(yRot, 0.0f, 1.0f, 0.0f);
+    m.rotate(zRot, 0.0f, 0.0f, 1.0f);
+
 
     program->setUniformValue("matrix", m);
     program->enableAttributeArray(PROGRAM_VERTEX_ATTRIBUTE);

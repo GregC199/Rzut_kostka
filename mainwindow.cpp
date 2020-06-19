@@ -10,7 +10,10 @@ MainWindow::MainWindow(QWidget *parent)
 
     //kosc obsluga
     currentGlWidget = ui->wizualizacja;
+    QPixmap img("1.png");
+    ui->obraz->setPixmap(img);
 
+    connect(ui->wizualizacja, SIGNAL(emituj_zmiane_sciany(int)),this,SLOT(aktualizuj_obraz(int)));
     connect(ui->Rotx, SIGNAL(valueChanged(int)),ui->wizualizacja, SLOT(obrocX(int)));
     connect(ui->Roty, SIGNAL(valueChanged(int)),ui->wizualizacja, SLOT(obrocY(int)));
     connect(ui->Rotz, SIGNAL(valueChanged(int)),ui->wizualizacja, SLOT(obrocZ(int)));

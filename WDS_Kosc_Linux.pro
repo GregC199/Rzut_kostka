@@ -12,8 +12,6 @@ QT += bluetooth
 QT += charts
 #kosc
 QT += opengl
-#LIBS     += -lOpengl32
-#LIBS += -lglut -lGLU
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -35,19 +33,22 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 
 SOURCES += \
-        main.cpp \
-        mainwindow.cpp \
-    diody.cpp \
     bluetooth.cpp \
-    wykresy.cpp \
-    wykres.cpp \
+    diody.cpp \
     kosc.cpp \
-    wizualizacjakosc.cpp
+    main.cpp \
+    mainwindow.cpp \
+    wizualizacjakosc.cpp \
+    wykres.cpp \
+    wykresy.cpp
 
 HEADERS += \
-        mainwindow.h \
-    wykres.h \
-    wizualizacjakosc.h
+    mainwindow.h \
+    wizualizacjakosc.h \
+    wykres.h
 
 FORMS += \
-        mainwindow.ui
+    mainwindow.ui
+
+SUBDIRS += \
+    WDS_Kosc_Linux.pro

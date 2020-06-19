@@ -53,56 +53,140 @@ public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
-    //tworzenie diody
+
+    /*!
+     *
+     * \brief Tworzenie diód
+     */
     void tworz_diode();
-    //zmiana kolorow diod
+    /*!
+     *
+     * \brief Zmiana kolorow diód na zielony
+     */
     void zapal_zielone();
+    /*!
+     *
+     * \brief Zmiana kolorow diód na czerowny
+     */
     void zapal_czerwone();
 
-    //tworzenie wykresow
+    /*!
+     *
+     * \brief Obsługa tworzenia wykresów
+     */
     void stworz_wykresy();
-    //inicjalizacja obslugi bluetooth
+
+    /*!
+     *
+     * \brief Inicjalizacja obsługi bluetooth
+     */
     void obsluga_bt();
 
-    //informacje o nawiazanym polaczeniu
+    /*!
+     *
+     * \brief Informacje o nawiązanym połączeniu
+     */
     void inicjalizuj_info();
+
+    /*!
+     *
+     * \brief Szczegóły parametrów połączenia
+     */
     void informacje_bluetooth();
 
-    //aktualizacja danych na wykresie
+    /*!
+     *
+     * \brief Aktualizacja danych na wykresie
+     */
     void aktualizuj_wykres(float a_x,float a_y,float a_z,float g_x,float g_y,double g_z,double rkom,double pkom, unsigned long long czas);
 
-    //wczytanie danych z pliku bedacego logiem polaczenia bluetooth
+    /*!
+     *
+     * \brief Wczytanie danych z pliku będącego logiem połączenia bluetooth
+     */
     void wczytanie_danych_z_logu(unsigned long long czas_zmierzony);
 
-    //kolejne operacje tworzenia wykresow
+    /*!
+     *
+     * \brief Utworzenie osi do wykresów
+     */
     void utworz_osie();
-
+    /*!
+     *
+     * \brief Utworzenie serii do wykresów
+     */
     void utworz_serie();
 
+    /*!
+     *
+     * \brief Utworzenie wykresów
+     */
     void utworz_wykresy();
 
+    /*!
+     *
+     * \brief Utworzenie wizualizacji do wykresów
+     */
     void wizualizuj_wykresy();
 
+    /*!
+     *
+     * \brief Przypięcie wartości serii do osi wykresów
+     */
     void przypnij_serie_do_osi();
 
-    //kostka
+    /*!
+     *
+     * \brief Obrót kości o kąty xa, ya, za
+     */
     void rotuj_kostke(double  xa, double  ya, double  za);
+    /*!
+     *
+     * \brief Niedokończone - służy za przemieszczenie kostki
+     */
     void przemiesc_kostke();
+
+    /*!
+     *
+     * \param Niedokończone - służy za przemieszczenie kostki
+     */
+    int mem_rzut = 0;
 
 private slots:
 
-    //aktualizacja obrazku
+    /*!
+     *
+     * \brief Aktualizuje obraz Wartość rzutu i lcd Rzut poprzedni
+     */
     void aktualizuj_obraz(int val);
 
-    //obsluga dzialania polaczenia z plytka
+    /*!
+     *
+     * \brief Slot odpowiedzialny za przechwycenie informacji na temat wykrywtego urządzenia
+     *
+     */
     void captureDeviceProperties(const QBluetoothDeviceInfo &device);
 
+    /*!
+     * \brief Slot odpowiedzialny za przechwycenie sygnału zakończenia wyszukiwania
+     */
     void searchingFinished();
 
+    /*!
+     * \brief Slot odpowiedzialny za obsługę wyszukiwania urządzeń
+     */
     void on_button_wyszukaj_clicked();
+    /*!
+     * \brief Slot odpowiedzialny za przechwycenie sygnału inicjacji połączenia
+     */
     void on_button_polacz_clicked();
+    /*!
+     * \brief Slot odpowiedzialny za przechwycenie sygnału wywołania zakończenia połączenia
+     */
     void on_button_rozlacz_clicked();
-
+    /*!
+     * \brief Slot nawiązania połączenia
+     */
     void connectionEstablished();
     void connectionInterrupted();
 
@@ -115,6 +199,8 @@ private:
 
     //kosc
     WizualizacjaKosc *currentGlWidget;
+
+
 
     float x_mem = 0.0;
     float y_mem = 0.0;
@@ -182,6 +268,8 @@ private:
 
     //aktualizacja logu polaczenia
     void addToLogs(QString message);
+
+    void zmien_lcd(int wartosc);
 
     //obsluga bt
     QBluetoothDeviceDiscoveryAgent* discoveryAgent;

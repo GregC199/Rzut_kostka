@@ -28,18 +28,49 @@ public:
     void obroc(int x_a, int y_a, int z_a);
     void setClearColor(const QColor &color);
 
+    QSize minimumSizeHint() const override;
+    QSize sizeHint() const override;
+
+    void x_okresl_zakres();
+    void y_okresl_zakres();
+    void z_okresl_zakres();
+    void okres_zakresy();
+    int x_zakres = 0;
+    int y_zakres = 0;
+    int z_zakres = 0;
+
+    int mem_sciana = 1;
+
+    bool czy_slider;
+
+    int sciany[4][4][4] = {{{1,1,1,1},{3,5,4,2},{6,6,6,6},{4,2,3,5}},
+                           {{5,4,2,3},{5,4,2,3},{5,4,2,3},{5,4,2,3}},
+                           {{6,6,6,6},{4,2,3,5},{1,1,1,1},{3,5,4,2}},
+                           {{2,3,5,4},{2,3,5,4},{2,3,5,4},{2,3,5,4}}};
+
 protected:
     void initializeGL() override;
     void paintGL() override;
     void resizeGL(int w, int h) override;
 
 signals:
+    void emituj_zmiane_sciany(int value);
+
 private:
+
+    void normalizuj_kat(int &kat);
+
     void utworz_kosc();
+
+
+
+
     QColor clearColor;
     QPoint lastPos;
 
     QSlider* Sender;
+
+
 
     int xRot = 0;
     int yRot = 0;
