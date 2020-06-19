@@ -35,8 +35,5 @@ var searchData=
   ['brr',['BRR',['../struct_u_s_a_r_t___type_def.html#a6ef06ba9d8dc2dc2a0855766369fa7c9',1,'USART_TypeDef']]],
   ['bsrr',['BSRR',['../struct_g_p_i_o___type_def.html#acd6f21e08912b484c030ca8b18e11cd6',1,'GPIO_TypeDef']]],
   ['button_5fb',['Button_B',['../main_8c.html#a09f904e618569a217ab032fb39800921',1,'main.c']]],
-  ['button_5fb_5fmem',['Button_B_mem',['../main_8c.html#a3a84093535b390d14477ed40e850014b',1,'main.c']]],
-  ['button_5fpolacz',['button_polacz',['../class_ui___main_window.html#a2b1221815978f1c67ebca29edc8431dc',1,'Ui_MainWindow']]],
-  ['button_5frozlacz',['button_rozlacz',['../class_ui___main_window.html#a53a3457cca90680d43cff2058a0f7455',1,'Ui_MainWindow']]],
-  ['button_5fwyszukaj',['button_wyszukaj',['../class_ui___main_window.html#ae1f5118fab998b948831cebc923325ca',1,'Ui_MainWindow']]]
+  ['button_5fb_5fmem',['Button_B_mem',['../main_8c.html#a3a84093535b390d14477ed40e850014b',1,'main.c']]]
 ];

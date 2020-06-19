@@ -18,8 +18,6 @@ var searchData=
   ['fpcar',['FPCAR',['../struct_f_p_u___type.html#a55263b468d0f8e11ac77aec9ff87c820',1,'FPU_Type']]],
   ['fpccr',['FPCCR',['../struct_f_p_u___type.html#af1b708c5e413739150df3d16ca3b7061',1,'FPU_Type']]],
   ['fpdscr',['FPDSCR',['../struct_f_p_u___type.html#a58d1989664a06db6ec2e122eefa9f04a',1,'FPU_Type']]],
-  ['frame',['frame',['../class_ui___main_window.html#ad01968740c435709a8b2ec4c08094c67',1,'Ui_MainWindow']]],
-  ['frame_5f2',['frame_2',['../class_ui___main_window.html#ab47865bd12cd980e143b3fc06ad24ac1',1,'Ui_MainWindow']]],
   ['fscr',['FSCR',['../struct_t_p_i___type.html#ad6901bfd8a0089ca7e8a20475cf494a8',1,'TPI_Type']]],
   ['ftsr',['FTSR',['../struct_e_x_t_i___type_def.html#aee667dc148250bbf37fdc66dc4a9874d',1,'EXTI_TypeDef']]],
   ['function0',['FUNCTION0',['../struct_d_w_t___type.html#a579ae082f58a0317b7ef029b20f52889',1,'DWT_Type']]],

@@ -1,7 +1,6 @@
 var searchData=
 [
   ['par',['PAR',['../struct_d_m_a___stream___type_def.html#adbeac1d47cb85ab52dac71d520273947',1,'DMA_Stream_TypeDef']]],
-  ['parametry_5fpolaczenia',['parametry_polaczenia',['../class_ui___main_window.html#a88cb7ad9dfb013b11e125d5f029301e8',1,'Ui_MainWindow']]],
   ['parent',['Parent',['../struct_____d_m_a___handle_type_def.html#af42684decd26b1c5d49a529fcf99be30',1,'__DMA_HandleTypeDef']]],
   ['parity',['Parity',['../struct_u_a_r_t___init_type_def.html#adc92243425cb18cb8b5f03692841db48',1,'UART_InitTypeDef']]],
   ['pbuffptr',['pBuffPtr',['../struct_____i2_c___handle_type_def.html#af699cc26b19f28b9215d3d4a167f068e',1,'__I2C_HandleTypeDef']]],
@@ -32,8 +31,6 @@ var searchData=
   ['pllsource',['PLLSource',['../struct_r_c_c___p_l_l_init_type_def.html#a72806832a179af8756b9330de7f7c6a8',1,'RCC_PLLInitTypeDef']]],
   ['pllstate',['PLLState',['../struct_r_c_c___p_l_l_init_type_def.html#a6cbaf84f6566af15e6e4f97a339d5759',1,'RCC_PLLInitTypeDef']]],
   ['pmc',['PMC',['../struct_s_y_s_c_f_g___type_def.html#ab5c47c570566cb8ff9d0436c17cc9241',1,'SYSCFG_TypeDef']]],
-  ['podzial',['podzial',['../class_ui___main_window.html#acba352c7c0c7e24037c604c45fb72579',1,'Ui_MainWindow']]],
-  ['podzial2_5f2',['podzial2_2',['../class_ui___main_window.html#a4eb6355fb4170b814c9a0891dc1b88c7',1,'Ui_MainWindow']]],
   ['polaczenie',['Polaczenie',['../main_8c.html#ae73bfe641dddaa19b9d52282d7897385',1,'main.c']]],
   ['port',['PORT',['../struct_i_t_m___type.html#a7010d53d9f2b725fba177015cbdc6bc2',1,'ITM_Type::PORT()'],['../struct_i_t_m___type.html#a2fc80b848dc9408836b15f1672b69ff6',1,'ITM_Type::PORT()'],['../struct_i_t_m___type.html#a6ca4dbb3a8d0a64815b500481c226370',1,'ITM_Type::PORT()'],['../struct_i_t_m___type.html#a0a29b660072699beb29486fe5e1675a3',1,'ITM_Type::PORT()'],['../struct_i_t_m___type.html#a4ce174a5f5eaaa9a278eea39b42966d9',1,'ITM_Type::PORT()'],['../struct_i_t_m___type.html#a3bf05bf08f89c7cd5b44a333585b19f0',1,'ITM_Type::PORT()']]],
   ['power',['POWER',['../struct_s_d_i_o___type_def.html#a7c156bc55f6d970a846a459d57a9e940',1,'SDIO_TypeDef']]],

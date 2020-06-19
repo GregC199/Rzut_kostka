@@ -1,7 +1,6 @@
 var searchData=
 [
   ['uart_5finittypedef',['UART_InitTypeDef',['../struct_u_a_r_t___init_type_def.html',1,'']]],
-  ['ui_5fmainwindow',['Ui_MainWindow',['../class_ui___main_window.html',1,'']]],
   ['usart_5ftypedef',['USART_TypeDef',['../struct_u_s_a_r_t___type_def.html',1,'']]],
   ['usb_5fotg_5fdevicetypedef',['USB_OTG_DeviceTypeDef',['../struct_u_s_b___o_t_g___device_type_def.html',1,'']]],
   ['usb_5fotg_5fglobaltypedef',['USB_OTG_GlobalTypeDef',['../struct_u_s_b___o_t_g___global_type_def.html',1,'']]],

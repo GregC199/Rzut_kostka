@@ -15,7 +15,6 @@ var searchData=
   ['setclearcolor',['setClearColor',['../class_wizualizacja_kosc.html#a3569ad7deb2d9462dfc2d152d9a7c4b7',1,'WizualizacjaKosc']]],
   ['setup_5fl3gd20',['Setup_L3GD20',['../main_8c.html#a471021b1fa96d7870422247bbb401732',1,'main.c']]],
   ['setup_5fuart_5fbt',['Setup_UART_BT',['../main_8c.html#aa2c07790f204996bbcc1b0aff230fc67',1,'main.c']]],
-  ['setupui',['setupUi',['../class_ui___main_window.html#acf4a0872c4c77d8f43a2ec66ed849b58',1,'Ui_MainWindow']]],
   ['sizehint',['sizeHint',['../class_wizualizacja_kosc.html#a24b1691336c8e00a17986a947316f96d',1,'WizualizacjaKosc']]],
   ['stworz_5fwykresy',['stworz_wykresy',['../class_main_window.html#a0669fa55d3cd37cef0e9e3d6e296ebd2',1,'MainWindow']]],
   ['svc_5fhandler',['SVC_Handler',['../stm32f4xx__it_8h.html#a3e5ddb3df0d62f2dc357e64a3f04a6ce',1,'SVC_Handler(void):&#160;stm32f4xx_it.c'],['../stm32f4xx__it_8c.html#a3e5ddb3df0d62f2dc357e64a3f04a6ce',1,'SVC_Handler(void):&#160;stm32f4xx_it.c']]],

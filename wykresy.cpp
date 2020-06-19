@@ -152,7 +152,7 @@ void MainWindow::utworz_wykresy(){
     this->line_acc_wykres_x->addSeries(this->series_acc_wykres_x);
 
     //dodanie tytulu wykresu
-    this->line_acc_wykres_x->setTitle("Zczytania wzdłuż osi X");
+    this->line_acc_wykres_x->setTitle("Zczytania wzdłuż osi Ox");
 
     //wylaczenie legendy
     this->line_acc_wykres_x->legend()->hide();
@@ -167,7 +167,7 @@ void MainWindow::utworz_wykresy(){
 
     this->line_acc_wykres_y->addSeries(this->series_acc_wykres_y);
 
-    this->line_acc_wykres_y->setTitle("Zczytania wzdłuż osi Y");
+    this->line_acc_wykres_y->setTitle("Zczytania wzdłuż osi Oy");
 
     this->line_acc_wykres_y->legend()->hide();
 
@@ -181,7 +181,7 @@ void MainWindow::utworz_wykresy(){
 
     this->line_acc_wykres_z->addSeries(this->series_acc_wykres_z);
 
-    this->line_acc_wykres_z->setTitle("Zczytania wzdłuż osi Z");
+    this->line_acc_wykres_z->setTitle("Zczytania wzdłuż osi Oz");
 
     this->line_acc_wykres_z->legend()->hide();
 
@@ -196,7 +196,7 @@ void MainWindow::utworz_wykresy(){
     this->line_gyr_wykres_x->addSeries(this->series_gyr_wykres_x);
     this->line_gyr_wykres_x->addSeries(this->series_kom_wykres_x);
 
-    this->line_gyr_wykres_x->setTitle("Zczytania wzdłuż osi X");
+    this->line_gyr_wykres_x->setTitle("Zczytania wzdłuż osi Ox");
 
     this->line_gyr_wykres_x->legend()->hide();
 
@@ -212,7 +212,7 @@ void MainWindow::utworz_wykresy(){
     this->line_gyr_wykres_y->addSeries(this->series_gyr_wykres_y);
     this->line_gyr_wykres_y->addSeries(this->series_kom_wykres_y);
 
-    this->line_gyr_wykres_y->setTitle("Zczytania wzdłuż osi Y");
+    this->line_gyr_wykres_y->setTitle("Zczytania wzdłuż osi Oy");
 
     this->line_gyr_wykres_y->legend()->hide();
 
@@ -227,7 +227,7 @@ void MainWindow::utworz_wykresy(){
 
     this->line_gyr_wykres_z->addSeries(this->series_gyr_wykres_z);
 
-    this->line_gyr_wykres_z->setTitle("Zczytania wzdłuż osi Z");
+    this->line_gyr_wykres_z->setTitle("Zczytania wzdłuż osi Oz");
 
     this->line_gyr_wykres_z->legend()->hide();
 }

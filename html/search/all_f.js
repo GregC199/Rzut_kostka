@@ -30,7 +30,6 @@ var searchData=
   ['ob_5fwrpstate_5fenable',['OB_WRPSTATE_ENABLE',['../group___f_l_a_s_h_ex___w_r_p___state.html#ga9fc463145ab57616baa36d95523186a1',1,'stm32f4xx_hal_flash_ex.h']]],
   ['obex_5fbootconfig',['OBEX_BOOTCONFIG',['../group___h_a_l___f_l_a_s_h___aliased___defines.html#ga79284d41c929869394172fc526ff3d7e',1,'stm32_hal_legacy.h']]],
   ['obex_5fpcrop',['OBEX_PCROP',['../group___h_a_l___f_l_a_s_h___aliased___defines.html#ga1de788f8cf04b70320aaebf3388e638c',1,'stm32_hal_legacy.h']]],
-  ['obraz',['obraz',['../class_ui___main_window.html#a695652e0f65074c1e868e5d2851d4881',1,'Ui_MainWindow']]],
   ['obroc',['obroc',['../class_wizualizacja_kosc.html#abd638267982c1c65610501551ffec3b0',1,'WizualizacjaKosc']]],
   ['obrocx',['obrocX',['../class_wizualizacja_kosc.html#acc8ddbf71bdee742b882390c73536b83',1,'WizualizacjaKosc']]],
   ['obrocy',['obrocY',['../class_wizualizacja_kosc.html#a05112c1b2321cc7ce5fc4123263ede7a',1,'WizualizacjaKosc']]],

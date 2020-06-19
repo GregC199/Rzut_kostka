@@ -355,7 +355,6 @@ var searchData=
   ['imr',['IMR',['../struct_e_x_t_i___type_def.html#a17d061db586d4a5aa646b68495a8e6a4',1,'EXTI_TypeDef']]],
   ['inak_5ftimeout',['INAK_TIMEOUT',['../group___h_a_l___c_a_n___aliased___defines.html#ga60a32132df242146efd3e9f7a079f0f0',1,'stm32_hal_legacy.h']]],
   ['informacje_5fbluetooth',['informacje_bluetooth',['../class_main_window.html#ac3bcbf1dc657f039bf90254b24e023a5',1,'MainWindow']]],
-  ['informacje_5fo_5fpolaczeniu',['informacje_o_polaczeniu',['../class_ui___main_window.html#a77fbc26afe496853f804a445b68acd9b',1,'Ui_MainWindow']]],
   ['inicjalizuj_5finfo',['inicjalizuj_info',['../class_main_window.html#a7b1012fca99df34abcdc108974ab583c',1,'MainWindow']]],
   ['init',['Init',['../struct_____d_m_a___handle_type_def.html#a3792cb34cedb0e2ab204e41b53ef75ad',1,'__DMA_HandleTypeDef::Init()'],['../struct_____i2_c___handle_type_def.html#a8e665bc833889975a33b10bebeab5db2',1,'__I2C_HandleTypeDef::Init()'],['../struct_____s_p_i___handle_type_def.html#a4b43d4d72f571b7d2162a2d171bb1312',1,'__SPI_HandleTypeDef::Init()'],['../struct_t_i_m___handle_type_def.html#a8b2e61c3c4128e62cb7be7d35048152e',1,'TIM_HandleTypeDef::Init()'],['../struct_____u_a_r_t___handle_type_def.html#a56ed519d3ec77350c528fb8536bd9f5a',1,'__UART_HandleTypeDef::Init()']]],
   ['initialise_5fmonitor_5fhandles',['initialise_monitor_handles',['../syscalls_8c.html#a25c7f100d498300fff65568c2fcfe639',1,'syscalls.c']]],

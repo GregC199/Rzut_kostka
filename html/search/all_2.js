@@ -48,8 +48,5 @@ var searchData=
   ['busfault_5fhandler',['BusFault_Handler',['../stm32f4xx__it_8h.html#a850cefb17a977292ae5eb4cafa9976c3',1,'BusFault_Handler(void):&#160;stm32f4xx_it.c'],['../stm32f4xx__it_8c.html#a850cefb17a977292ae5eb4cafa9976c3',1,'BusFault_Handler(void):&#160;stm32f4xx_it.c']]],
   ['busfault_5firqn',['BusFault_IRQn',['../group___peripheral__interrupt__number__definition.html#gga7e1129cd8a196f4284d41db3e82ad5c8a8693500eff174f16119e96234fee73af',1,'stm32f411xe.h']]],
   ['button_5fb',['Button_B',['../main_8c.html#a09f904e618569a217ab032fb39800921',1,'main.c']]],
-  ['button_5fb_5fmem',['Button_B_mem',['../main_8c.html#a3a84093535b390d14477ed40e850014b',1,'main.c']]],
-  ['button_5fpolacz',['button_polacz',['../class_ui___main_window.html#a2b1221815978f1c67ebca29edc8431dc',1,'Ui_MainWindow']]],
-  ['button_5frozlacz',['button_rozlacz',['../class_ui___main_window.html#a53a3457cca90680d43cff2058a0f7455',1,'Ui_MainWindow']]],
-  ['button_5fwyszukaj',['button_wyszukaj',['../class_ui___main_window.html#ae1f5118fab998b948831cebc923325ca',1,'Ui_MainWindow']]]
+  ['button_5fb_5fmem',['Button_B_mem',['../main_8c.html#a3a84093535b390d14477ed40e850014b',1,'main.c']]]
 ];

@@ -16,7 +16,7 @@ var searchData=
   ['main_2ec',['main.c',['../main_8c.html',1,'']]],
   ['main_2ecpp',['main.cpp',['../main_8cpp.html',1,'']]],
   ['main_2eh',['main.h',['../main_8h.html',1,'']]],
-  ['mainwindow',['MainWindow',['../class_ui_1_1_main_window.html',1,'Ui::MainWindow'],['../class_main_window.html',1,'MainWindow'],['../class_main_window.html#a996c5a2b6f77944776856f08ec30858d',1,'MainWindow::MainWindow()']]],
+  ['mainwindow',['MainWindow',['../class_main_window.html',1,'MainWindow'],['../class_main_window.html#a996c5a2b6f77944776856f08ec30858d',1,'MainWindow::MainWindow()']]],
   ['mainwindow_2ecpp',['mainwindow.cpp',['../mainwindow_8cpp.html',1,'']]],
   ['mainwindow_2eh',['mainwindow.h',['../mainwindow_8h.html',1,'']]],
   ['mask',['MASK',['../struct_s_d_i_o___type_def.html#a9a08e405ab985c60ff9031025ab37d31',1,'SDIO_TypeDef']]],

@@ -2,7 +2,6 @@ var searchData=
 [
   ['oar1',['OAR1',['../struct_i2_c___type_def.html#ae8269169fcbdc2ecb580208d99c2f89f',1,'I2C_TypeDef']]],
   ['oar2',['OAR2',['../struct_i2_c___type_def.html#a73988a218be320999c74a641b3d6e3c1',1,'I2C_TypeDef']]],
-  ['obraz',['obraz',['../class_ui___main_window.html#a695652e0f65074c1e868e5d2851d4881',1,'Ui_MainWindow']]],
   ['ocfastmode',['OCFastMode',['../struct_t_i_m___o_c___init_type_def.html#a4c4203c5ed779ac86fb793bb9d628e55',1,'TIM_OC_InitTypeDef']]],
   ['ocidlestate',['OCIdleState',['../struct_t_i_m___o_c___init_type_def.html#ace3e2b76ca2fca0f4961585ed9ebecf5',1,'TIM_OC_InitTypeDef::OCIdleState()'],['../struct_t_i_m___one_pulse___init_type_def.html#aef11bcea1dbf3e3ddf2a4bbc2846bb1e',1,'TIM_OnePulse_InitTypeDef::OCIdleState()']]],
   ['ocmode',['OCMode',['../struct_t_i_m___o_c___init_type_def.html#ae5faa1cba0b3f1ab6179cc54e1015ee8',1,'TIM_OC_InitTypeDef::OCMode()'],['../struct_t_i_m___one_pulse___init_type_def.html#af127f01162853e39ae616b43cc52b674',1,'TIM_OnePulse_InitTypeDef::OCMode()']]],

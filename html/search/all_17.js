@@ -3,7 +3,6 @@ var searchData=
   ['w',['w',['../union_a_p_s_r___type.html#ae4c2ef8c9430d7b7bef5cbfbbaed3a94',1,'APSR_Type::w()'],['../union_i_p_s_r___type.html#a4adca999d3a0bc1ae682d73ea7cfa879',1,'IPSR_Type::w()'],['../unionx_p_s_r___type.html#a1a47176768f45f79076c4f5b1b534bc2',1,'xPSR_Type::w()'],['../union_c_o_n_t_r_o_l___type.html#a6b642cca3d96da660b1198c133ca2a1f',1,'CONTROL_Type::w()']]],
   ['wczytanie_5fdanych_5fz_5flogu',['wczytanie_danych_z_logu',['../class_main_window.html#a5c39c76ab1f6edbff934e87a385bd5bd',1,'MainWindow']]],
   ['wiadomosc',['Wiadomosc',['../main_8c.html#ab59a8a428b266863f97dc0a7f5ea6d38',1,'main.c']]],
-  ['wizualizacja',['wizualizacja',['../class_ui___main_window.html#ad718dc71d168fd759d27806468beb381',1,'Ui_MainWindow']]],
   ['wizualizacjakosc',['WizualizacjaKosc',['../class_wizualizacja_kosc.html',1,'']]],
   ['wizualizacjakosc_2ecpp',['wizualizacjakosc.cpp',['../wizualizacjakosc_8cpp.html',1,'']]],
   ['wizualizacjakosc_2eh',['wizualizacjakosc.h',['../wizualizacjakosc_8h.html',1,'']]],

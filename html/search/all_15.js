@@ -89,8 +89,6 @@ var searchData=
   ['ufb_5fmode_5fbit_5fnumber',['UFB_MODE_BIT_NUMBER',['../group___h_a_l___private___constants.html#gac8a0079a8d30ec8633adaed9e2cfa49d',1,'stm32f4xx_hal.c']]],
   ['ufb_5fmode_5fbitnumber',['UFB_MODE_BitNumber',['../group___h_a_l___aliased___macros.html#gaa531b9c8535235ee73455c2b88663c03',1,'stm32_hal_legacy.h']]],
   ['ui',['Ui',['../namespace_ui.html',1,'']]],
-  ['ui_5fmainwindow',['Ui_MainWindow',['../class_ui___main_window.html',1,'']]],
-  ['ui_5fmainwindow_2eh',['ui_mainwindow.h',['../ui__mainwindow_8h.html',1,'']]],
   ['uid_5fbase',['UID_BASE',['../group___peripheral__memory__map.html#ga664eda42b83c919b153b07b23348be67',1,'stm32f411xe.h']]],
   ['unused',['UNUSED',['../stm32f4xx__hal__def_8h.html#a6bc306171da085f4c7df2c66d2ff8e47',1,'stm32f4xx_hal_def.h']]],
   ['usagefault_5fhandler',['UsageFault_Handler',['../stm32f4xx__it_8h.html#a1d98923de2ed6b7309b66f9ba2971647',1,'UsageFault_Handler(void):&#160;stm32f4xx_it.c'],['../stm32f4xx__it_8c.html#a1d98923de2ed6b7309b66f9ba2971647',1,'UsageFault_Handler(void):&#160;stm32f4xx_it.c']]],

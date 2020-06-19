@@ -1,7 +1,5 @@
 var searchData=
 [
-  ['a',['a',['../class_ui___main_window.html#ab70b373357a746e70b5ef5b4814888b6',1,'Ui_MainWindow']]],
-  ['a_5f3',['a_3',['../class_ui___main_window.html#afb86e28eb82b9b69086f5a5e48175638',1,'Ui_MainWindow']]],
   ['abfsr',['ABFSR',['../struct_s_c_b___type.html#a35a95c9a21f43a569a7ac212acb4cee7',1,'SCB_Type']]],
   ['acc_5fadres',['ACC_ADRES',['../main_8c.html#a63cf4b5f070793b792511c930780fe2d',1,'main.c']]],
   ['acc_5fctrl_5freg1_5fa',['ACC_CTRL_REG1_A',['../main_8c.html#abc5fef7a2f53bf8ab1e86a05075908a2',1,'main.c']]],
@@ -14,9 +12,6 @@ var searchData=
   ['acc_5fset_5f4g',['ACC_SET_4G',['../main_8c.html#aa84a7b0536055e5fdf191f28f5b4d9e5',1,'main.c']]],
   ['acc_5fustawienia',['ACC_USTAWIENIA',['../main_8c.html#a337e9e0f1bba29076f506da16c4bf0ee',1,'main.c']]],
   ['acc_5fwszystkie_5fosie_5fzczytanie',['ACC_WSZYSTKIE_OSIE_ZCZYTANIE',['../main_8c.html#a61a025677156c75c72e3d2e933770a92',1,'main.c']]],
-  ['acc_5fwykres_5fx',['acc_wykres_x',['../class_ui___main_window.html#a0c90f06928ad144d9e8b8935ed285b69',1,'Ui_MainWindow']]],
-  ['acc_5fwykres_5fy',['acc_wykres_y',['../class_ui___main_window.html#ab53418042651aedd2c4e1832be7af1d8',1,'Ui_MainWindow']]],
-  ['acc_5fwykres_5fz',['acc_wykres_z',['../class_ui___main_window.html#af3be0fc233198da5a1a644d04abd19c3',1,'Ui_MainWindow']]],
   ['acc_5fzczytanie_5fpoczatek',['ACC_ZCZYTANIE_POCZATEK',['../main_8c.html#ae917463c5b05dbe574651d0192d048c4',1,'main.c']]],
   ['acpr',['ACPR',['../struct_t_p_i___type.html#a9e5e4421ef9c3d5b7ff8b24abd4e99b3',1,'TPI_Type']]],
   ['acr',['ACR',['../struct_f_l_a_s_h___type_def.html#aaf432a8a8948613f4f66fcace5d2e5fe',1,'FLASH_TypeDef']]],
